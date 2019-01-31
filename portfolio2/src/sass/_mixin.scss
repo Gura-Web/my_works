@@ -1,0 +1,242 @@
+/* コンタクトアイコン */
+@mixin contact($w:40px,$h:40px,$m:37px auto 0,$mw:154px) {
+    .contact {
+        display: flex;
+        justify-content: space-between;
+        margin: $m;
+        max-width: $mw;
+        li {
+
+            display: inline-block;
+            background: linear-gradient(to top, #FFAFBD,#FFC3A0);
+            border-radius: 50%;
+            width: $w;
+            height: $h;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+            transition: 0.3s ease;
+            &:hover {
+                // opacity: 0.5;
+                transform: translateY(-3px);
+                filter: brightness(120%);
+            }
+            &:hover img {
+                filter: invert(100%);
+            }
+            a {
+                display: block;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+    }
+    .mail {
+        cursor: pointer;
+        position: relative;
+        &-view {
+            line-height: 40px;
+            letter-spacing: 0.02em;
+            display: block;
+            width: 340px;
+            height: 40px;
+            background: $none;
+            position: absolute;
+            bottom: 53px;
+            border-radius: 5px;
+            text-align: center;
+            &::before {
+                content: "";
+                display: block;
+                width: 0;
+                height: 0;
+                border: 10px solid transparent;
+                border-top: 11px solid $none;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: -20px;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+/* アイコンスタイル */
+@mixin iconList($img) {
+    &::before {
+        content: "";
+        display: block;
+        width: 106px;
+        height: 106px;
+        margin: 0 auto;
+        background: url($IMG + $img) no-repeat center center;
+    }
+}
+
+/* テキストボックススタイル */
+@mixin textBox($img,$h,$m) {
+    background: $none;
+    max-width: 523px;
+    padding: 48px 67px 85px;
+    letter-spacing: 0.08em;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin: $m 0 0 0;
+    box-shadow: 0 3px 30px rgba(0,0,0,.04);
+    border-radius: 5px;
+    @include sp {
+        padding: 54px 40px 45px;
+    }
+    &::before {
+        content: "";
+        display: block;
+        max-width: 295px;
+        height: $h;
+        margin: 0 auto;
+        background: url($IMG + $img) no-repeat center center/100%;
+        margin-bottom: 29px;
+    }
+    &__ttl {
+        font-size: 2.2rem;
+        
+        span {
+            font-size: 1.1rem;
+            display: block;
+        }
+    }
+    &__desc {
+        margin: 35px 0 0 0;
+        font-size: 1.3rem;
+        text-align: left;
+        line-height: 2.3;
+        max-width: 383px;
+    }
+}
+
+
+
+// square
+@mixin square-main { 
+    @include square(1); @include square(2,750px,0px,top,right); 
+    @include squareSmall(1); @include squareSmall(2,200px,690px); @include squareSmall(3,500px,13%,top,right);
+}
+@mixin square-profile {
+    @include square(3,540px,497px); @include square(4,750px,40px,top,right);
+    @include squareSmall(4,240px,150px,bottom); @include squareSmall(5,1050px,-30px); @include squareSmall(6,230px,6%,top,right);
+}
+@mixin square-skill {
+    @include square(5,540px,67px); @include square(6,750px,60px,top,right);
+    @include squareSmall(7,240px,150px,bottom); @include squareSmall(8,1050px,-30px); @include squareSmall(9,230px,6%,top,right);
+}
+@mixin square-works {
+    @include square(7,680px,-90px); @include square(8,750px,0px,top,right); @include squareSmall(9,240px,930px,top); @include squareSmall(10,1050px,-30px);
+}
+@mixin square-policy {
+    @include square(9,680px,0); @include square(10,320px,0px,top,right); 
+    @include squareSmall(10,240px,930px,top); @include squareSmall(11,1050px,-30px);
+}
+@mixin square-blog {
+    @include square(10,680px,0);@include square(11,320px,0px,top,right);
+    @include squareSmall(12,240px,930px,top);@include squareSmall(13,130px,390px, bottom);
+}
+@mixin square($n:1,$p1:200px,$p2:-40px,$tb:top,$rl:left) {
+    .square#{$n} {
+        width: 60px;
+        height: 10px;
+        border-radius: 150px;
+        background: linear-gradient(to top, #ED6EA0, #EC8C69);
+        position: absolute;
+        #{$tb}: $p1;
+        #{$rl}: $p2;
+        &::before {
+            content: "";
+            display: block;
+            width: 40px;
+            top: 22px;
+            right: -20px;
+            height: 10px;
+            border-radius: 50px;
+            background: linear-gradient(to top, #ED6EA0, #EC8C69);
+            position: absolute;
+            z-index: 0;
+        }
+    }
+}
+@mixin squareSmall($n:1,$p1:700px,$p2:150px,$tb:top,$rl:left) {
+    .square-small#{$n} {
+        width: 64px;
+        height: 10px;
+        border-radius: 50px;
+        background: linear-gradient(to top, #ED6EA0, #EC8C69);
+        position: absolute;
+        #{$tb}: $p1;
+        #{$rl}: $p2;
+        &::before {
+            content: "";
+            display: block;
+            width: 37px;
+            top: 15px;
+            right: -18px;
+            height: 10px;
+            border-radius: 50px;
+            background: linear-gradient(to top, #ED6EA0, #EC8C69);
+            position: absolute;
+            z-index: 0;
+        }
+    }
+}
+
+
+/* 記事hover ブラー効果 */
+@mixin article_hover {
+    &__img {
+        order: -1;
+        overflow: hidden;
+        width: 368px;
+        height: 222px;
+        border-radius: 4px 4px 0 0 ;
+        img {
+            display: block;
+            transition: 0.3s;
+        }
+        &:hover img {
+            transform: scale(1.05);   
+            
+            filter: blur(2px);
+            transition: 0.3s;
+            
+        }
+    }
+}
+
+
+/* ----------- media ----------- */
+$pc: 980px; // パソコン
+$tb: 600px; // タブレット
+$sp: 480px;  // スマートフォン
+
+@mixin pc {
+  @media screen and (max-width: ($pc)) {
+    @content;
+  }
+}
+
+@mixin tb {
+  @media screen and (max-width: ($tb)) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media screen and (max-width: ($sp)) {
+    @content;
+  }
+}
+
