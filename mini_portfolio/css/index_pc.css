@@ -1,0 +1,255 @@
+@media screen and (min-width: 800px) {
+  header {
+    width: 70%; }
+    header #pcMenu {
+      justify-content: flex-end;
+      right: 20px; }
+
+  #container {
+    width: 70%;
+    margin: 170px auto 0; }
+
+  #top #teeth {
+    font-size: 1.4vw; }
+  #top #logo {
+    left: 0; }
+    #top #logo img {
+      width: 15%; }
+  #top #scroll {
+    top: 5px;
+    right: 6px; }
+    #top #scroll #scroll::after {
+      margin-left: 23px; }
+
+  #WhoIsOgura .ttl {
+    border-bottom: solid 2px #3387c0;
+    color: #3387c0;
+    font-size: 2.0rem;
+    letter-spacing: 0.08em;
+    line-height: 1em;
+    margin-top: 60px;
+    padding-bottom: 5px; }
+    #WhoIsOgura .ttl .ttl_block {
+      color: #333;
+      display: block;
+      font-size: 1.2rem;
+      font-weight: normal;
+      position: relative; }
+      #WhoIsOgura .ttl .ttl_block::before {
+        background: #8fcce6;
+        content: "";
+        display: inline-block;
+        margin-left: 5px;
+        width: 118px;
+        height: 2px;
+        position: absolute;
+        left: 55px;
+        top: 7px; }
+      #WhoIsOgura .ttl .ttl_block::after {
+        background: #8fcce6;
+        content: "";
+        display: inline-block;
+        margin-left: 5px;
+        width: 118px;
+        height: 3px; }
+  #WhoIsOgura .ttl {
+    font-size: 2.6rem; }
+    #WhoIsOgura .ttl .ttl_block {
+      font-size: 1.6rem;
+      top: 3px; }
+      #WhoIsOgura .ttl .ttl_block::before {
+        left: 74px;
+        top: 7px;
+        width: 154px;
+        height: 2px; }
+      #WhoIsOgura .ttl .ttl_block::after {
+        width: 154px;
+        height: 4px; }
+  #WhoIsOgura .text {
+    font-size: 1.4rem;
+    float: left;
+    padding-left: 15px;
+    line-height: 2.3em;
+    width: 45%; }
+  #WhoIsOgura #profile #meProfile {
+    margin: 200px 0 0 auto;
+    width: 50%; }
+    #WhoIsOgura #profile #meProfile #desk {
+      width: 45%; }
+    #WhoIsOgura #profile #meProfile #ttlProfile {
+      font-size: 1.6rem;
+      font-weight: bold;
+      width: 40%;
+      margin-right: 15px;
+      padding-bottom: 2px; }
+    #WhoIsOgura #profile #meProfile #time #money {
+      letter-spacing: 0.2em; }
+    #WhoIsOgura #profile #meProfile #time #always {
+      font-size: 1.6rem;
+      padding-left: 0; }
+    #WhoIsOgura #profile #meProfile #time #timeText {
+      padding: 2px 0 0 2px; }
+    #WhoIsOgura #profile #meProfile #profileText {
+      width: 40%; }
+  #WhoIsOgura #profile #earth {
+    width: 20%;
+    right: 25%; }
+
+  /* from */
+  #from #fromTtl #namekuji {
+    top: 70%;
+    right: 15%; }
+  #from #fromTtl .ttl {
+    font-size: 2.6rem; }
+    #from #fromTtl .ttl .ttl_block {
+      font-size: 1.4rem;
+      top: 29px; }
+      #from #fromTtl .ttl .ttl_block::before {
+        left: 63px;
+        top: 7px;
+        width: 42px;
+        height: 2px; }
+      #from #fromTtl .ttl .ttl_block::after {
+        width: 42px;
+        height: 4px; }
+  #from #map {
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%; }
+    #from #map #mapText {
+      width: 50%;
+      letter-spacing: 0.2em; }
+      #from #map #mapText #tenkin {
+        font-size: 1.6rem;
+        margin: 0; }
+      #from #map #mapText #jp {
+        font-size: 1.4rem;
+        margin: 8px 0 0;
+        letter-spacing: 0.3em; }
+      #from #map #mapText #en {
+        font-size: 1.0rem;
+        letter-spacing: 0.3em;
+        margin: 3px 0 0; }
+
+  /* policy */
+  #policy .ttl {
+    font-size: 2.6rem; }
+    #policy .ttl .ttl_block {
+      font-size: 1.4rem;
+      top: 30px; }
+      #policy .ttl .ttl_block::before {
+        left: 27px;
+        top: 7px;
+        width: 81px;
+        height: 2px; }
+      #policy .ttl .ttl_block::after {
+        width: 81px;
+        height: 4px; }
+  #policy #policyWrapper {
+    display: flex;
+    margin-left: 10px;
+    letter-spacing: 0.08em; }
+    #policy #policyWrapper #policyContent {
+      font-size: 1.4rem;
+      width: 33%;
+      line-height: 2em; }
+      #policy #policyWrapper #policyContent p {
+        margin-top: 25px; }
+        #policy #policyWrapper #policyContent p span {
+          display: block;
+          padding-top: 15px; }
+      #policy #policyWrapper #policyContent #pen img {
+        width: 40%; }
+      #policy #policyWrapper #policyContent #bread img {
+        width: 33%; }
+    #policy #policyWrapper #cycle {
+      margin-right: 5%;
+      margin-left: auto;
+      width: 46%;
+      display: flex;
+      align-items: center; }
+
+  /* skill */
+  #skill {
+    font-size: 1.4rem;
+    letter-spacing: 0.07em; }
+    #skill .ttl {
+      font-size: 2.6rem;
+      margin-bottom: 80px; }
+      #skill .ttl .ttl_block {
+        font-size: 1.4rem;
+        top: 30px; }
+        #skill .ttl .ttl_block::before {
+          left: 27px;
+          top: 7px;
+          width: 58px;
+          height: 2px; }
+        #skill .ttl .ttl_block::after {
+          width: 58px;
+          height: 4px; }
+    #skill #html, #skill #design, #skill #javascript {
+      display: flex;
+      padding: 0; }
+      #skill #html .meter_blue, #skill #design .meter_blue, #skill #javascript .meter_blue {
+        width: 21%;
+        height: 28px;
+        border: 5px solid #3387c0; }
+        #skill #html .meter_blue #meter_blue_in, #skill #design .meter_blue #meter_blue_in, #skill #javascript .meter_blue #meter_blue_in {
+          background: #3387c0;
+          width: 0%;
+          height: 100%; }
+      #skill #html .meter_orange, #skill #design .meter_orange, #skill #javascript .meter_orange {
+        width: 21%;
+        height: 28px;
+        border: 5px solid #dd861e; }
+        #skill #html .meter_orange #meter_orange_in, #skill #design .meter_orange #meter_orange_in, #skill #javascript .meter_orange #meter_orange_in {
+          background: #dd861e;
+          width: 0%;
+          height: 100%; }
+      #skill #html .meter_red, #skill #design .meter_red, #skill #javascript .meter_red {
+        width: 21%;
+        height: 28px;
+        border: 5px solid #d55167; }
+        #skill #html .meter_red #meter_red_in, #skill #design .meter_red #meter_red_in, #skill #javascript .meter_red #meter_red_in {
+          background: #d55167;
+          width: 0%;
+          height: 100%; }
+      #skill #html #designTtl, #skill #html #htmlTtl, #skill #html #javaTtl, #skill #design #designTtl, #skill #design #htmlTtl, #skill #design #javaTtl, #skill #javascript #designTtl, #skill #javascript #htmlTtl, #skill #javascript #javaTtl {
+        text-align: center; }
+      #skill #html .skillWrapper, #skill #design .skillWrapper, #skill #javascript .skillWrapper {
+        width: 13%; }
+      #skill #html #pc img, #skill #html #brush img, #skill #html #fx img, #skill #design #pc img, #skill #design #brush img, #skill #design #fx img, #skill #javascript #pc img, #skill #javascript #brush img, #skill #javascript #fx img {
+        width: 50%;
+        margin-left: 20%; }
+      #skill #html .meter_blue, #skill #html .meter_orange, #skill #html .meter_red, #skill #design .meter_blue, #skill #design .meter_orange, #skill #design .meter_red, #skill #javascript .meter_blue, #skill #javascript .meter_orange, #skill #javascript .meter_red {
+        margin: 33px 0 0; }
+      #skill #html .skillText, #skill #design .skillText, #skill #javascript .skillText {
+        margin-top: 2.8%;
+        margin-left: 10%;
+        width: 55%; }
+
+  /* contact */
+  #contact h2 {
+    font-size: 2.6rem;
+    padding-bottom: 10px; }
+  #contact #call {
+    margin: 300px 0 0;
+    padding-bottom: 200px; }
+    #contact #call #love {
+      font-size: 2.6rem;
+      letter-spacing: 0.3em;
+      margin-bottom: 60px; }
+    #contact #call #send {
+      font-size: 1.6rem;
+      letter-spacing: 0.1em;
+      margin-bottom: 80px; }
+    #contact #call address {
+      font-size: 1.6rem;
+      padding: 13px 33px;
+      margin-top: 80px;
+      position: relative; }
+    #contact #call #friend img {
+      width: 30%;
+      margin: 30px 0 30px 2%; } }
+
+/*# sourceMappingURL=index_pc.css.map */

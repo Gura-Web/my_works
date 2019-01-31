@@ -1,0 +1,204 @@
+@charset "UTF-8";
+/* メニューバーのアニメーション */
+#pcMenu li a {
+  transition: all 0.5s; }
+#pcMenu li a:hover {
+  transform: translateY(5px); }
+
+/* wisdomを順番に表示 */
+.wisdom1, .wisdom2, .wisdom3 {
+  opacity: 0;
+  animation: opaictyView 0.5s ease 1s forwards; }
+
+.wisdom2 {
+  animation: opaictyView 0.5s ease 2s forwards; }
+
+.wisdom3 {
+  animation: opaictyView 0.5s ease 2.8s forwards; }
+
+@keyframes opaictyView {
+  100% {
+    opacity: 1; } }
+#scroll:hover {
+  transition: 0.25s ease;
+  letter-spacing: 0.2em; }
+
+/* ロゴを回転 */
+.rotate-logo {
+  animation: rotate 2s ease; }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0); }
+  10% {
+    transform: rotate(50deg); }
+  20% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } }
+/* scrollのアニメーション */
+#scroll {
+  animation: moveEndress 4s forwards infinite; }
+
+@keyframes moveEndress {
+  0% {
+    transform: translateY(0); }
+  50% {
+    transform: translateY(5px); }
+  100% {
+    transform: translate(0); } }
+#WhoIsOgura #oguraTtl, #WhoIsOgura #oguraTxt, #WhoIsOgura #profile {
+  opacity: 0; }
+
+#from #fromTtl, #from #mapText, #from #japan, #from #japanSp {
+  opacity: 0; }
+
+#policy #policyTtl, #policy #grow, #policy #both, #policy #cycle {
+  opacity: 0; }
+
+#skill #skillTtl, #skill #html, #skill #design, #skill #javascript {
+  opacity: 0; }
+
+#contact #contactTtl, #contact .love_me, #contact #send, #contact #arrow, #contact address, #contact #friend {
+  opacity: 0; }
+
+.fadeIn {
+  animation: fadeIn 4s ease 4s forwards; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+.slideL_0s {
+  animation: slideL 2.5s ease forwards; }
+
+.slideL_1s {
+  animation: slideL 2.5s ease 1s forwards; }
+
+.slideL_2s {
+  animation: slideL 2.5s ease 2s forwards; }
+
+.slideL_3s {
+  animation: slideL 2.5s ease 3s forwards; }
+
+@keyframes slideL {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+.slideR_0s {
+  animation: slideR 2.5s ease forwards; }
+
+.slideR_1s {
+  animation: slideR 2.5s ease 1s forwards; }
+
+.slideR_2s {
+  animation: slideR 2.5s ease 2s forwards; }
+
+.slideR_3s {
+  animation: slideR 2.5s ease 3s forwards; }
+
+@keyframes slideR {
+  0% {
+    opacity: 0;
+    transform: translateX(50px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+.diagonal_0s {
+  animation: diagonal 2.5s ease forwards; }
+
+.diagonal_1s {
+  animation: diagonal 2.5s ease 1s forwards; }
+
+.diagonal_2s {
+  animation: diagonal 2.5s ease 2s forwards; }
+
+.diagonal_3s {
+  animation: diagonal 2.5s ease 3s forwards; }
+
+.love_me {
+  display: inline-block; }
+
+@keyframes diagonal {
+  0% {
+    opacity: 0;
+    transform: translate(-50px, 50px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+.meter60 {
+  animation: meter60 2.5s ease 4.5s forwards; }
+
+@keyframes meter60 {
+  0% {
+    width: 0%; }
+  100% {
+    width: 60%; } }
+.meter45 {
+  animation: meter45 2.5s ease 5s forwards; }
+
+@keyframes meter45 {
+  0% {
+    width: 0%; }
+  100% {
+    width: 45%; } }
+.meter20 {
+  animation: meter20 2.5s ease 5.5s forwards; }
+
+@keyframes meter20 {
+  0% {
+    width: 0%; }
+  100% {
+    width: 20%; } }
+/* addressの枠アニメーション */
+.draw_anime {
+  box-shadow: inset 0 0 0 2px #333;
+  color: #333;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  position: relative;
+  font-weight: bold;
+  font-style: normal;
+  display: inline-block;
+  transition: color 0.25s; }
+  .draw_anime::before, .draw_anime::after {
+    box-sizing: inherit;
+    border: solid 2px transparent;
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute; }
+  .draw_anime::before {
+    top: 0;
+    left: 0;
+    animation: border 2s ease; }
+  .draw_anime::after {
+    top: 0;
+    left: 0; }
+  .draw_anime:hover {
+    color: #67b363; }
+  .draw_anime:hover::before, .draw_anime:hover::after {
+    width: 100%;
+    height: 100%; }
+  .draw_anime:hover::before {
+    border-top-color: #67b363;
+    border-right-color: #67b363;
+    transition: width 0.25s ease-out, height 0.25s ease-out 0.25s; }
+  .draw_anime:hover::after {
+    border-bottom-color: #67b363;
+    border-left-color: #67b363;
+    transition: width 0.25s ease-out 0.25s, height 0.25s ease-out; }
+
+@media screen and (min-width: 480px) {
+  .draw_anime {
+    padding: 13px 33px;
+    font-size: 1.4rem; } }
+
+/*# sourceMappingURL=animation.css.map */

@@ -1,0 +1,151 @@
+@media screen and (min-width: 480px) {
+  header {
+    font-size: 1.2rem;
+    width: 85%;
+    margin: 0 auto; }
+    header #pcMenu {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      top: 20px;
+      margin-left: 10px; }
+      header #pcMenu li a {
+        padding: 15px 10px; }
+      header #pcMenu li #profile_nav {
+        color: #d55167; }
+        header #pcMenu li #profile_nav::after, header #pcMenu li #profile_nav::before {
+          background: #d55167; }
+      header #pcMenu li #from_nav {
+        color: #e88e4f; }
+        header #pcMenu li #from_nav::after, header #pcMenu li #from_nav::before {
+          background: #e88e4f; }
+      header #pcMenu li #policy_nav {
+        color: #67b363; }
+        header #pcMenu li #policy_nav::after, header #pcMenu li #policy_nav::before {
+          background: #67b363; }
+      header #pcMenu li #skill_nav {
+        color: #3387c0; }
+        header #pcMenu li #skill_nav::after, header #pcMenu li #skill_nav::before {
+          background: #3387c0; }
+      header #pcMenu li #contact_nav {
+        color: #8fcce6; }
+        header #pcMenu li #contact_nav::after, header #pcMenu li #contact_nav::before {
+          background: #8fcce6; }
+
+  #top #teeth {
+    font-size: 2.2vw;
+    right: -3px; }
+  #top #logo {
+    left: 5px; }
+    #top #logo img {
+      width: 30%; }
+  #top #scroll {
+    right: 0; }
+
+  /* who is ogura */
+  #WhoIsOgura .text {
+    margin-top: 40px; }
+  #WhoIsOgura #profile #meProfile {
+    margin-left: auto;
+    width: 70%; }
+    #WhoIsOgura #profile #meProfile #time {
+      width: 40%; }
+      #WhoIsOgura #profile #meProfile #time #money {
+        letter-spacing: 0.5em;
+        top: 5px; }
+      #WhoIsOgura #profile #meProfile #time #always {
+        font-size: 1.4rem;
+        position: relative;
+        top: -2px; }
+      #WhoIsOgura #profile #meProfile #time #timeText {
+        font-size: 1.2rem;
+        margin-top: 5px; }
+    #WhoIsOgura #profile #meProfile #desk {
+      left: 0;
+      bottom: 0;
+      overflow: hidden;
+      width: 35%;
+      display: flex;
+      align-items: flex-end;
+      border-radius: 6px; }
+      #WhoIsOgura #profile #meProfile #desk img {
+        width: 100%;
+        transition: all 0.25s linear; }
+        #WhoIsOgura #profile #meProfile #desk img:hover {
+          transform: scale(1.1); }
+  #WhoIsOgura #profile #earth {
+    width: 25%;
+    right: 35%; }
+
+  /* from */
+  #from {
+    position: relative; }
+    #from #map {
+      margin-top: 180px; }
+      #from #map #mapText {
+        margin-left: auto;
+        position: absolute;
+        top: -90px;
+        right: 0;
+        width: 55%; }
+      #from #map #japan img {
+        width: 100%; }
+
+  /* policy */
+  #policy #policyContent #pen, #policy #policyContent #bread {
+    margin-right: 15px;
+    margin-left: auto;
+    width: 50%; }
+  #policy #cycle {
+    margin: 0 auto;
+    width: 70%; }
+
+  /* skill */
+  #skill #pc img, #skill #brush img, #skill #fx img {
+    width: 13%; }
+  #skill #htmlTtl, #skill #designTtl, #skill #javaTtl {
+    font-size: 1.4rem; }
+
+  #pcMenu {
+    display: block; }
+
+  #spMenu {
+    display: none; }
+
+  #desk {
+    display: block; }
+
+  #japan {
+    display: block; }
+
+  #japanSp {
+    display: none; } }
+/* groball */
+.underline {
+  display: inline-block;
+  padding-bottom: 4px;
+  position: relative; }
+  .underline::after {
+    background: #333;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 1px;
+    transition: all 0.5s;
+    width: 0; }
+  .underline::before {
+    background: #333;
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 1px;
+    transition: all 0.5s;
+    width: 0; }
+  .underline:hover::after, .underline:hover::before {
+    width: 50%; }
+
+/*# sourceMappingURL=index_tb.css.map */
