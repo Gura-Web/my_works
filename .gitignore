@@ -1,0 +1,6 @@
+images_dest/
+node_modules/
+package-lock.json
+package.json
+db_account.php
+sql/

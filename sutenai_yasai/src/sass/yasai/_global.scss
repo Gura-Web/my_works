@@ -1,0 +1,271 @@
+
+html * ,
+::before ,
+::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, YakuHanJP,"Helvetica Neue", "Segoe UI","Hiragino Kaku Gothic ProN","Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", Meiryo, sans-serif;
+    background: $bak_color;
+    font-weight: bold;
+    color: $font_color;
+}
+
+body,h1,h2,h3,h4,h5,h6,p {
+    font-size: 1.6rem;
+}
+h1,h2 {
+    font-family: "TBUD丸ゴシック B", "TBUDRGothic B",sans-serif;
+}
+
+
+::first-letter {
+    font-feature-settings : "palt" 1;
+}
+
+a {    
+    text-decoration: none;
+    font-weight: bold;
+    color: $font_color;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+ul,ol,li {
+    list-style: none;
+    margin:0;
+    padding: 0;
+}
+
+:focus {
+    outline: 0;
+    border: 0;
+}
+
+.accent_color {
+    color: $accent_color;
+}
+
+.none {
+    display: none;
+}
+
+
+/* ----------- item ----------- */
+.item {
+    max-width: 197px;
+    padding: 19px 19px 20px;
+    transition: 0.3s;
+    position: relative;
+    height: 46%;
+    @include sp {
+        width: 100%;
+        max-width: 100%;
+    }
+    &:hover {
+        box-shadow: 0 13px 17px rgba(0,0,0,0.08);
+        transform: translateY(-4px);
+        &::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 0;
+            border: solid 20px transparent;
+            border-bottom: solid 20px $accent_color;
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            transform: rotate(135deg);
+        }
+    }
+    
+    &__name {
+        padding: 9px 0 5px;
+        font-weight: normal;
+    }
+    &__weight {
+        font-size: 1.3rem;
+    }
+    &__link  {
+        display: block;
+        max-width: 160px;
+        margin: 0 auto;
+        @include sp {
+            margin: 0 auto;
+            max-width: 85%;
+        }
+    }
+    &__image {
+        flex: 0 0 125px;
+        @include sp {
+            margin: 15px 0 0 0;
+        }
+    }
+    &__farmer {
+        font-size: 1.2rem;
+        font-weight: normal;
+        vertical-align: middle;
+        color: $pale_text_color;
+        &::before {
+            content: "";
+            display: inline-block;
+            background: url($IMG_GLOBAL + "simple_house_i.svg") no-repeat;
+            width: 13px;
+            height: 13px;
+            margin: 0 5px 0 0;
+        }
+    }
+    &__pref {
+        color: $accent_color;
+        padding: 0 0 0 3px;
+    }
+    &__price {
+        font-size: 2.4rem;
+        text-align: right;
+        padding: 10px 0 9px;
+        border-bottom: solid 2px $border_line_color;
+        color: $pale_text_color;
+        
+    }
+    &__tax {
+        font-size: 1.2rem;
+        font-weight: normal;
+        vertical-align: middle;
+        padding: 0 0 0 3px;
+        
+    }
+    &__popular {
+        width: 120px;
+        height: 20px;
+        margin: 7px auto 0;
+        
+    }
+}
+
+/* btn */
+.check-btn {
+    .check-btn__link {
+        @include check_btn(33px);
+        position: relative;
+        overflow: hidden;
+        transition: 0.7s ease;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -80px;
+            right: -40px;
+            width: 10px;
+            height: 10px;
+            background: $accent_color;
+            border-radius: 50%;
+            transition: 0.7s ease;
+        }
+        span {
+            position: relative;
+        }
+        &:hover {
+            color: $none_color;
+            &::before {
+                width: 400px;
+                height: 400px;
+                opacity: 1;
+            }
+            &::after {
+                transform: translateX(7px);
+            }
+        }
+    }
+}
+@keyframes check-btn {
+    0% {
+        background: $none_color;
+        transform: scale(0);
+    }
+    100% {
+        background: $assort_color;
+        transform: scale(1);   
+    }
+}    
+
+/* ----------- breadcrumb ----------- */
+.breadcrumb {
+    display: flex;
+    margin: 63px auto 18px;
+    max-width: 980px;
+    @include sp {
+        margin: 93px 0 0 0;
+        padding: 0 10px;
+    }
+    a {
+        font-size: 1.4rem;
+    }
+    &__home {
+        a {
+            color: $assort_color;
+            
+        }
+        &::before {
+            content: "";
+            display: inline-block;
+            background: url($IMG_GLOBAL + "map_point_i.svg") no-repeat;
+            width: 15px;
+            height: 15px;
+            transform: translateY(2px);
+        }
+        @include arrowRight();
+    }
+    &__item {
+        @include arrowRight();
+        &:last-child {
+            &::after {
+                display: none;
+            }
+        }
+        a {
+            font-weight: normal;
+        }
+        
+    }
+}
+
+
+/* ----------- animaiton ----------- */
+.scroll_hide1 { opacity: 0; transform: translateY(90px); }
+.scroll_hide2 { opacity: 0; transform: translateX(-100px); }
+.scroll_hide3 { opacity: 0; transform: translateX(100px); }
+.scroll_hide4 { opacity: 0; transform: translateX(-100%); }
+
+// scroll_view
+.scroll_view1 { animation: scroll_view1 1s ease forwards; }
+.scroll_view1_slow { animation: scroll_view1 1s ease 0.7s forwards; }
+.scroll_view2 { animation: scroll_view2 1s ease forwards; }
+.scroll_view3 { animation: scroll_view3 1s ease forwards; }
+.scroll_view4 { animation: scroll_view4 1s ease forwards; }
+
+@keyframes scroll_view1{
+    0% { opacity: 0; transform: translateY(90px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes scroll_view2{
+    0% { opacity: 0; transform: translateX(-100px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scroll_view3{
+    0% { opacity: 0; transform: translateX(100px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+@keyframes scroll_view4{
+    0% { opacity: 0; transform: translateX(-100%); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+

@@ -1,0 +1,67 @@
+/* ----------- fes-footer ----------- */
+.footer {
+    &__container {
+        margin: 30px 0 0 0;
+    }
+    &__logo {
+        max-width: 152px;
+        margin: 0 auto;
+        transition: 0.7s ease;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+    &__copy {
+        font-size: 1.2rem;
+        font-weight: normal;
+        text-align: center;
+        padding: 10px 0 25px 0;
+        border-bottom: solid 11px $main_color_dark;
+    }
+}
+
+
+/* ----------- goTop ----------- */
+
+.goTop {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    background: $assort_color;
+    border-radius: 15px;
+    border: solid 5px $none_color;
+    width: 79px;
+    height: 79px;
+    z-index: 3;
+    transition: 0.7s ease;
+    box-shadow: 0 3px 5px rgba(202,139,78,0.3);
+    &:hover {
+        box-shadow: 0 8px 15px rgba(202,139,78,0.3);
+        transform: translateY(-10px);
+    }
+    .goTop__link {
+        display: block;
+        height: 100%;
+    }
+    &__wrapper {
+        display: block;
+        width: 0;
+        height: 0;
+        border: 25px solid transparent;
+        border-bottom: 30px solid $none_color;
+        border-radius: 5px;
+        position: relative;
+        bottom: 16px;
+        left: 9px;
+        &::after {
+            content: "";
+            display: block;
+            width: 19px;
+            height: 19px;       
+            background: #fff;
+            position: absolute;
+            bottom: -49px;
+            left: -9px;
+        }
+    }
+}

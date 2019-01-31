@@ -1,0 +1,308 @@
+@import "_variable.scss";
+@import "_mixin.scss";
+@import "_global.scss";
+@import "_yasai_header.scss";
+@import "_yasai_footer.scss";
+
+
+
+
+.main-container {
+    padding-top: 160px;
+    max-width: 100%;
+    margin: 0 auto;
+    @include sp {
+        padding: 0;
+    }
+}
+
+.breadcrumb {
+    max-width: 980px;
+    margin: 63px auto 10px; // overwrite
+    @include sp {
+        margin: 93px auto 10px;
+    }
+}
+
+
+/* ----------- symbol ----------- */
+.symbol {
+    background: $main_color_dark;
+    color: #fff;
+    &__container {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 152px 130px 158px;
+        @include sp {
+            padding: 60px 30px 50px;
+        }
+    }
+    @include symbol_page_ttl(#fff);
+}
+
+.about-symbol {
+    display: flex;
+    padding: 96px 0 0 0 ;
+    flex-wrap: wrap;
+    @include sp {
+        padding: 50px 0 0 0;
+    }
+    &__heading {
+        font-size: 2.6rem;
+        @include sp {
+            font-size: 2rem;
+        }
+        &__en {
+            font-size: 1.4rem;
+            font-weight: normal;
+            margin: 0 0 0 23px;
+            letter-spacing: 2px;
+            @include sp {
+                display: block;
+                font-size: 1.2rem;
+                margin: 0;
+            }
+        }
+    }
+    &__desc {
+        font-weight: normal;
+        max-width: 385px;
+        line-height: 1.8em;
+        margin: 42px 0 0 0;
+        @include sp {
+            margin: 10px 0 0 0;
+        }
+    }
+    
+    &__image {
+        flex: 0 1 212px;
+        margin: 0 0 0 auto;
+        transform: translateY(-15px);
+        filter: drop-shadow( 0 9px 10px rgba(0,0,0,0.21));
+        @include sp {
+            margin: 0 auto 20px;
+            order: -1;
+        }
+    }
+}
+
+.symbol__images {
+    display: flex;
+    justify-content: center;
+    margin: 95px 0 0 0;
+    @include sp {
+        display: none;
+    }
+    li:first-child {
+        transform: translateX(60px);
+    }
+    li:nth-child(2) {
+        transform: translate(27px, 64px);
+    }
+    li:nth-child(3) {
+        transform: translate(-17px, 0);       
+    }
+    li:last-child {
+        transform: translate(-37px, 64px);
+    }
+
+}
+
+
+
+
+
+/* ----------- symbol_merit ----------- */
+.symbol-merit {
+    background: $none_color;
+    padding: 170px 0 76px;
+    @include symbol_page_ttl($main_color);
+    &__container {
+        max-width: 980px;
+        margin: 0 auto;
+    }
+    &__wrapper {
+        margin: 88px 0 0 0;
+        padding: 0 30px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @include sp {
+
+        }
+    }
+    &__supplement {
+        max-width: 439px;
+        margin: 83px 0 0 6%;
+    }
+}
+.merit-item {
+    max-width: 250px;
+    @include sp {
+        margin: 40px auto;
+    }
+    &__ttl {
+        text-align: center;
+        font-size: 2rem;
+        line-height: 1.5em;
+        color: $main_color_dark;
+    }
+    &__number {
+        color: #a6a6a6;
+        font-size: 4.2rem;
+        display: block;
+        &::before {
+            content: "merit";
+            font-size: 1.2rem;
+            display: block;
+            color: $main_color;
+            transform: translateY(6px);
+            letter-spacing: 2px;
+        }
+        &::after {
+            content: "";
+            display: block;
+            max-width: 134px;
+            height: 134px;
+            background: url($IMG_GLOBAL + "sprout_i.svg") no-repeat center center/110px 69px;
+            margin: 40px auto 0;
+            @include sp {
+                margin: 15px auto 0;
+            }
+        }
+    }
+    &__text {
+        margin: 23px 0 0 0;
+        font-weight: normal;
+        line-height: 1.8em;
+        &::before {
+            content:"";
+            display: block;
+            background: url($IMG_GLOBAL + "dotted.svg") repeat-x;
+            background-size: 30px 30px;    
+            height: 20px;
+            margin: 0 0 25px 0;
+        }
+    }
+
+}
+// merit-item 2 3 style //
+.merit-item:nth-child(2) .merit-item__text,
+.merit-item:nth-child(3) .merit-item__text, {
+    margin: 53px 0 0 0;
+}
+.merit-item:nth-child(2) .merit-item__ttl-text,
+.merit-item:nth-child(3) .merit-item__ttl-text {
+    display: block;
+    transform: translateY(15px);
+}
+.merit-item:nth-child(2) .merit-item__number {
+    &::after {background: url($IMG_GLOBAL + "hokkaido_i.svg") no-repeat center center/120px 108px;}
+}
+.merit-item:nth-child(3) .merit-item__number {
+    &::after {background: url($IMG_GLOBAL + "area_i.svg") no-repeat center center/120px 129px;}
+}
+// merit-item 2 3 style //
+
+
+
+
+
+
+/* ----------- get_symbol ----------- */
+.get-symbol {
+    @include symbol_page_ttl($main_color);
+    &__container {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 152px 0 158px;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin: 65px 0 64px 0;
+        flex-wrap: wrap;
+        @include sp {
+            
+        }
+    }
+}
+
+.symbol-farmer,.symbol-restaurant {
+    @include sp {
+            margin: 80px auto 0;
+        }
+    &__ttl {
+        text-align: center;
+        font-size: 2rem;
+        margin: 0 0 60px 0;
+        
+        &::after {
+            content: "";
+            display: block;
+            max-width: 58px;
+            height: 4px;
+            background: $main_color_dark;
+            margin: 19px auto 0;
+            border-radius: 50px;
+        }
+    }
+}
+.symbol-restaurant {
+    flex: 0 1 314px;
+    &__ttl {
+        &::before {
+            content: "";
+            display: block;
+            background: url($IMG_GLOBAL + "cook_symbol_i.svg") no-repeat;
+            max-width: 61px;
+            height: 85px;
+            margin: 0 auto 20px;
+        }
+    }
+}
+.symbol-farmer {
+    flex: 0 1 314px;
+    &__ttl {
+        &::before {
+            content: "";
+            display: block;
+            background: url($IMG_GLOBAL + "farmer_symbol_i.svg") no-repeat;
+            max-width: 65px;
+            height: 81px;
+            margin: 0 auto 20px;
+        }
+    }
+}
+
+.get-person {
+    display: flex;
+    align-items: center;
+    margin: 38px 0 0;
+    padding: 0 0 0 4%;
+    &__image{
+        order: -1;
+        display: flex;
+        align-items: center;
+        &::after {
+            content: "";
+            display: inline-block;
+            width: 2px;
+            height: 67px;
+            margin: 0 0 0 21px;
+            background: $none_color;
+        }
+    }
+    &__wrap {
+        padding: 0 0 0 17px;
+    }
+    &__pref {
+        font-size: 1.4rem;
+        font-weight: normal;
+    }
+    &__manager {
+        font-size: 1.3rem;
+        font-weight: normal;
+        
+    }
+}

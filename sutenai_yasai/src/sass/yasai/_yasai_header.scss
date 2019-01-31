@@ -1,0 +1,403 @@
+
+/* ----------- header ----------- */
+.header {
+    width: 100%;
+    background: #fff;
+    transition: 0.9s ease;
+    box-shadow: 0 8px 22px rgba(202,139,78,0.19);
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    left: 0;
+    @include sp {
+        height: 60px;
+    }
+    &-container {
+        max-width: 1000px;
+        position: relative;
+        margin: 0 auto;
+    }
+    &-container {
+        @include tb {
+            display: flex;
+        }
+        @include sp {
+            height: 100%;
+        }
+    }
+    a {
+        display: block;
+    }
+    .header__logo {
+        max-width: 150px;
+        margin: 5px auto 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        @include tb {
+            margin: 20px 0 0;
+        }
+        @include sp {
+            margin: 0 auto;
+            max-width: 180px;
+            &__pc {
+                display: none;
+            }   
+            &__sp {
+                display: block;
+                
+            }
+        }
+        &__link {
+            transition: 0.7s ease;
+            &:hover {
+                opacity: 0.6;
+
+            }
+        }
+    }
+}
+
+/* ----------- header-toggle ----------- */
+.header_hide {
+    transform: translateY(-100%);
+    .header-menu,.header__logo,.account {
+        visibility: hidden;
+        opacity: 0;
+        z-index: 0;
+    }
+}
+.header_show {
+    .header-menu,.header__logo,.account {
+        visibility: hidden;
+        opacity: 0;
+        z-index: 0;
+        animation: show 1s ease 0.5s forwards;
+    }
+}
+@keyframes show {
+    0% {
+        visibility: hidden;
+        opacity: 0;
+        z-index: 0;
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+        z-index: 1;
+    }
+}
+
+.header-menu {
+        width: 100%;
+        @include sp {
+            display: none;
+        }
+    &__container {
+        display:flex;
+        justify-content: space-between;
+        padding-top: 25px;
+        
+    }
+    /* ----------- main-list ----------- */
+    &__main-list {
+        display: flex;
+        justify-content: space-between;
+        width: 33%;
+        @include tb {
+            
+            justify-content: space-around;
+        }
+        &__first {
+            @include tb {
+                    margin-left: auto;
+            }
+        }
+        /* main-icon*/
+        .header__about > a  {
+            color: $assort_color;
+            &::before {
+                @include menu_main_icon("carrot_menu_i.svg",55px,53px,0);
+            }
+        }
+        .header__new-farmer > a  {
+            color: $main_color_dark;
+            &::before {
+                @include menu_main_icon("farmer_i.svg",33px,46px, 10px);    
+            }
+        }
+        .header__event > a {
+            color: $separation_color;
+            &::before {
+                @include menu_main_icon("calendar_i.svg", 35px, 35px, 17px,5px);
+            }
+        }
+        .header__symbol > a {
+            color: $accent_color;
+            &::before {
+                @include menu_main_icon("award_i.svg", 35px, 35px, 16px,6px);
+            }
+        }
+    }
+    &__main-item {
+        margin: 0 10px;
+        @include tb {
+                max-width: 180px;
+            }
+        & a {
+            text-align: center;
+            transition: 0.4s ease;
+            &:hover {
+                transform: translateY(-3px);
+                opacity: 0.6;
+            }
+        }
+        .header__en {
+            display: block;
+            font-size: 1.2rem;
+        }
+    }
+ 
+
+
+    /* ----------- sub-list ----------- */
+    &__sub-list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        font-size: 1.4rem;
+        margin: 10px 0 0 6%;
+        max-width: 95%;
+
+        /* sub-icon */
+        .header__mypage a::before {
+            @include menu_sub_icon("me_i.svg", 21px, 21px);
+        }
+        .header__favorite a::before {
+            @include menu_sub_icon("star_blonde_i.svg", 21px, 21px);
+        }
+        .header__good-value {
+            transform: translateY(-8px);
+            vertical-align: -5px;
+            & a::before {
+                @include menu_sub_icon("megaphone_i.svg", 30px, 30px,10px,3px);
+            }
+        }
+        .header__history a::before {
+            @include menu_sub_icon("history_i.svg", 21px, 21px);
+            
+        }
+        .header__check a::before {
+            @include menu_sub_icon("graph_i.svg", 21px, 21px);
+        }
+    }
+    &__sub-item a {
+        vertical-align: -5px;
+        font-weight: normal;
+        color: $pale_text_color;
+        transition: 0.4s ease;
+        &:hover {
+            opacity: 0.4;
+        }
+    }
+}
+/* ----------- account ----------- */
+.account {
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+    &__list {
+        display: flex;
+        @include sp {
+           display: none;
+        }
+    }
+    &__register, &__login {
+        transition: 0.7s;
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+    &__login > &__link {
+        @include account_btn;
+        &::before {
+            @include menu_sub_icon("login_i.svg",14px,17px,6px,4px);
+        }
+    }
+    &__register > &__link {
+        @include account_btn($assort_color);
+        margin-left: 13px;
+        &::before {
+            @include menu_sub_icon("check_i.svg", 18px, 16px,3px,2px);
+        }
+    }
+}
+
+/* ----------- header-toggle ----------- */
+.header-toggle,.header-toggle span {
+    display: inline-block;
+    transition: 0.7s ease;
+}
+.header-toggle {
+    opacity: 0;
+    position: fixed;
+    right: -100%;
+    top: 5%;
+    width: 100px;
+    height: 100px;
+    background: $main_color_dark;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.14);
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 11;
+    @include sp {
+        top: 0;
+        border-radius: 0 0 0 6px;
+    }
+    &:hover {
+        opacity: 0.7;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 56px;
+        left: 57px;
+        transform: translate(-50%,-50%);
+        display: block;
+        width: 85px;
+        height: 85px;
+        margin: -50px 0 0 -50px;
+        border-radius: 50%;
+        border: solid 2px transparent;
+        transition: 0.9s ease;
+    }
+    &__wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        div {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 65px;
+            height: 8px;
+            background: $none_color;
+            border-radius: 4px;
+            transition: 0.9s ease;
+        }
+    }
+    &__one { top: 25%;  }
+    &__two { top: 46%; }
+    &__three { bottom: 25%;  }
+}
+.toggle_anime_show {
+    box-shadow: none;
+    .header-toggle__one { animation: toggle_anime1 1s ease forwards; }
+    .header-toggle__two { animation: toggle_anime2 1s ease forwards; }
+    .header-toggle__three { animation: toggle_anime3 1s ease forwards; }
+    &::after { animation: circle_anime 0.4s 0.3s forwards; }
+}
+.toggle_anime_scroll_show {
+    opacity: 1;
+    right: 5%;
+    @include sp {
+        right: 0;
+    }
+}
+
+/* toggleBtn animation */
+@keyframes toggle_anime1 { 100% { transform: translateY(20px) rotate(-45deg); } }
+@keyframes toggle_anime2 {
+    100% {
+        left: 60%;
+        opacity: 0;
+        animation: active_anime 0.8s forwards;
+    }
+}
+@keyframes toggle_anime3 { 100% { transform: translateY(-20px) rotate(45deg); } }
+@keyframes active_anime { 100% { height: 0; } }
+@keyframes circle_anime {
+    0% {border-color: transparent; transform: rotate(0);}
+    25% {border-color: transparent $none_color transparent $none_color;}
+    50% {border-color: transparent $none_color $none_color transparent;}
+    75% {border-color: transparent $none_color $none_color $none_color;}
+    100% {border-color: $none_color; transform: rotate(-680deg);}
+}
+
+
+@keyframes header-toggle_show {
+    0% {
+        right: -100%;
+    }
+    100% {
+        right: 30px;
+    }
+}
+
+/* ----------- toggle-nav(content) ----------- */
+.toggle-nav {
+    opacity: 0;
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: $main_color_dark;
+    transition: 1s ease;
+    width: 100vw;
+    height: 100vh;
+    a {
+        color: $none_color;
+        font-size: 2.6rem;
+    }
+    &__container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__list {
+        width: 900px;
+        margin: 0 auto;
+        padding: 40px;
+        
+    }
+    &__item {
+        padding: 15px 0;
+        transition: 0.4s ease;
+        &:hover {
+            transform: translateX(8px);
+            opacity: 0.6;
+        }
+    }
+    &__item__small {
+        padding: 5px 0 ;
+        transition: 0.4s ease;
+        &:hover {
+            transform: translateX(4px);
+            opacity: 0.6;
+        }
+        a {
+            font-weight: normal;
+            font-size: 1.6rem;
+        }
+    }
+}
+
+.toggle-nav_show {
+    opacity: 1;
+    z-index: 10;
+}
+
+// モーダルウィンドウ時の背景をスクロールさせなくする
+.overflowY {
+    overflow-y: hidden;
+}
+
