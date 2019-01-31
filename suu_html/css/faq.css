@@ -1,0 +1,61 @@
+@charset "UTF-8";
+#headerWrapper #gNavi #faqIcon {
+  /* 現在地がわかるようにメニューのアイコンを青色にする　base.cssより優先 */
+  background: url("../images/grobal/question_icon_blue.png") no-repeat top center; }
+  #headerWrapper #gNavi #faqIcon a {
+    display: block;
+    padding: 43px 0 0 5px;
+    line-height: 1.2em; }
+
+/* heading */
+#faqHead {
+  background: url("../images/faq_img/background_top.png") no-repeat center center;
+  width: 100%;
+  height: 625px;
+  text-align: center;
+  position: absolute;
+  top: 0; }
+  #faqHead h2 {
+    margin: 450px 0 10px; }
+  #faqHead p {
+    color: #73caff; }
+
+/* contents */
+#contentsBak {
+  background: url("../images/faq_img/background_middle.png") no-repeat center center;
+  height: 2007px;
+  margin-top: 428px; }
+  #contentsBak #contents {
+    background: url("../images/faq_img/faq_bak.png") no-repeat center center;
+    height: 1992px; }
+    #contentsBak #contents section {
+      width: 700px;
+      height: 480px;
+      margin: 60px auto 0;
+      position: relative;
+      top: 250px; }
+      #contentsBak #contents section h3 {
+        text-align: center;
+        margin-bottom: 50px; }
+
+.faq_box {
+  margin-bottom: 70px; }
+  .faq_box p:first-child {
+    border-bottom: solid 3px #ffffff;
+    padding-bottom: 5px;
+    margin-bottom: 15px; }
+  .faq_box .q_a {
+    padding-right: 15px; }
+  .faq_box #deodorant {
+    width: 705px; }
+
+/* buy */
+#online-shopWrapper {
+  background: url("../images/faq_img/background_bottom.png") no-repeat center center;
+  height: 1168px;
+  position: relative;
+  top: -11px; }
+  #online-shopWrapper #online-shop {
+    padding-top: 100px; }
+
+/*# sourceMappingURL=faq.css.map */

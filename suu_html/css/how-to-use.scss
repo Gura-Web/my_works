@@ -1,0 +1,169 @@
+
+#headerWrapper #gNavi #how-to-useIcon { /* 現在地がわかるようにメニューのアイコンを青色にする　base.cssより優先 */
+  background: url("../images/grobal/light_icon_blue.png") no-repeat top center;
+  a {
+    display: block;
+    padding: 40px 0 0 0;
+  }
+}
+
+#useHead {
+  background: url("../images/how-to-use_img/background_top.png") no-repeat center center;
+  height: 522px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  h2 {
+    margin: 450px 0 10px;
+  }
+  p {
+    color: #73caff;
+  }
+}
+
+#stepWrapper {
+  background: url("../images/how-to-use_img/background_middle.png") no-repeat center center;
+  height: 1561px;
+  margin-top: 349px;
+  #threeStep {
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    h3 {
+      position: relative;
+      top: 83px;
+    }
+  }
+}
+.step_box {
+  background: #007cc8;
+  display: inline-block;
+  width: 155px;
+  height: 40px;
+  font-size: 2.2rem;
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.9em;
+  margin: 0;
+}
+/* STEP 1 */
+#stepOne {
+  width: 980px;
+  margin: 100px auto 0;
+  height: 330px;
+  #stepOneLeft {
+    width: 440px;
+    float: left;
+  }
+  figure {
+    width: 448px;
+    float: right;
+    margin: 0;
+  }
+  h5 {
+    position: relative;
+    top: 3px;
+    left: 20px;
+    margin: 20px 0 35px;
+    &::before {
+      content: "";
+      background: #007cc8;
+      width: 10px;
+      height: 28px;
+      position: absolute;
+      top: 2px;
+      left: -20px;
+    }
+  }
+  p {
+    line-height: 2em;
+  }
+}
+
+/* STEP 2 */
+#stepTwo {
+  width: 980px;
+  margin: 125px auto 0;
+  height: 330px;
+  #stepTwoRight {
+    width: 440px;
+    float: right;
+  }
+  figure {
+    width: 448px;
+    float: left;
+    margin: 0;
+  }
+  h5 {
+    position: relative;
+    top: 3px;
+    left: 20px;
+    margin: 20px 0 35px;
+    &::before {
+      content: "";
+      background: #007cc8;
+      width: 10px;
+      height: 28px;
+      position: absolute;
+      top: 2px;
+      left: -20px;
+    }
+  }
+  p {
+    line-height: 2em;
+  }
+  #noteCotton {
+    position: relative;
+    top: -1px;
+  }
+}
+
+/* STEP 3 */
+#stepThree {
+  width: 980px;
+  margin: 125px auto 0;
+  height: 330px;
+  #threeThreeLeft {
+    width: 440px;
+    float: left;
+  }
+  h5 {
+    position: relative;
+    top: 3px;
+    left: 20px;
+    margin: 20px 0 35px;
+    &::before {
+      content: "";
+      background: #007cc8;
+      width: 10px;
+      height: 28px;
+      position: absolute;
+      top: 2px;
+      left: -20px;
+    }
+  }
+  p {
+    line-height: 2em;
+  }
+  figure {
+    width: 448px;
+    float: right;
+    margin: 0;
+  }
+}
+
+/* Online Shop */
+#online-shopWrapper {
+  background: url("../images/how-to-use_img/background_bottom.png") no-repeat center center;
+  height: 1204px;
+  #online-shop {
+    margin: 0 auto;
+    position: relative;
+    top: 150px;
+  }
+}
+
+body{
+  background: #FFF;
+}

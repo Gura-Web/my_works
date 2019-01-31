@@ -1,0 +1,399 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%;
+  /* 10px */
+  line-height: 1.9em;
+  font-family: "helvetica", "Helvetica Neue",  "Segoe UI", "Yu Gothic", "YuGothic", "Meiryo", "メイリオ", sans-serif;
+  font-weight: bold; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1.8rem;
+  line-height: 1.9em;
+  background: #ffffff;
+  color: #333333;
+  position: relative; }
+
+/*　grobal  */
+p {
+  margin: 0; }
+
+a {
+  text-decoration: none;
+  color: #333333; }
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+address {
+  font-style: normal; }
+
+.br::before {
+  content: "\A\A";
+  white-space: pre; }
+
+.clear {
+  clear: both; }
+
+.indent {
+  display: inline-block;
+  text-indent: 2.3em; }
+
+.normal {
+  font-style: normal;
+  font-weight: normal; }
+
+.bold {
+  font-weight: bold; }
+
+.thin {
+  font-family: "helvetica", "Yu Gothic", "YuGothic", sans-serif; }
+
+.spacing {
+  letter-spacing: 0.1em; }
+
+/* font */
+.font_14px {
+  font-size: 1.4rem; }
+
+.font_16px {
+  font-size: 1.6rem;
+  line-height: 1.9em; }
+
+.font_20px {
+  font-size: 2.0rem; }
+
+.font_22px {
+  font-size: 2.2rem; }
+
+.font_24px {
+  font-size: 2.4rem; }
+
+.font_28px {
+  font-size: 2.8rem; }
+
+.font_32px {
+  font-size: 3.2rem; }
+
+.font_34px {
+  font-size: 3.4rem; }
+
+.font_42px {
+  font-size: 4.2rem; }
+
+/* color */
+.blue {
+  color: #007cc8; }
+
+.light_blue {
+  color: #2eafec; }
+
+.skyblue {
+  color: #00a0e9; }
+
+.yellow {
+  color: #fff100; }
+
+.green {
+  color: #43b055; }
+
+.white {
+  color: #ffffff; }
+
+/* header */
+#headerWrapper {
+  background: url("../images/grobal/menu_bak.png") no-repeat center center;
+  width: 100%;
+  margin: 0 auto;
+  height: 169px;
+  position: relative;
+  z-index: 100000; }
+  #headerWrapper header {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex; }
+    #headerWrapper header #logo {
+      margin-top: 20px; }
+      #headerWrapper header #logo:hover {
+        opacity: 0.7; }
+
+#gNavi {
+  margin: 21px 0 0 auto;
+  text-align: center; }
+  #gNavi ul {
+    display: flex;
+    justify-content: flex-end; }
+    #gNavi ul li {
+      margin-right: 15px; }
+    #gNavi ul #homeIcon {
+      background: url("../images/grobal/house_icon.png") no-repeat top center; }
+      #gNavi ul #homeIcon a {
+        display: block;
+        padding: 40px 0 0 3px; }
+        #gNavi ul #homeIcon a:hover {
+          color: #2eafec;
+          background: url("../images/grobal/house_icon_blue.png") no-repeat top center; }
+    #gNavi ul #aboutIcon {
+      background: url("../images/grobal/bottle_icon.png") no-repeat top center; }
+      #gNavi ul #aboutIcon a {
+        display: block;
+        padding: 40px 0 0 15px; }
+        #gNavi ul #aboutIcon a:hover {
+          color: #2eafec;
+          background: url("../images/grobal/bottle_icon_blue.png") no-repeat top center; }
+    #gNavi ul #how-to-useIcon {
+      background: url("../images/grobal/light_icon.png") no-repeat top center;
+      margin: 0 3px; }
+      #gNavi ul #how-to-useIcon a {
+        display: block;
+        padding: 40px 0 0 0; }
+        #gNavi ul #how-to-useIcon a:hover {
+          color: #2eafec;
+          background: url("../images/grobal/light_icon_blue.png") no-repeat top center; }
+    #gNavi ul #online-shopIcon {
+      background: url("../images/grobal/cart_icon.png") no-repeat top center; }
+      #gNavi ul #online-shopIcon a {
+        display: block;
+        padding: 43px 0 0 15px;
+        line-height: 1.2em; }
+        #gNavi ul #online-shopIcon a:hover {
+          color: #2eafec;
+          background: url("../images/grobal/cart_icon_blue.png") no-repeat top center; }
+    #gNavi ul #storeIcon {
+      background: url("../images/grobal/store_icon.png") no-repeat top center; }
+      #gNavi ul #storeIcon a {
+        display: block;
+        padding: 43px 0 0 3px;
+        line-height: 1.2em; }
+        #gNavi ul #storeIcon a:hover {
+          color: #2eafec;
+          background: url("../images/grobal/store_icon_blue.png") no-repeat top center; }
+    #gNavi ul #faqIcon {
+      background: url("../images/grobal/question_icon.png") no-repeat top center; }
+      #gNavi ul #faqIcon a {
+        display: block;
+        padding: 43px 0 0 5px;
+        line-height: 1.2em; }
+        #gNavi ul #faqIcon a:hover {
+          color: #2eafec;
+          background: url("../images/grobal/question_icon_blue.png") no-repeat top center; }
+
+/* online-shop */
+#online-shop {
+  width: 1000px;
+  margin: 10px auto 0;
+  position: relative; }
+  #online-shop h2 {
+    text-align: center;
+    margin: 0; }
+
+#shopLeftBox {
+  width: 400px;
+  float: left;
+  margin: 15px 0 0 65px;
+  position: relative;
+  z-index: 10; }
+  #shopLeftBox #product {
+    width: 200px;
+    float: left;
+    text-align: center; }
+    #shopLeftBox #product #onlineBottle {
+      margin: 0; }
+      #shopLeftBox #product #onlineBottle:hover {
+        opacity: 0.7; }
+    #shopLeftBox #product #price {
+      margin-left: 20px; }
+      #shopLeftBox #product #price #five-yen {
+        position: relative;
+        top: 3px;
+        margin-right: 2px; }
+    #shopLeftBox #product #capacity {
+      display: inline;
+      position: relative;
+      top: -6px;
+      left: 6px; }
+  #shopLeftBox .cross {
+    display: block;
+    width: 20px;
+    height: 4px;
+    background: #a3daff;
+    position: relative;
+    top: 14px;
+    left: 33px;
+    transform: rotate(45deg); }
+    #shopLeftBox .cross::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: #a3daff;
+      transform: rotate(90deg); }
+  #shopLeftBox #threeBox {
+    width: 100px;
+    float: right;
+    margin: 60px  80px 0 0; }
+    #shopLeftBox #threeBox li {
+      border: solid 3px #a3daff;
+      text-align: center;
+      line-height: 90px;
+      width: 87px;
+      height: 87px;
+      margin-bottom: 30px; }
+
+#shopRightBox {
+  width: 500px;
+  float: right;
+  padding-top: 65px;
+  position: relative;
+  z-index: 10; }
+  #shopRightBox #caption {
+    line-height: 2em;
+    /* 48px */ }
+    #shopRightBox #caption .exclamation {
+      padding-left: 6px;
+      position: relative;
+      top: 2px; }
+  #shopRightBox #component {
+    border: solid 2px #2eafec;
+    width: 100px;
+    height: 29px;
+    margin: 20px 0 10px;
+    padding: 1px 0 0 17px;
+    text-align: center;
+    line-height: 33px;
+    letter-spacing: 1em; }
+  #shopRightBox #buyLink {
+    width: 291px;
+    margin-top: 30px;
+    padding-top: 12px;
+    background: url("../images/grobal/buy_link_mini_hover.png") no-repeat center center; }
+    #shopRightBox #buyLink a {
+      display: block; }
+    #shopRightBox #buyLink a:hover img {
+      visibility: hidden; }
+
+/* go Top */
+#go {
+  width: 1000px;
+  margin: 0 auto; }
+
+#goTop {
+  position: fixed;
+  bottom: 50px;
+  margin-left: 1080px;
+  background: url("../images/grobal/go_top_hover.png") no-repeat top center;
+  z-index: 1000; }
+  #goTop a {
+    display: block; }
+  #goTop a:hover img {
+    visibility: hidden; }
+
+/* footer */
+#footerWrapper {
+  background: url("../images/grobal/footer_bak.png") no-repeat center center;
+  height: 369px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 100; }
+  #footerWrapper footer {
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 150px; }
+
+#footerLeft {
+  width: 360px;
+  float: left;
+  margin-left: 40px;
+  position: relative;
+  top: 10px; }
+  #footerLeft #momoi {
+    padding-bottom: 15px; }
+    #footerLeft #momoi:hover {
+      opacity: 0.8; }
+
+#footerRight {
+  width: 570px;
+  float: right;
+  padding-top: 15px;
+  position: relative;
+  top: 8px; }
+  #footerRight #siteLinks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+    #footerRight #siteLinks li {
+      text-align: center;
+      width: 120px; }
+      #footerRight #siteLinks li:nth-child(4), #footerRight #siteLinks li:nth-child(5), #footerRight #siteLinks li:nth-child(6) {
+        width: 200px; }
+      #footerRight #siteLinks li:nth-child(5), #footerRight #siteLinks li:nth-child(6) {
+        width: 120px;
+        margin-top: 15px; }
+      #footerRight #siteLinks li:last-child {
+        width: 200px;
+        margin: 15px 0 0 13px; }
+      #footerRight #siteLinks li a {
+        color: #ffffff;
+        position: relative; }
+        #footerRight #siteLinks li a::before {
+          content: "";
+          position: absolute;
+          top: 7px;
+          left: -12px;
+          width: 5px;
+          height: 5px;
+          background: #ffffff; }
+        #footerRight #siteLinks li a:hover {
+          opacity: 0.7; }
+
+#contact {
+  text-align: center; }
+  #contact > p {
+    margin: 23px 6px 0 6px;
+    margin-right: 6px;
+    margin-left: 6px; }
+  #contact p {
+    display: inline-block;
+    background: #ffffff;
+    width: 170px;
+    height: 45px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 48px; }
+    #contact p #tel {
+      display: block;
+      padding-left: 20px;
+      position: relative; }
+      #contact p #tel::before {
+        content: "";
+        background: url("../images/grobal/telephone_icon.png") no-repeat center center;
+        width: 20px;
+        height: 17px;
+        position: absolute;
+        top: 13.5px;
+        left: 18px; }
+      #contact p #tel:hover {
+        opacity: 0.7; }
+    #contact p #company {
+      display: block;
+      padding-left: 10px;
+      position: relative; }
+      #contact p #company::before {
+        content: "";
+        background: url("../images/grobal/company_icon.png") no-repeat center center;
+        width: 20px;
+        height: 23px;
+        position: absolute;
+        top: 10.5px;
+        left: 25px; }
+      #contact p #company:hover {
+        opacity: 0.7; }
+
+#copyright {
+  text-align: center; }
+
+/*# sourceMappingURL=base.css.map */
