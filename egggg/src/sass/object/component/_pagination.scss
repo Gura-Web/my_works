@@ -1,0 +1,40 @@
+.wp-pagenavi {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+  a {
+    transition: 0.3s ease;
+    color: $gray1;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+  .nextpostslink,
+  .previouspostslink {
+    img {
+      transition: 0.3s ease;
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+  .nextpostslink {
+    transform: rotate(180deg);
+  }
+  .previouspostslink {
+    // margin-right: 33px;
+  }
+}
+
+// ページネーション共通スタイル
+.wp-pagenavi a,.wp-pagenavi span {
+  display: inline-block;
+  margin: 0 13px;
+}
+.pagenation__lists {
+  display: flex;
+}
+

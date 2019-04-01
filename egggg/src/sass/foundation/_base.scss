@@ -1,0 +1,85 @@
+// color
+$mainColor: #fbd469;
+$accentColor1: #e27371;
+$accentColor2: #895fa4;
+$accentColor3: #5a71c6;
+$black: #1D1D1D;
+$black_pale: #686868;
+$gray1:#A2A2A2;
+$gray2: #919191;
+$white: #fff;
+$bak: #FFF9E2;
+
+// PATH
+$img: "../img/";
+$font1: 'M PLUS Rounded 1c',"Helvetica Neue", "Segoe UI","Hiragino Kaku Gothic ProN","游ゴシック Medium", "Yu Gothic Medium",  Meiryo, sans-serif;
+
+// global
+html *,
+::before,
+::after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: $font1;
+  font-weight: bold;
+  font-size: 1.4rem;
+  background: $bak;
+  line-height: 1.9;
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+  color: $black;
+}
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+ul,
+ol,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+:focus {
+  outline: 0;
+  border: 0;
+}
+
+// media
+$pc: 1100px; // パソコン
+$tb: 769px; // タブレット
+$sp: 481px; // スマートフォン
+
+@mixin pc {
+  @media screen and (min-width: ($pc)) {
+    @content;
+  }
+}
+
+@mixin tb {
+  @media screen and (min-width: ($tb)) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media screen and (min-width: ($sp)) {
+    @content;
+  }
+}
+
+// useful
+.italic {
+  font-style: italic;
+}
+.bold {
+  font-weight: bold;
+}

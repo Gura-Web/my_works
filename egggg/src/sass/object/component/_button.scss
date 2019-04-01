@@ -1,0 +1,159 @@
+//=============================
+// 通常ボタン
+//=============================
+[class^="btn--"],
+[class*=" btn--"] {
+  a {
+    @include btn();
+  }
+}
+
+.btn--white {
+  @include tb {
+    @include btn();
+    border: 2px solid $white;
+    color: $white;
+    &::after {
+      width: 15px;
+      height: 6px;
+      background: url($img+"arrow_white.svg") no-repeat;
+    }
+  }
+}
+.btn--normal {
+  a {
+    color: $accentColor1;
+    border: 2px solid $accentColor1;
+    transition: 0.3s ease;
+    &::after {
+      width: 15px;
+      height: 6px;
+      background: url($img+"arrow_red.svg") no-repeat;
+    }
+    &:hover {
+      color: $white;      
+      background: $accentColor1;
+      &::after {
+        background: url($img+"arrow_white.svg") no-repeat;
+      }
+    }
+  }
+}
+//=============================
+// 送信ボタン
+//=============================
+.btn--submit {
+  @include btn();
+  color: $accentColor1;
+  border: 2px solid $accentColor1;
+  transition: 0.3s ease;
+  &::after {
+    width: 15px;
+    height: 6px;
+    background: url($img+"arrow_red.svg") no-repeat;
+  }
+  &:hover {
+    color: $white;      
+    background: $accentColor1;
+    &::after {
+      background: url($img+"arrow_white.svg") no-repeat;
+    }
+  } 
+}
+//=============================
+// ツイッターボタン(横長)
+//=============================
+.twitter-btn > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  margin: 0 auto;
+  background: #1da1f2;
+  width: 114px;
+  height: 22px;
+  transition: 0.3s ease;
+  @include tb {
+    margin: 0 auto 0 0;
+}
+  &:hover {
+    opacity: 0.8;
+  }
+  img {
+    width: 16px;
+    height: 13px;
+  }
+}
+
+//=============================
+// ツイッターボタン(四角)
+//=============================
+.twitter-btn--square {
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    background: $white;
+    transition: 0.3s ease;
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 3px 9px rgba(0,0,0,.13);
+    }
+  }
+  img {
+    width: 25px;
+  }
+}
+
+//=============================
+// 検索ボタン
+//=============================
+.search-btn {
+  background: url($img+"search_white.svg") no-repeat center 21px $accentColor1;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 17px;
+  right: 15px;
+  z-index: 10;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  opacity: 0.85;
+  transition: 0.3s ease;
+  cursor: pointer;
+  &:hover {
+    transform: translateY(-3px);
+    background-color: #FF9595;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  }
+}
+
+//=============================
+// シェアボタン
+//=============================
+.share-btn {
+  a {
+    display: inline-block;
+    padding: 6px 19px 4px;
+    border-radius: 5px;
+    box-shadow: 0 6px 15px rgba(0,0,0,.13);
+    background: $white;
+    color: $accentColor1;
+    @include tb {
+      padding: 4px 19px 3px;
+    }
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 13px;
+      height: 13px;
+      margin-left: 10px;
+      transform: translateY(1px);
+      background: url($img + "share.svg") no-repeat center center /contain;
+    }
+  }
+  
+}

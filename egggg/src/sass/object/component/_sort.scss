@@ -1,0 +1,39 @@
+.sort {
+    text-align: center;
+    margin-top: 23px;
+    @include tb {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    @include tb {
+        margin: 0;
+        text-align: left;
+    }
+    form {
+        position: relative;
+        @include tb {
+            display: flex;
+            @include before() {
+                border-top: 6px solid $black_pale;
+                border-left: 6px solid transparent;
+                border-right: 6px solid transparent;
+                position: absolute;
+                top: 11px;
+                right:5px;
+            }
+        }
+    }
+    &-lists {
+        padding: 5px 35px;
+        border: 1px solid $black_pale;
+        border-radius: 0;
+        font-weight: normal;
+        
+        @include tb {
+            padding: 0 23px;
+            margin-left: 5px;
+        }
+
+    }
+}

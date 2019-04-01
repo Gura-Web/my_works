@@ -1,0 +1,76 @@
+
+.red {
+    color: $accentColor1;
+}
+//=============================
+// アーカイプページ カテゴリー
+//=============================
+.result-categories {
+    .cat-item {
+        &:nth-child(1) a {
+            color:$mainColor;
+        }
+        &:nth-child(2) a {
+             color:$accentColor1;
+        }
+        &:nth-child(3) a {
+             color:$accentColor2;
+        }
+        &:nth-child(4) a {
+             color:$accentColor3;
+        }
+        @include tb {
+            &:nth-child(1) a,&:nth-child(2) a,&:nth-child(3) a,&:nth-child(4) a {
+                color: $black;
+            }
+            &:nth-child(1) a:hover {
+                color:$mainColor;
+            }
+            &:nth-child(2) a:hover {
+                 color:$accentColor1;
+            }
+            &:nth-child(3) a:hover {
+                 color:$accentColor2;
+            }
+            &:nth-child(4) a:hover {
+                 color:$accentColor3;
+            }
+        }
+    }
+
+}
+//=============================
+//メニュー
+//=============================
+.menu-content {
+    .ttl-arrow--bottom {
+        color: $white;
+        &::after {
+            border-top: 5px solid $white;
+        }
+    }
+    .categories {
+        &__list {
+            &::after {
+                background: $white;
+            }
+
+        }
+    }
+
+}
+//=============================
+// フッターのカテゴリー一覧
+//=============================
+footer {
+    .categories {
+        a {
+            color: $gray2;
+        }
+        .cat-item {
+            &::after {
+                background: #4E4E4E;
+            }
+        }
+    }
+}

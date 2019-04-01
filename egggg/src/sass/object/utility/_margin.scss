@@ -1,0 +1,153 @@
+
+//=============================
+// aboutページ
+//=============================
+.about-ttl {
+    text-align: center;
+    margin: 56px auto 93px;
+    @include tb {
+        margin: 66px auto 123px;
+    }
+}
+.about-me {
+    .twitter-me {
+        margin: 16px 0 0 8px;
+        @include tb {
+            margin-left: 0;
+        }
+    }
+}
+//=============================
+// コンタクトページ
+//=============================
+.contact-form {
+    .input-name,.input-mail,.input-txtarea {
+        margin-top: 33px;
+        @include tb {
+            margin-top: 16px;
+        }
+    }
+    .btn--submit {
+        margin-top: 47px;
+    }
+}
+.contact-main {
+    .contents-header__ttl {
+        padding: 0 0 5px 0;
+        margin: 43px 0 0 0;
+        text-align: left;
+        width: 100%;
+        max-width: 100%;
+        border-bottom: solid 1px #C9C9C9;
+        @include tb {
+            margin-top: 65px;
+            font-size: 2.4rem;
+        }
+    }
+}
+
+.ajax-loader {
+    position: absolute;
+    top: -9999px;
+}
+//=============================
+// 記事詳細ページ
+//=============================
+.article-main {
+    .heading-background {
+        padding: 117px 0px 113px;
+    }
+}
+.contents {
+    &__container > .share-btn {
+        margin: 50px 0 148px;
+    }
+    .breadcrumb-list {
+        margin: 0;
+    }
+}
+.single .contents__main {
+    p {
+        margin-top: 39px;
+    }
+    h3 {
+        margin: 130px 0 0;
+    }
+    figure {
+        margin: 44px 0 0 0;
+    }
+    .table-contents__lists {
+        margin-top: 14px;
+    }
+    .table-contents__ttl {
+        margin-top: 7px;
+    }
+}
+//=============================
+// アーカイブページの記事
+//=============================
+.archive-article {
+    padding-top: 46px;
+}
+//=============================
+// 背景タイトル
+//=============================
+.heading-background {
+    .heading {
+        margin-bottom: 0;
+    }
+}
+//=============================
+// カテゴリー見出しを中央に戻す
+//=============================
+.main-category,.menu-content {
+    .ttl-arrow--bottom {
+        @include tb {
+            text-align: center;
+            &::after {
+                display: block;
+                margin: 0 auto;
+                transform: none;
+            }
+        }
+    }
+}
+//=============================
+// メニューコンテンツ
+//=============================
+.menu-content {
+    // ツイッターボタン(四角)
+    .twitter-btn--square {
+        position: fixed;
+        bottom: 14px;
+        right: 20px;
+    }
+    // カテゴリー
+    .categories {
+        justify-content: center;
+        margin-top: 10px;
+    }
+}
+
+//=============================
+// フッター
+//=============================
+.footer {
+    // カテゴリー一覧
+    .categories {
+        justify-content: center;
+        margin: 7px 0 0 0;
+        @include tb {
+            justify-content: flex-start;
+            padding-left: 23px;
+        }
+    }
+    // タグ一覧
+    .tags {
+        margin: 9px auto -10px;
+        @include tb {
+            margin: 9px auto 0 10px;
+        }
+    }
+}
+

@@ -1,0 +1,13 @@
+.recommend-tag {
+  @include tb {
+    @include after() {
+      position: absolute;
+      top: -40px;
+      left: -50px;
+      z-index: 1;
+      width: 147px;
+      height: 140px;
+      background: url(../img/recommend.svg) no-repeat center center/contain;
+    }
+  }
+}

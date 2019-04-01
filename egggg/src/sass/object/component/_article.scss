@@ -1,0 +1,103 @@
+.article-item {
+  width: 100%;
+  background: $white;
+  margin: 0 0 50px;
+  border-radius: 0 0 3px 3px;
+  box-shadow: 0 6px 16px rgba(218, 189, 74, 0.14);
+  @include sp {
+    flex: 0 0 47%;
+  }
+  @include tb {
+    max-width: 360px;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    width: 87%;
+    margin: 0 auto;
+    padding: 18px 0;
+    @include sp {
+      width: 82%;
+    }
+  }
+  &__ttl {
+    font-size: 1.6rem;
+    margin: -1px 0 20px 0;
+    line-height: 1.5;
+    &:hover {
+      transition: 0.3s ease;
+      opacity: 0.8;
+    }
+  }
+  &__txt {
+    color: $black_pale;
+    font-weight: normal;
+    margin: 8px 0 12px 0;
+    letter-spacing: 0.02em;
+  }
+  &__wrap {
+    // カテゴリーと日付
+    order: -1;
+    display: flex;
+    align-items: flex-end;
+  }
+  &__date {
+    font-size: 1.1rem;
+    padding: 0 0 3px 8px;
+  }
+
+  &__img {
+    order: -2;
+    overflow: hidden;
+    border-radius: 3px 3px 0 0;
+    max-height: 233px;
+    img {
+      height: 228px;
+      object-fit: cover;
+    }
+    &:hover img {
+      transform: scale(1.05);
+      filter: blur(2px);
+      transition: 0.3s;
+    }
+  }
+}
+
+// カテゴリー共通スタイル
+[class^="article-item__category--"],
+[class*=" article-item__category--"] {
+  a {
+    font-size: 1.4rem;
+    transition: 0.3s ease;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.article-item__category {
+  &--design {
+    a {
+      color: $mainColor;
+    }
+  }
+  &--code {
+    a {
+      color: $accentColor1;
+    }
+  }
+  &--school {
+    a {
+      color: $accentColor2;
+    }
+  }
+  &--private {
+    a {
+      color: $accentColor3;
+    }
+  }
+}
