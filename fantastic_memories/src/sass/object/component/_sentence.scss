@@ -1,0 +1,131 @@
+// ====================
+// 大見出し
+// ====================
+[class^="heading--"],
+[class*=" heading--"] {
+  font-size: 2rem;
+  font-family: $font1;
+  font-weight: bold;
+  letter-spacing: 0.06em;
+  text-align: center;
+  line-height: 1.8;
+  color: $font_color;
+  position: relative;
+  max-width: 203px;
+  margin: 0 auto;
+  @include before() {
+    width: 206px;
+    height: 94px;
+    top: -60px;
+    left: -80px;
+    transform: rotate(-7deg);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: contain;
+    @include tb {
+      width: 304px;
+      height: 124px;
+      transform: rotate(0);
+      left: -50px;
+    }
+  }
+  @include tb {
+    max-width: 450px;
+    font-size: 3.5rem;
+  }
+  @include pc {
+    font-size: 3.5rem;
+    line-height: 1.5;
+  }
+}
+.heading {
+  &--consept {
+    @include before() {
+      background-image: url($img+"consept.svg");
+      @include tb {
+        top: -80px;
+      }
+    }
+  }
+  &--place {
+    @include before() {
+      background-image: url($img+"place.svg");
+    }
+  }
+  &--dress {
+    @include before() {
+      background-image: url($img+"dress.svg");
+    }
+  }
+  &--food {
+    @include before() {
+      background-image: url($img+"food.svg");
+    }
+  }
+  &--plan {
+    @include before() {
+      background-image: url($img+"plan.svg");
+    }
+  }
+  &--news {
+    @include before() {
+      background-image: url($img+"news.svg");
+      @include tb {
+        left: -10px;
+      }
+    }
+  }
+  &--access {
+    order: -1;
+    @include tb {
+      display: flex;
+      margin: 0;
+      align-items: center;
+      padding-left: 25px;
+    }
+
+    @include before() {
+      background-image: url($img+"access.svg");
+      @include tb {
+        left: -80px;
+        top: -40px;
+      }
+    }
+  }
+  &--contact {
+    @include before() {
+      background-image: url($img+"contact.svg");
+      left: -50px;
+      @include tb {
+        left: 10px;
+      }
+    }
+  }
+}
+.heading__small {
+  font-size: 1.5rem;
+  @include tb {
+    font-size: 2.4rem;
+  }
+  @include pc {
+    font-size: 3.4rem;
+  }
+}
+
+// ====================
+// テキスト
+// ====================
+.text {
+  margin: 41px auto 0;
+  font-size: 1.2rem;
+  letter-spacing: 0.1em;
+  line-height: 2;
+  text-align: center;
+  width: 80%;
+  @include tb {
+    font-size: 1.5rem;
+  }
+  @include pc {
+    font-size: 1.5rem;
+  }
+}

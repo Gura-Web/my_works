@@ -1,0 +1,138 @@
+// ====================
+// 通常ボタン
+// ====================
+[class^="btn--"],
+[class*=" btn--"] {
+  a {
+    color: $white;
+    display: inline-block;
+  }
+}
+.btn--normal {
+  text-align: center;
+  margin: 75px 0 0 0;
+  a {
+    background: $main_color;
+    padding: 0.7em 2.8em 0.7em 4em;
+    position: relative;
+    transition: 0.3s ease;
+    @include arrowRight(18px, 27px, 21px, 20px, $white);
+    
+    @include tb {
+      padding: 1em 3.4em 1em 5.2em;
+      @include arrowRight(23px,33px,26px,24px,$white);
+    }
+    &:hover {
+      background: #FFA8DE;
+    }
+  }
+}
+
+// ====================
+// 重要ボタン
+// ====================
+[class^="btn--important"],
+[class*=" btn--important"] {
+  a {
+    display: block;
+    margin: 0 auto;
+    max-width: 200px;
+    height: 43px;
+    text-align: center;
+    line-height: 43px;
+    background: $accent_color1;
+    font-size: 1.6rem;
+    transition: 0.3s ease;
+    @include tb {
+      max-width: 218px;
+      font-size: 1.6rem;
+      line-height: 46px;
+    }
+    &:hover {
+      background: #A0DAFF;
+    }
+  }
+  span {
+    position: relative;
+    padding-left: 15px;
+    @include before() {
+      top: -3px;
+      left: -14px;
+    }
+  }
+}
+.btn--important1 {
+  span {
+    @include before() {
+      background: url($img+"calendar.svg") no-repeat center center / cover;
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
+.btn--important2 {
+  span {
+    @include before() {
+      background: url($img+"paper.svg") no-repeat center center / contain;
+      width: 21px;
+      height: 21px;
+    }
+  }
+}
+
+// ====================
+// ヘッダーボタン
+// ====================
+.btn--header1,
+.btn--header2 {
+  display: inline-block;
+  background: $accent_color1;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  padding: 0 1em;
+  transition: 0.3s ease;
+  cursor: pointer;
+  @include tb {
+    height: 42px;
+  }
+  @include pc {
+    flex: 0 0 146px;
+    justify-content: center;
+  }
+  &:hover {
+    background: #A0DAFF;
+  }
+}
+.btn--header1,
+.btn--header2 {
+  @include tb {
+    &::before {
+      content: "";
+      display: block;
+      width: 15px;
+      height: 15px;
+      margin: -2px 5px 0 0;
+    }
+  }
+}
+.btn--header1 {
+  margin-right: 2px;
+  @include tb {
+    &::before {
+      background: url($img+"calendar.svg") no-repeat center center / contain;
+    }
+  }
+}
+.btn--header2 {
+  @include tb {
+    &::before {
+      background: url($img+"paper.svg") no-repeat center center / contain;
+    }
+  }
+  @include pc {
+    span {
+      transform: translateX(-5px);
+    }
+  }
+}

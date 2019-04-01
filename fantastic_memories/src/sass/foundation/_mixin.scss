@@ -1,0 +1,61 @@
+
+// ====================
+// before & after
+// ====================
+@mixin before() {
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        @content;
+    }
+}
+@mixin after() {
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        @content;
+    }
+}
+
+// ====================
+// 矢印
+// ====================
+@mixin arrowDown($top1,$left1,$top2,$left2,$color) {
+    @include before() {
+        width: 10px;
+        height: 10px;
+        border: 2px solid;
+        border-color: transparent transparent $color $color;
+        transform: rotate(-45deg);
+        top: $top1;
+        left: $left1;
+    }
+    @include after() {
+        width: 2px;
+        height: 20px;
+        background: $color;
+        top: $top2;
+        left: $left2;
+    }
+}
+
+@mixin arrowRight($top1,$left1,$top2,$left2,$color) {
+    @include before() {
+        width: 7px;
+        height: 7px;
+        border: 1px solid;
+        border-color: transparent transparent $color $color;
+        transform: rotate(-135deg);
+        top: $top1;
+        left: $left1;
+    }
+    @include after() {
+        width: 15px;
+        height: 1px;
+        background: $color;
+        top: $top2;
+        left: $left2;
+    }
+}
