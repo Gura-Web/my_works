@@ -3,146 +3,103 @@
     require_once "include_php/define.php";
 ?>
 <!DOCTYPE html>
-<html lang="ja" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
-<head>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
 	<!-- meta属性のデータを挿入 -->
 	<?php require_once PHP_PATH."meta.php"; ?> 
 	<title><?= SITE_NAME ?> | HOME</title>
 	<link href="<?= CSS_PATH ?>ress.css" rel="stylesheet"> 
-	<link href="<?= CSS_PATH ?>index_style.css" rel="stylesheet">
+	<link href="<?= CSS_PATH ?>about_style.css" rel="stylesheet">
 </head>
-<?php require_once "include_php/header.php"; ?>
+
 
 <body>
-    <header class="header">
-        <div class="header-container">
-        <h1 class="header__logo"><a href="index.php"><img src="<?= IMG ?>logo_main.png" alt="CORGI"></a></h1>
-            <nav class="g-nav">
-                <ul class="g-nav__wrapper">
-                    <li class="g-nav__list g-nav__feature"><a href="feature.php"><span class="g-nav__en">Feature</span>特徴</a></li>
-                    <li class="g-nav__list"><a href="feature.php"><span class="g-nav__en">Born</span>生い立ち</a></li>
-                </ul>
-            </nav>
-            <nav class="g-nav">
-                <ul class="g-nav__wrapper">
-                    <li class="g-nav__list"><a href="feature.php"><span class="g-nav__en">Keep</span>飼い方</a></li>
-                    <li class="g-nav__list"><a href="feature.php"><span class="g-nav__en">Question</span>コーギーの疑問</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<?php require_once "include_php/header.php"; ?>
     <main class="main">
-        <div class="main-container">
-            <div class="index-mainvisual">
-                <h2 class="index-mainvisual__logo"><img src="<?= IMG ?>logo_main.png" alt="CORGI"></h2>
-                <p class="index-mainvisual__text">いつもかわいい素敵なペット</p>
-                <div class="scroll"><a href="#about"><img src="<?= IMG ?>hand_down.png" alt=""></a></div>
+        <div class="top-visual">
+            <div class="top-visual__wrapper">
+                <div class="top-visual__wrap">
+                    <h2 class="top-visual__ttl">コーギーってどんな犬?</h2>
+                    <p class="top-visual__desc">このページではコーギーってどんな犬なのかをご紹介します</p>
+                </div>
             </div>
-        
-
-            <section id="about" class="about">
-                
-                    <h2 class="about__ttl"><img src="<?= IMG ?>corgi_ttl.png" alt="CORGIってなに？"></h2>
-                    <p class="about__text">コーギーを飼いたいって思う方に向けたコーギー紹介サイトです。<br>
-                        「コーギーって実際飼って見たらどうなの？」とか<br>
-                        「飼いたいけど飼えるか不安・・・」など<br>
-                        コーギーの特徴や知っておくべき知識、飼い方などを全般的にご紹介しています。
-                    </p>
-                
-            </section>
-            <div class="photos"></div>
-            <section class="what-corgi">
-                <div class="what-corgi__wrapper">
-                    <h2 class="what-corgi__ttl">コーギーって？</h2>
-                    <p class="what-corgi__text">胴長で短足が特徴のコーギー。<br>
-                        とても活発な犬で運動するのが大好きな犬です。<br>
-                        ふさふさな毛質と社交的な性格で飼う人みんな癒されています。
-                        賢くて物覚えが良く、好奇心旺盛な性格が多い犬種です。
-                    </p>
-                    <p class="index-btn"><a href="feature.php">さらに特徴を知る<span class="index-btn__en">STEP1</span></a></p>
-                    <div class="note-wrap"><p class="what-corgi__note">ペンブロークとカーディガンという種類がいるよ</p></div>
-                </div>
-                <figure class="what-corgi__image"><img src="<?= IMG ?>photo_walk.jpg" alt="コーギーが平原を歩いている"></figure>
-            </section>
-
-            <section class="where-born">
-                <div class="where-born__wrapper">
-                    <h2 class="where-born__ttl">どこで生まれたの？</h2>
-                    <p class="where-born__text">原産地はイギリスのウェールズという所で、牧羊犬として活躍していました。もともと<span class="main_color">ヒーラー※</span>として繁殖された犬種のため、散歩中の飼い主の足に噛み付くこともあったりします。<br>
-                    <span class="main_color">※ 牛や羊などのかかとに噛み付いて、吠えながら追いかける役目</span>
-                    </p>
-                    <p class="index-btn"><a href="born.php">生い立ちを見る<span class="index-btn__en">STEP2</span></a></p>
-                </div>
-                <figure class="where-born__image"><img src="<?= IMG ?>photo_run.jpg" alt="コーギーが走っている"></figure>
-                <div class="note-wrap"><p class="where-born__note">寒さに強くて暑さに弱いよ</p></div>
-            </section>
-
-            <section class="howTo-tame">
-                <div class="howTo-tame__wrapper">
-                    <h2 class="howTo-tame__ttl">飼うのは大変？</h2>
-                    <p class="howTo-tame__text">
-                        コーギーは非常に運動が大好きな犬種で、散歩の目安としては1日２回 30〜1時間くらいの運動量が必要となります。<br>
-                        そのため飼い主はコーギーに対してしっかり時間をとれる人であることが前提となります。
-                    </p>
-                    <p class="index-btn"><a href="keep.php">飼い方を知る<span class="index-btn__en">STEP3</span></a></p>
-                </div>
-                <figure class="howTo-tame__image"><img src="<?= IMG ?>corgi_sit.jpg" alt="コーギーが座っている"></figure>
-                <div class="note-wrap"><p class="howTo-tame__note">犬を飼うのが初めてな人にはおすすめできない！</p></div>
-            </section>
-
-            <section class="index-question">
-                <div class="index-question__wrapper">
-                    <h2 class="index-question__ttl">コーギーの疑問</h2>
-                    <p class="index-question__text">「コーギーは中型犬？」<br>
-                        「どうして尻尾がないの？」<br>
-                        コーギーに関する気になること、不安なこと<br>
-                        色んな疑問に答えます。
-                    </p>
-                    <p class="index-btn"><a href="question.php">知識を知る<span class="index-btn__en">STEP４</span></a></p>
-                </div>
-            </section>
         </div>
+        <div class="underLayer-container">
+            <section class="aboutCorgi">
+                <div class="aboutCorgi__container">
+                    <p class="aboutCorgi__img"><img src="<?= IMG ?>photo_sit.jpg" alt=""></p>
+                    <div class="aboutCorgi__wrap">
+                        <h2 class="aboutCorgi__ttl orange font32">コーギーって？</h2>
+                        <p class="aboutCorgi__text">胴長で短足の見た目が特徴のコーギー。<br>
+                        おっとりした顔でよく舌を出してることが多いです。<br>
+                        原産国はイギリスのウェールズという所で、イギリス王室で古くから飼われていることで有名です。
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="type">
+                <h2 class="type__ttl font32">コーギーには<span class="brown">ペンブローク</span>と<span class="gray">カーディガン</span>がいる！</h2>
+                <ul class="bothBox">
+                    <li class="bothBox-item">
+                        <p class="bothBox-item__img"><img src="<?= IMG ?>photo_front.jpg" alt=""></p>
+                        <h3 class="bothBox-item__ttl brown">ウェルシュ・コーギー・ペンブローク</h3>
+                        <p class="bothBox-item__desc">日本国内にいるコーギーのほとんどはペンブローク。<br> カーディガンと比べ耳がひとまわり小さい また興奮しやすく落ち着きがない。</p>
+                    </li>
+                    <li class="bothBox-item">
+                        <p class="bothBox-item__img"><img src="<?= IMG ?>photo_relax.jpg" alt=""></p>
+                        <h3 class="bothBox-item__ttl gray">ウェルシュ・コーギー・カーディガン</h3>
+                        <p class="bothBox-item__desc">日本国内ではカーディガンはとても少ない。 ペンブロークより耳がひとまわり大きい 骨太でがっちりとした体型</p>
+                    </li>
+                </ul>
+            </section>
+            <section class="character">
+                <p class="ttl-center--en">Character & Intelligence</p>
+                <h2 class="ttl-center">コーギーの性格と賢さ</h2>
+                <section class="leftBox">
+                    <div class="leftBox__wrapper">
+                        <p class="ttl-en">Character</p>
+                        <h2 class="leftBox__ttl">コーギーは活発な性格！</h2>
+                        <p class="leftBox__text">
+                            とても活発で運動が大好き、社交的で飼い主に基本的には従順な犬種
+                            食欲旺盛でなんでも際限なく食べるが、太りやすく食べ物に対する執着がとても強い。<br>
+                            そのため飼い主はコーギーの食事管理と毎日の運動がかかせません。
+                        </p>
+                    </div>
+                    <figure class="leftBox__image"><img src="<?= IMG ?>photo_run.jpg" alt="コーギーが走っている"></figure>
+                </section>
+                <section class="rightBox">
+                    <div class="rightBox__wrapper">
+                        <p class="ttl-en">Intelligence</p>
+                        <h2 class="rightBox__ttl">コーギーはとても賢い！</h2>
+                        <p class="rightBox__text">
+                        とても活発で運動が大好き、社交的で飼い主に基本的には従順な犬種
+                        食欲旺盛でなんでも際限なく食べるが、太りやすく食べ物に対する執着がとても強い。<br>
+                        そのため飼い主はコーギーの食事管理と毎日の運動がかかせません。
+                        </p>
+                    </div>
+                    <figure class="rightBox__image"><img src="<?= IMG ?>photo_glare.jpg" alt="コーギーが走っている"></figure>
+                </section>
+            </section>
+            <section class="price">
+                <p class="ttl-center--en">Price & Lifespan</p>
+                <h2 class="ttl-center">コーギーの値段や寿命</h2>
+                <ul class="bothBox">
+                    <li class="bothBox-item">
+                        <p class="bothBox-item__img"><img src="<?= IMG ?>photo_neck.jpg" alt=""></p>
+                        <h3 class="bothBox-item__ttl brown">コーギーの値段</h3>
+                        <p class="bothBox-item__desc">コーギーの値段はペットショップにもよりますが、一般的に１０〜２０万くらいが相場になっています。<br>
+                        また血統により値段も変わってきます。</p>
+                    </li>
+                    <li class="bothBox-item">
+                        <p class="bothBox-item__img"><img src="<?= IMG ?>photo_right_side.jpg" alt=""></p>
+                        <h3 class="bothBox-item__ttl gray">コーギーの寿命</h3>
+                        <p class="bothBox-item__desc">コーギーの寿命は１３歳前後が平均となっていて、<br>
+                        中には１５年以上いきることもあるそうです。</p>
+                    </li>
+                </ul>
+            </section>
+        </div><!-- underLayer-container -->
     </main>
-
-    <footer class="footer">
-        <div class="footer-container">
-            <nav class="footer__nav">
-                <h2 class="footer__logo"><img src="<?= IMG ?>logo_main.png" alt="CORGI"></h2>
-            <ul class="footer__col footer__col1">
-                <li class="footer__list"><a href="feature.php"></a><span class="footer__en">Feature</span>特徴</a>
-                    <li class="footer__item"><a href="#">- コーギーの種類</a></li>
-                    <li class="footer__item"><a href="#">- コーギーの見た目</a></li>
-                    <li class="footer__item"><a href="#">- 頭の良さ</a></li>
-                    <li class="footer__item"><a href="#">- 性格</a></li>
-                    <li class="footer__item"><a href="#">- 面白い特徴</a></li>
-                </li>
-            </ul>
-            <ul class="footer__col footer__col1">
-                <li class="footer__list"><a href="feature.php"></a><span class="footer__en">Born</span>生い立ち</a>
-                    <li class="footer__item"><a href="#">- イギリス生まれ</a></li>
-                    <li class="footer__item"><a href="#">- 元牧羊犬</a></li>
-                    <li class="footer__item"><a href="#">- 個体差が大きい</a></li>
-                    <li class="footer__item"><a href="#">- 毛の色</a></li>
-                 </li>
-            </ul>
-
-            <ul class="footer__col footer__col2">
-                <li class="footer__list"><a href="feature.php"></a><span class="footer__en">Keep</span>飼い方</a>
-                    <li class="footer__item"><a href="#">- 散歩時間</a></li>
-                    <li class="footer__item"><a href="#">- コーギーの食事</a></li>
-                    <li class="footer__item"><a href="#">- なりやすい病気</a></li>
-                    <li class="footer__item"><a href="#">- コーギーの寿命</a></li>
-                    <li class="footer__item"><a href="#">- コーギーの癖</a></li>
-                </li>
-            </ul>
-            <ul class="footer__col footer__col2">
-                <li class="footer__list"><a href="feature.php"></a><span class="footer__en">Question</span>コーギーの疑問</a>
-                    <li class="footer__item"><a href="#">- よくある質問</a></li>
-                </li>
-            </ul>
-            </nav>
-        </div>
-    </footer>
-    <div class="goTop"><a href="#"><img src="<?= IMG ?>hand_up.png" alt=""></a></div>
+    <?php include_once("include_php/footer.php"); ?>
 </body>
 </html>
