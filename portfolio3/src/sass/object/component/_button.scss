@@ -1,0 +1,26 @@
+.btn-normal a {
+    display: inline-block;
+    border: 2px solid;
+    border-image: linear-gradient(to right, #0062FF 0%, #07A9FF 100%);
+    border-image-slice: 1;
+    padding: 3px 40px;
+    transition: 0.3s ease;
+    position: relative;
+    &:hover {
+        color: rgb(7, 156, 255);
+        box-shadow: 0 0 30px $main_color;
+        &::after {
+            right: -30px;
+         
+        }
+    }
+    @include after() {
+        transition: 0.3s ease;
+        width: 40px;
+        height: 2px;
+        background: $white;
+        position: absolute;
+        top: 21px;
+        right: -22px;
+    }
+}
