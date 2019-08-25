@@ -1,0 +1,94 @@
+@charset "utf-8";
+
+html {
+    font-size: 62.5%;
+}
+html,body {
+    font-family: "Comfortaa","Noto Sans Japanese","Hiragino Kaku Gothic ProN",游ゴシック体, 'Yu Gothic',sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333333;
+}
+p {
+    margin: 0;
+}
+a {
+    color: #333333;
+    text-decoration: none; 
+}
+body {
+    font-size: 1.4rem;
+}
+ol,ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cross {
+    transform: rotate(45deg);
+}
+
+
+/* footer */
+
+footer {
+    height: 300px;
+    background: url("../img/footer_bak.png")  left bottom/contain no-repeat;
+    position: relative;
+}
+#copy {
+    position: absolute;
+    left: 0; 
+    right: 0;
+    /* 左右に要素を引き伸ばしてスペースを画面いっぱいにとったのでtext-align:centerが効く */
+    bottom: 5px;
+    text-align: center;
+    color: #fff;
+}
+
+
+
+
+
+
+
+/* popup */
+
+
+.scale {
+    animation: scale 0.75s ease;
+}
+
+@keyframes scale{
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes scalere{
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+.fadeIn {
+    animation: scale 0.5s forwards;
+}
+.fadeOut {
+    animation: scalere 0.5s forwards;
+}
+
+.none {
+    display: none;
+}

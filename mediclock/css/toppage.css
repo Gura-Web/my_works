@@ -1,0 +1,504 @@
+#container {
+	width: 100%;
+	
+}
+#backlmg{
+	background-image: url(../img/pattern_bak.png);
+	width: 50%;
+	height: 1300px;
+	display: block;
+	margin-left: auto;
+	/* position: relative; */
+	z-index: -1;
+	position: absolute;
+	right: 0;
+	/*left:725px; */
+}
+
+
+#content {
+	width: 1000px;
+	height: 200px;	
+	margin: 0 auto;
+	padding-top: 300px;
+	position: relative;
+}
+
+#aboutMC {
+	color: #333;
+	position: absolute;
+	top: 30px;
+	right: 40px;
+	font-size: 1.4rem;
+	font-weight: bold;
+	letter-spacing: 0.04em;
+	cursor: pointer;
+}
+#aboutMC:hover,#aboutMC span:hover {
+	color: #fff;
+}
+#aboutMC i {
+	font-weight: bold;
+	font-size: 2rem;
+	position: relative;
+	top: 1px;
+}
+#aboutMC span {
+	font-weight: bold;
+	font-size: 1.6rem;
+}
+
+
+#logo{
+	float:left;
+	margin-left: 130px;
+	text-align: center;
+}
+#logo p{
+	font-size: 20px;
+	color: #333333;
+	margin-top: 40px;
+}
+#member{
+	float:left;
+	margin-left:200px;
+}
+#signup{
+	width: 278px;
+	height:50px;
+	background-color: #72c4fb;
+	border: solid 2px #4a4a4a;
+	border-radius: 25px;
+	text-align: center;
+	font-size: 16px;
+	margin-top: 20px;
+}
+#signup:hover {
+	background: #88cfff;
+}
+#signup a{
+	text-decoration:none;
+	line-height: 50px;
+	color: #ffffff;
+	display: block;
+}
+#login{
+	width: 278px;
+	height:50px;
+	background-color: #ffffff;
+	border: solid 2px #333333;
+	border-radius: 25px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+	margin-top: 21px;
+}
+#login:hover {
+	background: #efefef;
+}
+#login a{
+	text-decoration:none;
+	color: #333333;
+	line-height: 50px;
+	display: block;
+}
+#characteristic{
+	width: 1000px;
+	margin: 200px auto 100px;
+	height: 450px;
+	background-color: #ffffff;
+	clear:both;
+	color:#333333;
+	font-size: 16px;
+	line-height: 30px;
+}
+#characteristic img{
+	margin-bottom: 30px;
+}
+.description{
+	margin-left: 80px;
+	margin-top: 75px;
+	float: left;
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* registeration */
+#register{
+	width: 414px;
+	height: 450px;
+	margin: 130px auto 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+#checkImg{
+	width:130px;
+	height:130px;
+	border: none;
+	border-radius: 50%;
+	background-color: #fff;
+	margin: 0 auto;
+
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -10px;
+	box-shadow: 2px 6px 10px rgba(51,51,51,0.2);
+	z-index: -1;
+}
+#check {
+	color: #8dc031;
+	font-size: 45px;
+	position: absolute;
+	top: 30px;
+	left: 5px;
+	right: 0;
+	text-align: center;
+	z-index: 2;
+	
+}
+#wrapper {
+	width:414px;
+	height:450px;
+	margin: 50px auto 0;
+	background: #fff;
+	box-shadow: 5px 5px 8px rgba(51,51,51,0.2);
+	position: relative;
+	z-index: 1;
+	
+}
+#registrationend{
+	width: 95px;
+	height: 35px;
+	font-size: 20px;
+	color: #da5789;
+	margin: 0 auto;
+	padding-top: 160px;
+	text-align: center;
+}
+#next{
+	width: 142px;
+	height:44px;
+	font-size:16px;
+	border: solid 2px #6f6f6f;
+	border-radius: 5px;
+	margin: 65px auto 0;
+	line-height: 44px;
+	text-align: center;
+	letter-spacing: 1px;
+}
+#next:hover {
+	background: #efefef;
+}
+#next a{
+	display: block;
+	text-decoration: none;
+	color: #333333;
+	font-weight: bold;
+}
+
+
+
+
+/* member */
+#memberContent{
+	position: absolute;
+	top: 80px;
+	left:0;
+	right: 0;
+	width: 414px;
+	height: 450px;
+	margin: 100px auto 0;
+}
+
+#editImg{
+	width:130px;
+	height:130px;
+	border: none;
+	border-radius: 50%;
+	background-color: #fff;
+	margin: 0 auto;
+
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -60px;
+	box-shadow: 2px 6px 10px rgba(51,51,51,0.2);
+	z-index: -1;
+}
+#edit{
+	font-size: 50px;
+	position: absolute;
+	top: -25px;
+	left: 17px;
+	right:0;
+	z-index: 2;
+	text-align: center;
+	color: #72c4fb;
+	
+}
+
+#memberWrapper {
+	width:414px;
+	height:450px;
+	margin: auto;
+	background: #fff;
+	box-shadow: 5px 5px 8px rgba(51,51,51,0.2);
+	position: relative;
+	z-index: 1;
+}
+
+
+#Inputdestination{
+	padding-top: 50px;
+	text-align: center;
+}
+.Inputdestinationsize{
+	font-size: 16px;
+	color: #333;
+	margin: 15px 0 5px;
+}
+.mall{
+	width: 295px;
+	height: 24px;
+	text-align: center;
+	border:2px solid #6f6f6f;
+	border-radius: 2px;
+	font-size: 1.4rem;
+	padding-right: 10px;
+}
+.password{
+	width: 212px;
+	height: 24px;
+	border: 2px solid #6f6f6f;
+	border-radius: 2px;
+	padding-left: 10px;
+	text-align: center;
+}
+#agreetext{
+	font-size: 12px;
+	color: #959595;
+	margin-top: 30px;
+}
+.emphasis{
+	border-bottom: 1px solid #333333;
+	color: #333333;
+}
+
+
+#confirm{
+	width:314px;
+	margin: 15px auto;
+	display: flex;
+}
+
+#cansle{
+	width: 142px;
+	height: 44px;
+	border: 2px solid #333333;
+	border-radius: 5px;
+	font-size: 16px;
+	text-align: center;
+	line-height: 44px;
+	background-color: #ffffff;
+}
+#cansle:hover {
+	background: #f1f1f1;
+}
+#cansle a{
+	color: #6f6f6f;
+	text-decoration: none;
+	display: block;
+}
+#cansle, #registration {
+	margin: 0;
+}
+
+#registration{
+	margin-left: 22px;	
+}
+#registration input{
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	width: 142px;
+	border: 2px solid #333333;
+	border-radius: 5px;
+	font-size: 16px;
+	text-align: center;
+	line-height: 44px;
+	float:left;
+	background-color:#72c4fb;
+	padding: 0;
+	cursor: pointer;
+}
+#registration input:hover {
+	opacity: 0.8;
+}
+
+
+/*login*/
+#loginContainer{
+	width: 414px;
+	margin: 0 auto;
+	position: absolute;
+	top: 100px;
+	right: 0;
+	left: 0;
+}
+#editImgLogin{
+	width:130px;
+	height:130px;
+	border: none;
+	border-radius: 50%;
+	background-color: #ffffff;
+	margin: 0 auto;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -10px;
+	box-shadow: 2px 6px 10px rgba(51,51,51,0.2);
+	z-index: -1;
+}
+#editLogin{
+	font-size: 50px;
+	position: absolute;
+	top: 25px;
+	left: 17px;
+	right:0;
+	z-index: 2;
+	text-align: center;
+	color: #72c4fb;
+	
+}
+
+#loginWrapper {
+	width:414px;
+	height:365px;
+	background: #fff;
+	margin: 50px auto 0;
+	box-shadow: 5px 5px 8px rgba(51,51,51,0.2);
+}
+#InputdestinationLogin{
+	padding-top: 80px;
+	text-align: center;
+}
+.InputdestinationsizeLogin{
+	font-size: 16px;
+	color: #333;
+	margin-bottom: 10px;
+}
+.mallLogin{
+	width: 295px;
+	height: 24px;
+	text-align: center;
+	border:2px solid #6f6f6f;
+	border-radius: 2px;
+	margin-bottom: 13px;
+	font-size: 1.4rem;
+	padding-right: 10px;
+}
+.passwordLogin{
+	width: 212px;
+	height: 24px;
+	border: 2px solid #6f6f6f;
+	border-radius: 2px;
+	padding-left: 10px;
+	text-align: center;
+}
+#cansleLogin{
+	width: 142px;
+	height: 44px;
+	border: 2px solid #333333;
+	border-radius: 5px;
+	font-size: 16px;
+	text-align: center;
+	line-height: 44px;
+	float:left;
+	background-color: #ffffff;
+}
+#cansleLogin:hover {
+	background: #f1f1f1;
+}
+#cansleLogin a{
+	color: #333333;
+	text-decoration: none;
+	display: block;
+}
+#cansleLogin, #registrationLogin {
+	margin: 0;
+}
+
+#confirmLogin{
+	width:314px;
+	margin: 50px auto;
+	display: flex;
+}
+
+#registrationLogin{
+	margin-left: 22px;	
+}
+#registrationLogin input{
+	color: #ffffff;
+	text-decoration: none;
+	display: block;
+	width: 142px;
+	border: 2px solid #333333;
+	border-radius: 5px;
+	font-size: 16px;
+	text-align: center;
+	line-height: 44px;
+	background-color:#72c4fb;
+	padding: 0;
+	cursor: pointer;
+}
+
+#registrationLogin input:hover {
+	background: #88cfff;
+}
+
+
+/* about popup */
+
+#about {
+	position: absolute;
+	top: 40px;	
+	left: 0;
+	right: 0;
+	width: 634px;
+	margin: 0 auto;
+}
+
+#closeBtn {
+    display: inline-block;
+    background: #da5789;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 40px;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    cursor: pointer;
+}
+#closeBtn:hover {
+	opacity: 0.7;
+}
+#closeBtn i {
+    color: #fff;
+    font-size: 1.6em;
+    
+}

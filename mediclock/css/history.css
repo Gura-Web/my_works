@@ -1,0 +1,111 @@
+@charset "utf-8";
+
+body {
+    background: url("../img/back.png");
+}
+
+/* header */
+header {
+    background: #fff;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+#head {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 1000px;
+    font-size: 1.4rem;
+}
+#logo {
+    margin: 0;
+    display: flex;
+    align-items: center;
+
+}
+#login {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+#loginTxt {
+    margin: 0 20px 20px 0;
+}
+#icon {
+    border: solid 2px #333;
+    border-radius: 4px;
+    color: #8dc031;
+    font-size: 2.6em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 40px;
+    height: 42px;
+}
+#logout {
+    font-size: 1.0rem;
+    font-weight: bold;
+}
+#logout a:hover {
+    opacity: 0.7;
+}
+
+
+/* main */
+main {
+    width: 1000px;
+    margin: 50px auto 0;
+}
+#mainContents {
+    width: 960px;
+    margin: 0 auto;   
+    display: flex;
+    justify-content: space-between;
+}
+#dataWrapper {
+    margin-left: 20px;
+}
+
+/* menu */
+#menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 34px;
+    width: 726px;
+}
+
+
+/* main */
+
+h2 {
+    color: #da5789;
+    font-weight: normal;
+    text-align : center;
+}
+
+#history {
+    background: #fff;
+    border: solid 2px #6f6f6f;
+    width: 800px;
+    height: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    border-radius: 4px;
+}
+table {
+    width: 600px;
+    height: 1000px;
+    margin: 0 auto;
+    font-size: 1.4rem;
+    border-collapse: collapse;
+    
+}
+tr {
+    
+    border-bottom: solid 2px #ccc;   
+}

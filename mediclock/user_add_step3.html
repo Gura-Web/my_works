@@ -1,0 +1,48 @@
+<?php
+// セッション開始
+session_start();
+
+$db['host'] = "localhost";  // DBサーバのURL
+$db['user'] = "tmatugami";  // ユーザー名
+$db['pass'] = "eccMyAdmin";  // ユーザー名のパスワード
+$db['dbname'] = "tmatugami";  // データベース名
+
+?>
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>新規情報登録step3</title>
+	<link rel="stylesheet" href="css/user_add_step3.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<script>
+		var time = new Date();
+		console.log(time.getMilliseconds);
+	</script>
+</head>
+<body>
+	<div class="wrap">
+	
+		<div id="headWrapper">
+			<div id="wrapper">
+				<i class="far fa-edit"></i>
+				<h1>新規登録</h1>
+			</div>
+			<div id="informationtext">
+					<h2>登録完了</h2>
+			</div>
+		</div>
+		<section id="wrap">
+			<p id="closeTxt">利用者の登録が完了しました。</p>
+			<p id="goMain"><a href="home.php" target="_top">メイン画面に戻る</a></p>
+		</section>
+
+
+	</div>
+	<!-- <script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/birthday.js"></script>
+		<script src="js/create_user.js"></script> -->
+</body>
+</html>

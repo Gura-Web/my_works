@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>mediclock</title>
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/toppage.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link rel="shortcut icon" href="img/favicon.ico">
+</head>
+<body>
+<div id="backlmg"></div>
+
+<div id="content">
+	<p id="aboutMC"><i class="far fa-question-circle"></i> <span>MediClock</span>とは?</p>
+	<div id="logo">
+		<h1><img src="img/logo_top.png" alt="mediclocklogo"></h1>
+		<p>薬の飲み忘れ、誤薬防止サービス</p>
+	</div>
+	<div id="member">
+		<div id="signup">
+			<a href="#">
+				新規登録
+			</a>
+		</div>
+		<div id="login">
+			<a href="#">
+				ログイン
+			</a>
+		</div>
+	</div>
+</div>
+	<div id="characteristic">
+		<p class="description">
+			<img src="img/alert.png" alt="時計"><br>
+			通知機能で<br>利用者の薬の飲み忘れを防止
+		</p>
+		<p class="description">
+			<img src="img/notePC.png" alt="パソコン"><br>
+			履歴機能により<br>今後の事故防止に活用
+		</p>
+		<p class="description">
+			<img src="img/nurse.png" alt="看護師"><br>
+			施設に導入しやすい<br>分かりやすい操作
+		</p>
+	</div>
+
+
+
+
+	<!-- registeration -->
+	<div id="register" class="none">
+		<div id="checkImg"></div>
+		<p id="check"><i class="fas fa-check"></i></p>
+		<div id="wrapper">
+			<p id="registrationend">登録完了<p>
+			<p id="next"><a href="#">閉じる</a></p>
+		</div>
+	</div>
+
+
+	<!-- member -->
+	<div id="memberContent" class="none">
+		<div id="editImg"></div>
+		<p id="edit"><i class="far fa-edit"></i></p>
+		<div id="memberWrapper">
+			<div id="Inputdestination">
+				<form action="#" method="post">
+					<label>
+						<p class="Inputdestinationsize">メールアドレス</p>
+						<input type="email" placeholder="ecccomp@yahoo.co.jp" class="mall">
+					</label>
+					<label>
+						<p class="Inputdestinationsize">パスワード</p>
+						<input type="password" class="password">
+					</label>
+				
+					<label>
+						<p class="Inputdestinationsize">パスワード再確認</p>
+						<input type="password" class="password">
+					</label>
+				</form>
+				<p id="agreetext"><label><input type="checkbox"><span class="emphasis">利用規約</span>と<span class="emphasis">個人情報保護方針</span>に同意する</label></p>
+			</div>
+			<div id="confirm">
+				<p id="cansle"><a href="#">キャンセル</a></p>
+				<p id="registration"><input type="submit" value="登録"></p>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- login -->
+	<div id="loginContainer" class="none">
+		<div id="editImgLogin"></div>
+			<p id="editIcon"><i class="far fa-edit" id="editLogin"></i></p>
+		<div id="loginWrapper">
+			<div id="InputdestinationLogin">
+				<form action="#" method="post">
+					<label>
+						<p class="InputdestinationsizeLogin">メールアドレス</p>
+						<input type="email" placeholder="ecccomp@yahoo.co.jp" class="mallLogin">
+					</label>
+					<label>
+						<p class="InputdestinationsizeLogin">パスワード</p>
+						<input type="password" class="passwordLogin">
+					</label>
+				</form>
+			</div>
+			<div id="confirmLogin">
+				<p id="cansleLogin"><a href="#">キャンセル</a></p>
+				<p id="registrationLogin"><a href="home.php"><input type="submit" value="ログイン"></a></p>
+			</div>
+		</div>
+	</div>
+
+	<p id="about" class="none">
+		<span id="closeBtn"><i class="fas fa-times"></i></span>
+		<img src="img/top_popup.png" alt="">
+	</p>
+
+	<script src="js/toppage.js"></script>
+	</body>
+</html>

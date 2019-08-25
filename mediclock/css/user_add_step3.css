@@ -1,0 +1,84 @@
+.wrap{
+	background: #fff;
+	width: 530px;
+	height: 612px;
+	border: solid 2px #6f6f6f;
+	border-radius: 20px;
+	color: #333333;
+	position: relative;
+	top: 2px;
+}
+/*------------header内css---------------*/
+#headWrapper {
+	position: relative;	
+	
+}
+#wrapper{
+	line-height: 66px;
+	width: 530px;
+	height: 66px;
+	background-color:#8dc031;
+	color: #fff;
+	border: solid 2px #6f6f6f;
+	border-radius: 20px 20px 0 0;
+	position: relative;
+	top: -3px;
+	left: -2px;
+}
+#wrapper i{
+	float: left;
+	margin:0 18px 0 52px;
+	line-height: 66px;
+	font-size: 2em;
+}
+#wrapper h1{
+	font-size: 20px;
+	margin: 0;
+	border-bottom: 2px solid #6f6f6f;
+}
+#informationtext{
+	position: absolute;
+	top: 5px;
+	right: 10px;
+}
+h2{
+	width: 233px;
+	height: 45px;
+	border-top: solid #6f6f6f 2px;
+	border-left: solid #6f6f6f 2px;
+	border-right: solid #6f6f6f 2px;
+	border-radius: 20px 20px 0 0;
+	background: #ffffff;
+	line-height: 45px;
+	font-size: 18px;
+	text-align: center;
+}
+
+
+
+
+/* close */
+#closeTxt {
+	font-size: 1.8rem;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 180px;
+}
+
+#goMain {
+    margin-top: 50px;
+    text-align: center;
+}
+#goMain a {
+    display: inline-block;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 40px;
+    width: 166px;
+    height: 40px;
+    border: solid 2px #6f6f6f;
+    
+}
+#goMain a:hover {
+    background: #ebebeb;
+}

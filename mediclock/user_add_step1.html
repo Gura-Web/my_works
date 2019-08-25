@@ -1,0 +1,122 @@
+<?php
+// セッション開始
+session_start();
+
+$db['host'] = "localhost";  // DBサーバのURL
+$db['user'] = "tmatugami";  // ユーザー名
+$db['pass'] = "eccMyAdmin";  // ユーザー名のパスワード
+$db['dbname'] = "tmatugami";  // データベース名
+
+?>
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>新規情報登録step1</title>
+	<link rel="stylesheet" href="css/user_add_step1.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link rel="shortcut icon" href="img/favicon.ico">
+</head>
+<body>
+	<header>
+		<div id="head">
+				<h1 id="logo"><a href="home.php"><img src="img/logo.png" alt="logo"></a></h1>
+			<div id="login">
+				<p id="loginTxt">〇〇でログインしています</p>
+				<p id="logout"><i id="icon" class="fas fa-user"></i><a href="index.html">ログアウト</a></p>
+			</div>
+		</div>
+	</header>
+	<div class="wrap">
+	
+		<div id="headWrapper">
+			<div id="wrapper">
+				<i class="far fa-edit"></i>
+				<h1>新規登録</h1>
+			</div>
+			<div id="informationtext">
+				<h2>利用者情報</h2>
+			</div>
+		</div>
+			
+		<section>
+			<form action="php/upload.php" method="post" name="myForm">
+				<div class="name">
+					<h3>お名前</h3>
+					<input name="name" type="text" placeholder="/*ここに名前を入力してもらいます*/" class="nametext"></input>
+				</div>
+				<div class="facialphoto">
+				<p>利用者の写真</p>
+				<p id="selectImg">
+					<button id="selectBtn" disabled>
+						<i class="cross fas fa-times"></i> 写真を選択
+					</button>
+					<input id="upFile" name="photo" type="file" style="display: none;">
+				</p>
+				</div>
+				<div class="gender">
+					<h3>性別</h3>
+					<div id="man_woman">
+						<p><input type="radio" id="subscribeNews" name="gender" value="1">
+							<label for="subscribeNews"><span class="man">男性</span></label>
+						</p>
+						<p>
+							<input type="radio" id="subscribeNews2" name="gender" value="2">
+							<label for="subscribeNews2"><span class="woman">女性</span></label>
+						</p>
+					</div>
+					
+				</div>
+				<div class="birthday">
+					<h3>生年月日</h3>
+					<div>
+						<input type="text" name="year" id="year">年
+						<input type="text" name="month" id="month">月
+						<input type="text" name="day" id="day">日
+					</div>
+				</div>
+				<div class="care">
+					<h3>介護度数</h3>
+					<select name="careLevel">
+						<option value="">-------------------</option>
+						<option value="1">要支援１</option>
+						<option value="2">要支援2</option>
+						<option value="1">要介護１</option>
+						<option value="2">要介護2</option>
+						<option value="3">要介護3</option>
+						<option value="4">要介護4</option>
+						<option value="5">要介護5</option>
+					</select>
+				</div>
+				<div class="comment">
+					<h3>追記事項</h3>
+					<textarea cols="282" rows="56" wrap="disabled" name="comment"></textarea>
+					
+				</div>
+			</form>
+			<div id="next"><i class="fas fa-arrow-alt-circle-right"></i></div>
+			<div id="allcircle">
+				<div class="greencircle"></div>
+				<div class="whietcircle"></div>
+				<div class="whietcircle"></div>
+			</div>
+		</section>
+		<iframe id="iframe2" src="user_add_step2.html" frameborder="0" scrolling="no"></iframe>
+		
+	</div>
+
+	
+
+	<footer>
+		<p id="copy">
+			<small>&copy; 2018 たんぽぽねこGames</small>
+		</p>
+	</footer>
+	<script src="js/step.js"></script>
+	<!-- <script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/birthday.js"></script>
+	<script src="js/create_user.js"></script> -->
+	
+</body>
+</html>

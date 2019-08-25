@@ -1,0 +1,253 @@
+.wrap{
+	background: #fff;
+	width: 530px;
+	height: 612px;
+	border: solid 2px #6f6f6f;
+	border-radius: 20px;
+	color: #333333;
+	position: relative;
+	top: 2px;
+}
+/*------------header内css---------------*/
+#headWrapper {
+	position: relative;	
+	
+}
+#wrapper{
+	line-height: 66px;
+	width: 530px;
+	height: 66px;
+	background-color:#8dc031;
+	color: #fff;
+	border: solid 2px #6f6f6f;
+	border-radius: 20px 20px 0 0;
+	position: relative;
+	top: -3px;
+	left: -2px;
+}
+#wrapper i{
+	float: left;
+	margin:0 18px 0 52px;
+	line-height: 66px;
+	font-size: 2em;
+}
+#wrapper h1{
+	font-size: 20px;
+	margin: 0;
+	border-bottom: 2px solid #6f6f6f;
+}
+#informationtext{
+	position: absolute;
+	top: 5px;
+	right: 10px;
+}
+h2{
+	width: 233px;
+	height: 45px;
+	border-top: solid #6f6f6f 2px;
+	border-left: solid #6f6f6f 2px;
+	border-right: solid #6f6f6f 2px;
+	border-radius: 20px 20px 0 0;
+	background: #ffffff;
+	line-height: 45px;
+	font-size: 18px;
+	text-align: center;
+}
+/*------------sectioncss---------------*/
+#timesettings{
+	width: 165px;
+	height: 35px;
+	border-bottom: 2px solid #6f6f6f;
+	text-align: center;
+	color: #da5789;
+	font-weight: bold;
+	float: left;
+	margin-left:180px;
+	margin-top: 60px;
+}
+.hourmin{
+	width:28px;
+	height: 25px;
+	font-size: 22px;
+	border: none;
+	text-align: center;
+	color: #da5789;
+}
+#selectBtn{
+	float: right;
+	margin-right: 84px;
+	margin-top: 70px;
+	padding: 2px 10px 2px 5px;
+	border: 2px solid #6f6f6f;
+	background-color: #f5f5f5;
+	font-size: 12px;
+	font-weight: bold;
+	border-radius: 4px;
+}
+#selectBtn i{
+	width: 18px;
+	height: 18px;
+	color: #fff;
+	background: #8dc031;
+	border-radius: 50%;
+	position: relative;
+	text-align: center;
+	line-height: 18px;
+}
+/*チェックボクス*/
+#week{
+	width: 350px;
+	height: 46px;
+	margin: 0 auto;
+	padding-top: 20px;
+	clear: both;
+	display: flex;
+	justify-content: space-between;
+}
+.daybox{
+
+	border: 2px solid #6f6f6f;
+	border-radius: 4px;
+}
+.daybox input{
+	display: inline-block;
+	width: 42px;
+	height: 42px;
+	border:none;
+	padding: 12px 20px 9px 14px;
+	font-size: 1.4rem;
+}
+.daybox input[type="checkbox"] {
+	display: none;
+}
+
+/* crossBtn */
+#crossBtn {
+	width: 100px;
+	margin: 40px auto 0;
+	text-align: center;
+}
+#crossBtn button {
+	width: 58px;
+	height: 58px;
+	border-radius: 50%;
+	background: #8dc031;
+}
+#crossBtn i {
+	font-size: 3rem;
+	color: #fff;
+}
+
+/* medicine */
+#medicineTtl {
+	font-size: 1.8rem;
+	width: 102px;
+	border-bottom: solid 4px #72c4fb;
+	text-align: center;
+	margin: 40px auto 0;
+	
+}
+
+#alert_medicine {
+	display: flex;
+	width: 350px;
+	margin: 30px auto 0;
+	
+}
+
+#medicineName {
+	margin-right: 25px;
+}
+#medicineName input {
+	width: 132px;
+	font-size: 1.8rem;
+	text-align: center;
+	border: none;
+	border-bottom: solid 2px #6f6f6f;
+	
+}
+#arrow {
+	margin-right: 25px;
+}
+#time {
+	margin-right: 30px;
+	border-bottom: solid 2px #6f6f6f;
+}
+#hour {
+	width: 40px;
+	border: none;
+	
+	font-size: 2rem;
+	font-weight: bold;
+	text-align: center;
+}
+#minute {
+	width: 50px;
+	border: none;
+	
+	font-size: 2rem;
+	font-weight: bold;
+	text-align: center;
+}
+#next2{
+	clear: both;
+	font-size: 5em;
+	position: absolute;
+	bottom: 60px;
+	right: 75px;
+	color: #da5789;
+	display: inline;
+	
+}
+#next2 i {
+	cursor: pointer;
+}
+
+#allcircle{
+	width:110px;
+	height: 16px;
+	margin: 0 auto;
+	position: relative;
+	top: 100px;
+}
+.whietcircle_step2_1 {
+	width: 16px;
+	height: 16px;
+	border: solid 2px #6f6f6f;
+	border-radius: 50%;
+	background-color: #fff;
+	float: left;
+	margin-right: 25px;	
+}
+.greencircle_step2{
+	width: 16px;
+	height: 16px;
+	border: solid 2px #689d38;
+	border-radius: 50%;
+	background-color: #689d38;
+	float: left;
+}
+.whietcircle_step2{
+	width: 16px;
+	height: 16px;
+	border: solid 2px #6f6f6f;
+	border-radius: 50%;
+	float:left;
+	margin-left: 25px;
+}
+
+#iframe3 {
+	width: 545px;
+	height: 625px;
+	position: absolute;
+	z-index: 100000;
+	top: -4px;
+	left: -2px;
+	display: none;
+}
+
+
+.blue {
+	background: #72c4fb;
+	color: #fff;
+}

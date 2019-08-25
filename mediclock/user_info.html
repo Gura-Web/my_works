@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MediClock - 利用者情報</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/user_info.css">
+    <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="shortcut icon" href="img/favicon.ico">
+</head>
+<body>
+    <header>
+        
+        <div id="head">
+            <h1 id="logo"><a href="home.php"><img src="img/logo.png" alt="logo"></a></h1>
+            <div id="login">
+                <p id="loginTxt">〇〇でログインしています</p>
+                <p id="logout"><i id="icon" class="fas fa-user"></i><a href="index.html">ログアウト</a></p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="frame">
+            <h2 id="title"><i class="far fa-user"></i><span>利用者情報</span></h2>
+            <div id="inframe">
+                <div id="radiusBox">
+                    <h3 id="nameTtl">田中 淳</h3>
+                </div>
+                <div id="info_edit">
+                    <h4 id="infoTtl">利用者情報</h4>
+                    <p id="edit"><a href="#"><i class="fas fa-pencil-alt"></i>編集</a></p> 
+                </div>     
+                <section id="profile">
+                    <div id="profileTxt">              
+                        <form action="php/add.php" method="post">
+                        <h5 id="name"><input type="text" name="name" value="田中 淳" readonly></h5>
+                        
+                            <dl>
+                                <dt id="age">年齢</dt>
+                                <dd><input type="text" name="age" value="90歳" readonly></dd>
+                            </dl> 
+                            <dl>
+                                <dt id="birth" class="clear">生年月日</dt>
+                                <dd><input name="birth" type="text" value="1928年1月1日生まれ" readonly></dd>
+                            </dl>
+                            <dl>
+                                <dt id="gender" class="clear">性別</dt>
+                                <dd>
+                                    <select disabled>
+                                        <option value="man">男性</option>
+                                        <option value="woman">女性</option>
+                                    </select>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt id="level" class="clear">介護度数</dt>
+                                <dd>
+                                    <select name="careLevel" disabled>
+                                        <option value="" selected>-------</option>
+                                        <option value="s1">要支援1</option>
+                                        <option value="s2">要支援2</option>
+                                        <option value="">-------</option>
+                                        <option value="k1">要介護1</option>
+                                        <option value="k2">要介護2</option>
+                                        <option value="k3">要介護3</option>
+                                        <option value="k4">要介護4</option>
+                                        <option value="k5">要介護5</option>
+                                    </select>
+                                </dd>
+                            </dl>
+                            
+                        </form>   
+                    </div>    
+                    <div id="photo">
+                        <div id="photoImg"></div>
+                        <p id="selectImg">
+                            <button id="selectBtn">
+                                <i class="cross fas fa-times"></i> 写真を選択
+                            </button>
+                            <input id="upFile" name="user_face" type="file" accept="image/*" style="display: none;">
+                        
+                         </p>
+                    </div>
+                </section>
+
+                <h4 id="timeTtl" class="clear">設定時間</h4>
+                <div id="timeForm">
+                    <p id="dragName"><input type="text" placeholder="薬の名前" readonly></p>
+                    <div class="arrow"></div>
+                    <p id="dragTime">
+                        <input id="hour" type="text" placeholder="11" readonly>
+                        <span>:</span>
+                        <input id="minute" type="text" placeholder="30" readonly>
+                    </p>
+                </div>
+                <p id="comment"><textarea id="commentTxt" placeholder="追記事項を入れてください" disabled></textarea></p>
+                <div id="btn">
+                    <p id="cansel"><a href="#">キャンセル</a></p>
+                    <p id="register">
+                        <button id="registerBtn">登録</button>
+                </div>
+                <iframe id="user_info4" class="none" src="user_info_close.html#frame"></iframe>
+                
+            </div>
+            
+        </section>
+        <footer>
+            <p id="copy">
+                <small>&copy; 2018 たんぽぽねこGames</small>
+            </p>
+        </footer>
+    </main>
+    <script src="js/user_info.js"></script>
+    <script src="js/alert.js"></script>
+</body>
+</html>
