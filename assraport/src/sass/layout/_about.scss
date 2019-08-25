@@ -1,0 +1,38 @@
+.about {
+    background: url($img_photo + "recruit_bak.jpg") no-repeat center center/cover;
+    color: $white;
+    &__wrapper {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 93px 0 75px;
+    }
+    &__wrap {
+        max-width: 450px;
+        text-align: center;
+        position: relative;
+        @include tb {
+            margin : 0 auto;
+        }
+    }
+    &__ttl {
+        margin: 8px 0 0 0;
+        @include sp {
+            width: 85%;
+            margin: 0 auto;
+        }
+    }
+    &__txt {
+        text-align: left;
+        margin: 67px 0 18px;
+        @include sp {
+            width: 80%;
+            margin: 30px auto;
+        }
+    }
+    &__human {
+        position: absolute;
+        bottom: -100px;
+        right: -450px;
+        max-width: 450px;
+    }
+}

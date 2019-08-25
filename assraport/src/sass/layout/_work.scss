@@ -1,0 +1,10 @@
+.work {
+    &__head {
+        background: url($img_photo + "work__img.jpg") no-repeat center center;
+        padding: 90px 0 180px;
+    }
+    .whiteBox-right {
+        max-width: 1050px;
+        margin: 90px auto 150px;
+    }
+}

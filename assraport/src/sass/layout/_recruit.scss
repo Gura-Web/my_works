@@ -1,0 +1,32 @@
+.recruit {
+
+    &__wrapper {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+    .g-ttl, .g-txt {
+        text-align: left;
+    }
+}
+.recruit-desc {
+    margin: 58px 0 0 0;
+    th {
+        background: $mainColor;
+        color: $white;
+        font-size: 1.8rem;
+        padding: 20px 32px;
+        @include tb {
+            padding: 0;
+            width: 100px;
+        }
+    }
+    td {
+        border-bottom: 1px solid #eeeeee;
+        padding: 22px 0 22px 73px;
+        letter-spacing: 0.1em;
+        line-height: 1.75;
+        @include tb {
+            padding: 22px 20px 22px 20px;
+        }
+    }
+}

@@ -1,0 +1,62 @@
+.mainColorBox {
+    background: $mainColor;
+    max-width: 1058px;
+    margin: -74px auto 0;
+    text-align: center;
+    color: $white;
+    box-shadow: 17px 17px 40px rgba(0,0,0,.14);
+    padding: 81px 0 86px;
+    @include sp {
+        max-width: 100%;
+        padding: 41px 6%;
+    }
+    &__en {
+        font-size: 2rem;
+        font-weight: bold;
+        font-family: 'Reimin Bold','Hiragino Mincho ProN', '游明朝' , sans-serif;
+        letter-spacing: 0.04em;
+        margin-bottom: 26px;
+    }
+    &__txt {
+        font-size: 2.8rem;
+        letter-spacing: 0.1em;
+        line-height: 1.6;
+    }
+}
+
+.whiteBox-right {
+    position: relative;
+    @include tb {
+        img {
+            width: 100%;
+        }
+    }
+    .white-txtBox {
+        background: rgba(255,255,255,0.9);
+        box-shadow: 25px 25px 40px rgba(0,0,0,0.05);
+        position: absolute;
+        bottom: -50px;
+        right: 0;
+        padding: 63px 60px;
+        max-width: 585px;
+        @include tb {
+            padding: 50px;
+            max-width: 100%;
+            position: relative;
+            bottom: 0;
+        }
+        @include sp {
+            padding: 30px 30px;
+        }
+        &__ttl {
+            font-size: 2.6rem;
+            line-height: 1.6;
+            margin-bottom: 35px;
+            &--small {
+                font-size: 1.6rem;
+                letter-spacing: 0.1em;
+                display: block;
+            }
+        }
+    }
+}

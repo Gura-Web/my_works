@@ -1,0 +1,108 @@
+.footer {
+    margin-top: 111px;
+    &-entry {
+        background: url($img_photo + "welcome.jpg") no-repeat;
+        padding: 20px 14px;
+        @include pc {
+            background-position: center center;
+            background-size: cover;
+        }
+        &__wrapper {
+            background: rgba(0,0,0,.5);
+            text-align: center;
+            color: $white;
+            font-size: 2rem;
+            font-weight: normal;
+            padding: 100px 0 83px;
+            @include tb {
+                padding: 100px 30px 83px;
+            }
+        }
+        &__txt {
+            letter-spacing: 0.5;
+            margin-bottom: 66px;
+            font-family: 'Reimin Bold','Hiragino Mincho ProN', '游明朝' , sans-serif;
+        }
+        &__btn > a {
+            display: inline-block;
+            padding: 13px 100px;
+            color: $white;
+            background: $mainColor;
+            font-size: 2rem;
+            box-shadow: 3px 3px 15px rgba(0,0,0,.24);
+            transition: 0.3s ease;
+            &:hover {
+                background: lighten($mainColor,15%);
+                box-shadow: 3px 3px 20px rgba(0,0,0,.34);
+            }
+        }
+    }
+}
+.address {
+    text-align: center;
+    margin: 80px 0 0 0;
+    &__logo {
+        max-width: 256px;
+        margin: 0 auto;
+    }
+    &__name {
+        margin: 33px 0 0 0;
+        font-size: 1.8rem;
+        letter-spacing: 0.1em;
+        font-weight: bold;
+        &--en {
+            color: #adadad;
+            font-size: 1.4rem;
+        }
+    }
+    &__company-detail {
+        margin: 31px 0 0 0;
+        letter-spacing: 0.1em;
+        font-style: normal;
+    }
+}
+.footer-copy {
+    background: $mainColor;
+    text-align: center;
+    color: $white;
+    font-weight: normal;
+    font-style: normal;
+    padding: 3px 0;
+    margin: 86px 0 0 0;
+    letter-spacing: 0.1em;
+}
+
+.topBtn > a {
+    background: #222;
+    width: 96px;
+    height: 48px;
+    border-radius: 8px 8px 0 0;
+    position: fixed;
+    bottom:0;
+    right: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transform: translateY(48px);
+    transition: 0.3s ease;
+    z-index: 10;
+    &:hover {
+        background: lighten(#222,15%);
+    }
+    img {
+        width: 30px;
+    }
+    @include tb {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        bottom: 10px;
+        right: 10px;
+        box-shadow: 0 3px 9px rgba(0,0,0,.14);
+        transform: translateY(0);
+        img {
+            width: 20px;
+        }
+    }
+}

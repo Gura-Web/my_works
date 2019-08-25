@@ -1,0 +1,11 @@
+// before & after
+@mixin before() {
+    content: "";
+    display: block;
+    @content;
+}
+@mixin after() {
+    content: "";
+    display: block;
+    @content;
+}

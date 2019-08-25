@@ -1,0 +1,7 @@
+.philosophy {
+    background: url($img_photo + "map.png") no-repeat center 340px,url($img_icon + "dot.png");
+    &__wrapper {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+}
