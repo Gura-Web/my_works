@@ -1,0 +1,395 @@
+@import "_variable.scss" ;
+@import "_global.scss" ;
+@import "_mixin.scss" ;
+@import "_sub-global.scss" ;
+
+/* works_style.scss */
+
+/* ------------ header -----------*/
+.g-nav__works > a {
+    color: $assort_color;
+}
+
+/* ------------ precautions -----------*/
+.precautions {
+    &__text {
+        max-width: 612px;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+/* ------------ category -----------*/
+.category {
+    max-width: 440px;
+    text-align: center;
+    margin: 0 auto;
+    color: $none_color;
+    cursor: pointer;
+    &__big {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__small {
+        margin: 18px auto 0;
+        display: flex;
+    }
+    &__web {
+        background: $main_color;
+        flex: 0 1 200px;
+        padding: 3px 0;
+    }
+    &__graphic {
+        flex: 0 1 200px;
+        background: $assort_color;
+        padding: 3px 0;
+    }
+    &__practice {
+        background: $accent_color2;
+        flex: 0 1 94px;
+    }
+    &__other {
+        background: $font_color;
+        flex: 0 1 94px;
+        margin: 0 0 0 18px;
+    }
+}
+.category__graphic,.category__web,.category__practice,.category__other {
+    opacity: 0.3;
+    transition: 0.2s ease;
+}
+// animation
+.opacity1 {
+    opacity: 1;
+}
+.opacity_hover {
+    &:hover {
+        opacity: 0.5;
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.14);
+    }
+}
+
+/* ------------ explain -----------*/
+.explain {
+    display: flex;
+    justify-content: space-between;
+    max-width: 330px;
+    margin: 31px 0 0 auto;
+    &__item {
+        font-size: 1.2rem;
+    }
+}
+
+/* ------------ works-list -----------*/
+.works-list__wrapper {
+    max-width: 732px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include sp {
+        justify-content: center;
+    }
+}
+
+
+.work-item {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    flex:0 1 230px;
+    background: $none_color;
+    margin: 50px 0 0 0;
+    padding: 10px 0 28px;
+    box-shadow: 3px 3px 15px rgba(0,0,0,0.05);
+    position: relative;
+    transition: 1s ease;
+    &:hover {
+        box-shadow: 3px 3px 15px rgba(0,0,0,0.14);
+        transform: translate(-3px,-3px);
+    }
+    &__wrapper {
+        padding: 0 0 0 17px;
+        
+    }
+    &__name {
+        margin: 25px 0 7px 0;
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 6px;
+            height: 18px;
+            background: $main_color;
+            margin: 0 12px 0 0;
+            transform: translateY(3px);
+        }
+    }
+    &__wrap {
+        display: flex;
+        height: 25px;
+        
+    }
+    &__sub-ttl {
+        font-size: 1.2rem;
+        color: #AFAFAF;
+        flex: 0 1 48px;
+        margin: 0 14px 0 0;
+        transform: translateY(5px);
+    }
+    &__text {
+        font-size: 1.4rem;
+        flex: 1 1 auto;
+    }
+    &__image {
+        order: -1;
+        margin: 0 auto;
+        &::after {
+            content: "";
+            display: block;
+            max-width: 216px;
+            height: 2px;
+            margin: 9px 0 0 0;
+            background: #EFEFEF;
+        }
+    }
+    &__tag {
+        position: absolute;
+        top: 16px;
+        right: 0;
+        color: $none_color;
+        padding: 0 0 0 21px;
+        width: 118px;
+        height: 24px;
+        line-height: 25px;
+        font-size: 1.4rem;
+        background: $assort_color;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.16);
+    }
+}
+
+
+/* ------------ product -----------*/
+.product {
+    width: 980px;
+    margin: 100px auto 0;
+    background: $none_color;
+    box-shadow: 6px 6px 20px rgba(0,0,0,0.10);
+    padding: 74px 0 44px 0;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,-10%);
+    @include sp {
+        width: 80%;
+        padding: 0 0 30px 0;
+        height: 500px;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        overflow: scroll;
+    }
+    &__container {
+        max-width: 820px;
+        overflow: scroll;
+        height: 300px;
+        margin: 0 auto;
+        display: flex;   
+        justify-content: space-between;
+        @include sp {
+            display: flex;
+            flex-direction: column;
+            border-bottom: solid 3px $main_color;
+            padding: 0 10px 30px;
+        }
+    }
+    &__wrapper {
+        flex: 0 1 358px;
+    }
+    &__name {
+        font-size: 3.2rem;
+        margin: 0 0 34px 0;
+        @include sp {
+            margin: 10px 0 20px 0;
+            text-align: center;
+            transform: translateX(-5px);
+        }
+        &::before{
+            content: "";
+            display: inline-block;
+            width: 10px;
+            height: 34px;
+            background: $main_color;
+            transform: translateY(4px);
+            margin: 0 19px 0 0;
+            @include sp {
+                display: none;
+            }
+        }
+    }
+    &__heading {
+        max-width: 94px;
+        color: $none_color;
+        text-align: center;
+        margin: 0 auto;
+        padding: 3px 0 1px;
+        font-size: 1.4rem;
+        &__info {
+            background: $assort_color;
+        }
+        &__skill {
+            background: $accent_color2;
+        }
+    }
+    &-info {
+        margin:14px 0 22px 0;
+        display: grid;
+        grid-template-columns: repeat(3, 132px);
+        grid-row-gap: 11px;
+        @include sp {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &__item {
+            line-height: 1.5em;
+            text-align: center;
+            @include sp {
+                flex: 0 1 50%;
+            }
+            &__sub-ttl {
+                font-size: 1.2rem;
+                color: #C7C7C7;
+                display: block;
+                height: 23px;
+            }
+        }
+        
+    }
+    &__skill {
+        max-width: 290px;
+        margin: 15px auto 0;
+        text-align: center;
+        line-height: 1.7em;
+        margin: 10px auto 30px;
+    }
+    &__image {
+        flex: 0 1 370px;
+        order: -1;
+        @include sp {
+            flex: 0;
+        }
+    }
+
+    &__wrap {
+        max-width: 810px;
+        margin: 29px auto 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include sp {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    &__text {
+        font-size: 1.4rem;
+        line-height: 1.8em;
+        flex: 0 1 512px;
+        @include sp {
+            padding: 0 20px;
+            margin: 0 0 20px 0;
+        }
+    }
+    &__btn {
+        flex: 0 1 238px;
+        height: 60px;
+        line-height: 63px;
+        font-size: 2.4rem;
+        background: $accent_color;
+        text-align: center;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+        a {
+            display: block;
+            color: $none_color;
+            // padding-right: 10px;
+            &::after {
+                pointer-events: none;
+                content: "";
+                display: inline-block;
+                background: url($IMG_SVG + "arrow_white.svg") no-repeat;   
+                width: 11px;
+                height: 17px;
+                padding-left: 5px;
+                transform: translateX(11px);
+            }
+        }
+
+    }
+    &__close {
+        @include close();
+        @include sp {
+            width: 78px;
+            height: 78px;
+            background: url(../img/svg/close.svg) no-repeat center center/30px 30px #fff;
+            box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            top: 10px;
+            right: 10px;
+        }
+    }
+}
+
+
+.product__frameTop {
+    @include sp {
+        display: none;
+    }
+    &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 6px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: $main_color;
+    }
+    &::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border: 40px solid transparent;
+        border-top: 40px solid $main_color;
+        position: absolute;
+        top: -34px;
+        left: -40px;
+        transform: rotate(135deg);
+    }
+}
+.product__frameBottom {
+    @include sp {
+        display: none;
+    }
+    &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 6px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: $main_color;
+    }
+    &::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border: 40px solid transparent;
+        border-top: 40px solid $main_color;
+        position: absolute;
+        bottom: -34px;
+        right: -40px;
+        transform: rotate(-45deg);
+    }
+}

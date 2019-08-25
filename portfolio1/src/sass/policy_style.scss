@@ -1,0 +1,52 @@
+@import "_variable.scss" ;
+@import "_global.scss" ;
+@import "_mixin.scss" ;
+@import "_sub-global.scss" ;
+
+/* policy_style.scss */
+
+/* ------------ header -----------*/
+.g-nav__policy > a {
+    color: $assort_color;
+}
+
+/* ------------ future -----------*/
+.future {
+    &__text {
+        text-align: center;
+    }
+}
+
+/* ------------ goal -----------*/
+@mixin goal-icon($color) {
+    &__item {
+        max-width: 406px;
+        margin: 0 auto 42px;
+        line-height: 2.2em;
+        position: relative;
+        @include sp {
+            max-width: 70%;
+        }
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background: url($IMG_SVG + "circle_"+ $color +".svg") no-repeat;
+            position: absolute;
+            top: 10px;
+            left: -25px;
+        }
+    }
+}
+
+.goal {
+    @include goal-icon(green);   
+}
+.would-like {
+    @include goal-icon(blue);   
+    
+}
+.future-own {
+    @include goal-icon(red);   
+}

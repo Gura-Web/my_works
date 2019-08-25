@@ -1,0 +1,132 @@
+@import "_variable.scss" ;
+@import "_global.scss" ;
+@import "_mixin.scss" ;
+@import "_sub-global.scss" ;
+
+/* skill_style.scss */
+
+/* ------------ header -----------*/
+.g-nav__skill > a {
+    color: $assort_color;
+}
+
+/* ------------ school-study -----------*/
+.school-study {
+    &__text {
+        max-width: 512px;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+/* ------------ studying-now -----------*/
+.studying-content:nth-child(2) {
+    @include box-heading_color($accent_color2);
+}
+.studying-content:nth-child(3) {
+    @include box-heading_color($accent_color);
+}
+.studying-content:nth-child(4) {
+    @include box-heading_color($main_color);
+}
+.studying-content:nth-child(5) {
+    @include box-heading_color($assort_color);
+}
+
+// studying-content list item
+@mixin skill-star($w:110px,$width:70px,$y:3px) {
+        &::after {
+            content: "";
+            display: inline-block;
+            width:  $width;
+            height: 16px;
+            background: url($IMG_SVG + "star_blue.svg");
+            transform: translateY($y);
+        }
+    .studying-content__text {
+        display: inline-block;
+        width: $w;
+    }
+}
+
+
+.studying-content {
+    &__item {
+        margin: 0 0 15px 0;
+        @include skill-star();    
+    }
+    &__list {
+        max-width: 400px;
+        margin: 34px auto 0;
+        display: grid;
+        grid-template-rows: 30px 30px;
+        grid-template-columns: 180px 180px;
+        grid-gap: 10px 30px;
+        @include sp {
+            max-width: 400px;
+        
+            margin: 34px auto 0;
+            display: grid;
+            grid-template-rows: 30px;
+            grid-template-columns: 180px;
+            grid-gap: 10px;
+            justify-content: center;
+        }
+    }
+    &__responsive {
+        transform: translateY(-5px);
+        @include skill-star(110px,70px,-10px);
+    }
+     &__graphic-design {
+         transform: translateY(-4px);
+        @include skill-star(110px,50px,-11px);
+     }
+     &__photoshop,&__illustrator,&__ux-design {
+         @include skill-star(110px,50px);
+     }
+     &__dreamweaver,&__git,&__gulp {
+         @include skill-star(110px,30px);
+     }
+     &__js, &__php,&__wordpress {
+         @include skill-star(110px,17px);
+     }
+     
+}
+.studying-content:nth-child(3) {
+    .studying-content__item {
+        &::after {
+            background: url($IMG_SVG + "star_green.svg");
+        }
+    }
+}
+.studying-content:nth-child(4) {
+    .studying-content__item {
+        &::after {
+            background: url($IMG_SVG + "star_yellow.svg");
+        }
+    }
+}
+.studying-content:nth-child(5) {
+    .studying-content__item {
+        &::after {
+            background: url($IMG_SVG + "star_red.svg");
+        }
+    }
+}
+
+/* ------------ skill-comment -----------*/
+.skill-comment {
+    @include sp {
+        padding: 64px 0 90px;
+    }
+    &__text {
+        max-width: 512px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    &__edit {
+        display: block;
+        margin: 0 0 30px 0;
+    }
+    
+}

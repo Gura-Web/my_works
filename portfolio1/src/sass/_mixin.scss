@@ -1,0 +1,151 @@
+
+/* ------------ nav -----------*/
+@mixin main-nav_icon($img,$w,$h) {
+    &::after {
+        content: "";
+        display: block;
+        background: url($IMG_SVG + $img) no-repeat center center;
+        width: $w;
+        height: $h;
+        margin: 0 auto 0;
+        
+    }
+}
+
+
+/* ------------ frame -----------*/
+@mixin frameTop-Bottom($placeTB,$placeLR,$r) {
+    position: relative;
+    
+    &::before {
+        content: "";
+        display: inline-block;
+        position: fixed;
+        #{$placeTB}: 0;
+        background: $main_color;
+        width: 100%;
+        height: 10px;
+        z-index: 20;
+    }
+    &::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border: 100px solid transparent;
+        border-bottom: 100px solid $main_color;
+        transform: rotate($r);
+        position: fixed;
+        #{$placeTB}: -120px;
+        #{$placeLR}: -120px;
+        z-index: 20;
+    }
+}
+@mixin frameLeft-Right() {
+    &::before {
+        content: "";
+        display: inline-block;
+        position: fixed;
+        right: 0;
+        top: 0;
+        background: $main_color;
+        width: 10px;
+        height: 100%;
+        z-index: 20;
+    }
+    &::after {
+        content: "";
+        display: inline-block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        background: $main_color;
+        width: 10px;
+        height: 100%;
+        z-index: 20;
+    }
+}
+
+/* ------------ box-heading -----------*/
+@mixin box-heading_color ($color) {
+    .box-heading__color {
+        max-width: 174px;
+        height: 30px;
+        background: $color;
+        color: $none_color;
+        line-height: 31px;
+        margin: 64px auto 19px;
+        text-align: center;
+    }
+}
+
+/* ------------ icons -----------*/
+@mixin background_icons($w,$h,$top,$left) {
+    width: $w;
+    height: $h;
+    top: $top;
+    left: $left;
+    transform: scale(0);
+}
+
+@mixin close() {
+    width: 88px;
+    height: 88px;
+    background: url($IMG_SVG + "close.svg") no-repeat center center/ 34px 34px $none_color;
+    border-radius: 50%;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.14);
+    position: absolute;
+    top: -30px;
+    right: -25px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+/* ------------ history -----------*/
+@mixin history_ttl($img,$color,$h) {
+    display: none;
+    &__ttl {
+        font-size: 2.2rem;
+        margin: 0 0 22px 0;
+        position: relative;
+        @include sp {
+            text-align: center;
+        }
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 17px;
+            height: 16px;
+            background: url($IMG_SVG + $img) no-repeat;
+            position: absolute;
+            top: 9px;
+            left: -28px;
+        }
+    }
+    &__text {
+        padding: 0 0 0 44px;
+        position: relative;
+        @include sp {
+            padding: 0 20px;
+        }
+        &::before {
+            content: "";
+            display: block;
+            width: 2px;
+            height: $h;
+            background: $color;
+            position: absolute;
+            left: -20px;
+            top: -25px;
+        }
+    }
+}
+
+/* ----------- media ----------- */
+$sp: 480px;  // スマートフォン
+
+@mixin sp {
+  @media screen and (max-width: ($sp)) {
+    @content;
+  }
+}

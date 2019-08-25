@@ -1,0 +1,122 @@
+/* ------------ frame -----------*/
+.header {
+    @include frameTop-Bottom(top,left,-45deg);
+    &::before {
+        left: -100%;
+        animation: width_left 0.6s ease 0.2s forwards;
+    }
+}
+.main {
+    @include frameLeft-Right();
+    &::before {
+        top: -100%;
+        animation: width_down 0.6s ease 0.6s forwards;
+    }
+    &::after {
+        top: 100%;
+        animation: width_up 0.6s ease 0.6s forwards;
+    }
+}
+.bottom-frame {
+    @include frameTop-Bottom(bottom,right,135deg);
+    &::before {
+        right: -100%;
+        animation: width_right 0.6s ease 0.2s forwards;
+    }
+}
+
+/* ------------ header -----------*/
+.header {
+    height: 64px;
+}
+.g-nav {
+    background: $none_color;
+    box-shadow: 0 3px 20px rgba(0,0,0,0.05);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    @include sp {
+        display: none;
+    }
+    &__wrapper {
+        max-width: 904px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        font-size: 2rem;
+        padding: 25px 0 15px;   
+    }
+}
+
+/* ------------ sidebar -----------*/
+.sidebar {
+    @include sp {
+        display: none;
+    }
+    &__wrapper {
+        position: fixed;
+        z-index: 10;
+        right: 0;
+        top: 180px;
+        font-size: 1.8rem;
+    }
+    &__item {
+        background: $pale_color;
+        display:block;
+        width: 180px;
+        height: 50px;
+        line-height: 51px;
+        margin: 15px 0 0 0;
+        transform: skewX(-8deg) rotate(-11deg);
+        text-align: center;
+        a {
+            display: block;
+            height: 100%;
+            transform: skewX(8deg) rotate(2deg);
+            &::before {
+                content: "";
+                display: inline-block;
+                width: 0;
+                height: 0;
+                border: 9px solid transparent;
+                border-bottom: 9px solid #4d4d4d;
+                transform: rotate(90deg) translateY(5px) translateX(4px);
+            }
+        }
+    }
+    &__text {
+        display: inline-block;
+        width: 110px;
+        height: 32px;
+    }
+}
+.sidebar_colorChange {
+    a {
+        background: $assort_color;
+        color: $none_color;
+        &::before {
+            border-bottom: 9px solid $none_color;
+        }
+    }
+}
+// position:fixedでずれた位置を修正
+section {
+    margin-top : -64px;
+    padding-top : 64px;
+}
+
+
+/* ------------ main -----------*/
+.main {
+    &__container {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 0 0 100px;
+        @include sp {
+            padding: 0 20px;
+        }
+    }
+}
+
