@@ -1,0 +1,247 @@
+// ---------------------------------
+//
+// account's Layout StyleSheet
+//
+// ---------------------------------
+
+// ---------------------------------
+// Account's Body Class
+// ---------------------------------
+.account {
+  &__container {
+    justify-content: space-between;
+    padding: 0 17px;
+    @include tb {
+      flex-direction: row;
+      padding: 0;
+    }
+  }
+}
+
+// ---------------------------------
+// Account Head
+// ---------------------------------
+.account-head {
+  text-align: center;
+  height: 34vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @include tb {
+    flex: 0 1 38%;
+    background: #f9f9f9;
+    height: 100%;
+    border-radius: 0 10px 10px 0;
+    padding: 0;
+    position: relative;
+  }
+  &__logo {
+    max-width: 84px;
+    margin: 0 auto 28px;
+    @include tb {
+      max-width: 157px;
+    }
+  }
+  &__ttl {
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 0.63;
+    color: $black;
+    margin: 0 0 19px 0;
+    @include tb {
+      display: none;
+    }
+  }
+  &__txt {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #bdc7cf;
+    margin: 0 auto;
+    @include tb {
+      display: none;
+    }
+  }
+
+  // ----- pc only style ----- //
+  .change-account {
+    display: none;
+    @include tb {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+  }
+}
+
+// ---------------------------------
+// Account Form
+// ---------------------------------
+.account-form__container {
+  @include tb {
+    order: -1;
+    padding: 70px 0 52px 51px;
+  }
+}
+.account-form {
+  height: 57vh;
+  max-height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include tb {
+    height: auto;
+    max-height: initial;
+    display: block;
+    max-width: 555px;
+  }
+
+  // ----- Txt input ----- //
+  &__wrapper {
+    height: 35vh;
+    max-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include tb {
+      height: auto;
+      max-height: initial;
+      display: block;
+    }
+  }
+  &__ttl {
+    display: none;
+    @include tb {
+      display: block;
+      font-size: 3.4rem;
+      font-weight: 500;
+      line-height: 0.59;
+      color: $black;
+      margin: 0 0 22px 0;
+    }
+  }
+  &__txt {
+    display: none;
+    @include tb {
+      display: block;
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: #bdc7cf;
+      margin: 0 0 29px 0;
+    }
+  }
+  input[type="text"],
+  input[type="password"] {
+    @include tb {
+      margin: 0 0 24px 0;
+    }
+  }
+  .form-showPass {
+    margin: 10px 0 0 5px;
+    @include tb {
+      margin: -13px 0 0 5px;
+    }
+  }
+
+  // ----- Btn ----- //
+  &__wrap {
+    @include tb {
+      margin-top: 50px;
+      position: relative;
+    }
+  }
+  &__btn-inner {
+    @include tb {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__submit {
+    @include btn_default();
+    max-width: none;
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 2px 11px 0 rgba(255, 57, 57, 0.38);
+    background: $mainColor;
+    color: $white;
+    padding: 8px 0;
+    @include tb {
+      flex: 0 1 49%;
+      max-width: initial;
+    }
+  }
+}
+
+// ---------------------------------
+// Btn overwrite
+// ---------------------------------
+.account {
+  .btn--cansel {
+    margin: 10px 0 0 0;
+    @include tb {
+      flex: 0 1 49%;
+      margin: 0;
+    }
+    a {
+      width: 100%;
+      max-width: none;
+      padding: 8px 0;
+    }
+  }
+}
+
+// ---------------------------------
+// Account step overwrite style
+// ---------------------------------
+.account {
+  .account-step {
+    @include tb {
+      position: absolute;
+      bottom: -40px;
+      right: -50px;
+      margin: 0;
+    }
+  }
+}
+
+// ---------------------------------
+// Account footer
+// ---------------------------------
+.footer--account {
+  display: none;
+  @include tb {
+    display: block;
+  }
+}
+
+
+
+// ---------------------------------
+// Login page overwrite style
+// ---------------------------------
+.login {
+    .account {
+        &-head {
+            height: 50vh;
+            @include tb {
+                height: 100%;
+            }
+        }
+    }
+    .account-form {
+        height: 46vh;
+        &__container {
+            @include tb {
+                padding :70px 0 0 51px;
+            }
+        }
+        &__wrapper {
+            height: 18vh;
+            @include tb {
+                height: auto;
+            }
+        }
+    }
+}

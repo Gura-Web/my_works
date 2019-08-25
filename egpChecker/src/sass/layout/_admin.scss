@@ -1,0 +1,98 @@
+// ---------------------------------
+//
+// Admin's Layout StyleSheet
+//
+// ---------------------------------
+
+.admin {
+    &__head {
+        @include tb {
+            width: 100%;
+            box-shadow: none;
+        }
+    }
+    &__wrap {
+        background: $mainColor;
+        display: flex;
+        padding: 26px 0 18px;
+        border-radius: 10px 10px 0 0;
+    }
+    &__txt {
+        display: none;
+        @include tb {
+            display: inline-block;
+            color: $white;
+            font-size: 1.4rem;
+            transform: translateY(6px);
+            opacity: 0.8;
+            margin: 0 0 0 14px;
+        }
+    }
+    .content-box {
+        margin: 74px auto -40px;
+        padding: 9vw 24px 4vw;
+        @include tb {
+            margin: 40px auto 0;
+            box-shadow :none;
+        }
+    }
+    .type-form {
+        margin: 35px 0 15px 0 ;
+        &__scan {
+            padding: 14px 0 14px 12px;
+            font-size: 1.6rem;
+            text-align: center;
+            max-width: 500px;
+            border: 1px solid #D4D4D4;
+        }
+        &__submit {
+            margin: 35px 0 0 0;
+        }
+    }
+
+    // ----- btn style  ----- //
+    &__wrapper {
+        @include tb {
+            width: 100%;
+        }
+    }
+}
+
+// ---------------------------------
+// main overwrite
+// ---------------------------------
+.admin {
+    .home {
+        background: none;
+    }
+    .main__container {
+        height: 91vh;
+        @include sp-side {
+            width: 100%;
+        }
+    }
+}
+
+// ---------------------------------
+// home overwrite
+// ---------------------------------
+.admin {
+    .home__head {
+        @include tb {
+            background: none;
+            padding: 0;
+        }
+    }
+}
+
+// ---------------------------------
+// btn overwrite
+// ---------------------------------
+.admin {
+    .btn--arrow {
+        margin: 110px 24px 0 auto;
+        @include tb {
+            margin: 30px 24px 0 auto;
+        }
+    }
+}

@@ -1,0 +1,96 @@
+// ---------------------------------
+//
+// Base StyleSheet : Base style used on all pages.
+//
+// ---------------------------------
+
+
+// ---------------------------------
+// MediaQuery
+// ---------------------------------
+$pc: 1500px; // MacBook
+$pc-small: 1280px; // PC(small)
+$tb: 960px; // Tablet
+$sp-side: 630px;  // telephone(side)
+$sp: 480px;  // telephone
+@mixin pc {
+  @media screen and (min-width: ($pc)) {
+    @content;
+  }
+}
+@mixin pc-small {
+  @media screen and (min-width: ($pc-small)) {
+    @content;
+  }
+}
+@mixin tb {
+  @media screen and (min-width: ($tb)) {
+    @content;
+  }
+}
+@mixin sp-side {
+  @media screen and (min-width: ($sp-side)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media screen and (min-width: ($sp)) {
+    @content;
+  }
+}
+
+// ---------------------------------
+// Path
+// ---------------------------------
+$img_svg: "../img/svg/";
+$font1: 'Rubik', "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+
+
+// ---------------------------------
+// Grobal Style
+// ---------------------------------
+html * ,
+::before ,
+::after {
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    @include sp-side {
+      font-size: 74%;
+    }
+    @include tb {
+      font-size: 62.5%;
+    }
+    @include pc {
+      font-size: 80%;
+    }
+}
+.body {
+  font-family: $font1;
+  font-size: 1.3rem;
+  line-height: 1.62;
+  font-weight: normal;
+  overflow: hidden;
+  background: $white;
+  color: $black;
+  @include tb {
+    font-size: 1.6rem;
+    background: $bgColor;
+  }
+}
+a {
+    color: $black;
+    text-decoration: none;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+ul,ol,li {
+    list-style: none;
+    margin:0;
+    padding: 0;
+}

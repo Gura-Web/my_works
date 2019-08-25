@@ -1,0 +1,199 @@
+// ---------------------------------
+//
+// TopPage's Layout StyleSheet
+//
+// ---------------------------------
+
+
+// ---------------------------------
+// TopPage's Body Class
+// ---------------------------------
+.body--topPage {
+    background: $mainColor;
+    height: 100%;
+    color: $white;
+    @include tb {
+        color: $black;
+        background: $white;
+    }
+}
+
+// ---------------------------------
+// TopPage's Contents
+// ---------------------------------
+.topPage {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    @include sp-side {
+        width: 60%;
+    }
+    @include tb {
+        width: 100%;
+        max-width: 1000px;
+    }
+    @include pc {
+        max-width: 1200px;
+    }
+
+    &__contianer {
+        display: flex;
+        flex-direction: column;
+        height: 95vh;
+        justify-content: center;
+    }
+
+    &__ttl {
+        img {
+            margin: 0 auto;
+            @include sp-side {
+                width: 53%;
+            }
+            @include tb {
+                max-width: 387px;
+                margin: 0 auto 0 0;
+            }
+        }
+    }
+
+    &__subTtl {
+        display: none;
+        @include tb {
+            display: block;
+            color: $black;
+            font-size: 2.6rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+    }
+
+    &__txt {
+        opacity: 0.81;
+        font-size: 1.4rem;
+        margin-top: 34px;
+        line-height: 1.8;
+        @include tb {
+            max-width: 317px;
+            font-weight: 500;
+            letter-spacing: 0.4px;
+            color: #888888;
+            margin-top: 27px;
+        }
+        @include pc {
+            max-width: 437px;
+        }
+    }
+
+    // ----- PC only layout   ----- //
+    &-merit {
+        display: none;
+        max-width: 440px;
+        @include tb {
+            display: block;
+            font-size: 1.4rem;
+            letter-spacing: 0.56px;
+            color: #38b754;
+            margin-top: 50px;
+        }
+        @include pc {
+            max-width: 600px;
+        }
+        &__item {
+            @include tb {
+                margin-top: 10px;
+                &::before {
+                    content: "";
+                    display: inline-block;
+                    width: 15px;
+                    height: 15px;
+                    background: url($img_svg + "icon-check_green.svg") no-repeat;
+                    transform: translateY(5px);
+                    margin-right: 8px;
+                }
+            }
+        }
+        }
+
+    &__left {
+        text-align: left;
+        position: relative;
+        @include sp-side {
+            width: 80%;
+            margin: 0 auto;
+        }
+        @include tb {
+            width: 100%;
+            margin: 0 30px 0 0;
+        }
+    }
+
+    &__bg { // illustration
+        display: none;
+        @include tb {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: -169px;
+            z-index: -2;
+        }
+        @include pc {
+            top: 30px;
+            right: -139px;
+            transform: scale(1.2);
+        }
+    }
+}
+
+
+// ---------------------------------
+// SignUp btn & Login btn
+// ---------------------------------
+.topPage-list {
+    margin-top: 79px;
+    @include tb {
+        max-width: 372px;
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+    }
+    @include pc {
+        max-width: 450px;
+    }
+    &__item {
+        @include tb {
+            flex: 0 1 49%;
+        }
+        a {
+            margin: 0 auto 13px;
+            @include pc {
+                margin: 0 auto;
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
+
+    // ----- overwrite btn style  ----- //
+    .btn{
+        &--normal > a {
+            background: $white;
+            color: $mainColor;
+            box-shadow: 0 0 4px 0 rgba(255, 57, 57, 0.44);
+            @include tb {
+                background: $mainColor;
+                color: $white;
+            }
+        }
+        &--solid > a {
+            margin-bottom: 0; // Erase extra space
+            color: $white;
+            border: 1px solid $white;
+            @include tb {
+                color: $mainColor;
+                border: 1px solid $mainColor;
+            }
+        }
+    }
+}
+

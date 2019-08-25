@@ -1,0 +1,61 @@
+// ---------------------------------
+//
+// Signup-finish Layout StyleSheet
+//
+// ---------------------------------
+.signup-finish {
+    &__container {
+        justify-content: center;
+        text-align: center;
+        @include tb {
+            padding: 60px 0 22px;
+        }
+    }
+
+    // ----- Sentence ----- //
+    &__ttl {
+        font-family: Avenir,sans-serif;
+        font-size: 3.6rem;
+        font-weight: 900;
+        line-height: 0.69;
+        color: $black;
+        span {
+            display: none;
+            @include tb {
+                display: inline-block;
+            }
+        }
+    }
+    &__txt {
+        font-size: 1.3rem;
+        line-height: 1.62;
+        max-width: 256px;
+        margin: 10px auto 0;
+        &--big {
+            font-size: 1.6rem;
+            font-weight: 500;
+            margin: 38px 0 0 0;
+        }
+    }
+
+    // ----- Illustration ----- //
+    &__img {
+        margin: 37px 0 0 0;
+        img {
+            margin: 0 auto;
+        }
+    }
+    // ----- Btn overwrite ----- //
+    .btn {
+        margin: 38px 0 0 0;
+        a {
+            max-width: 192px;
+            padding: 12px 40px;
+            margin: 0 auto;
+            font-size: 1.6rem;
+            @include sp-side {
+                max-width: 220px;
+            }
+        }
+    }
+}

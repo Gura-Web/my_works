@@ -1,0 +1,112 @@
+// ---------------------------------
+//
+// Account-form StyleSheet
+//
+// ---------------------------------
+
+// ---------------------------------
+// Account Form
+// ---------------------------------
+.form__name {
+    display: flex;
+    justify-content: space-between;
+}
+// ----- Common style for all input tags  ----- //
+input[type="text"],input[type="password"] {
+    display: block;
+    border-radius: 2px;
+    background-color: #f0f1f3;
+    padding: 10px 0 10px 12px;
+    width: 100%;
+    
+}
+
+// ----- content style  ----- //
+.form-submit {
+    @include btn_default();
+    max-width: none;
+    width: 100%;
+    color: $white;
+    border-radius: 6px;
+    box-shadow: 0 2px 11px 0 rgba(255, 57, 57, 0.38);
+    background: #ff3939;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+.form-showPass {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #cdced4;
+    input[type="checkbox"] {
+        margin-right: 7px;
+        display: inline-block;
+    }
+}
+
+// ----- input icon  ----- //
+.form-pass__wrap,.form-studentNum__wrap {
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        top:0;
+        left:13px;
+        bottom:0;
+        margin: auto 0;
+    }
+    input {
+        padding-left: 40px;
+    }
+}
+.form-pass__wrap {
+    &::before {
+        width: 14px;
+        height: 18px;
+        background: url($img_svg + "icon-pass_gray.svg") no-repeat;
+    }
+}
+.form-pass__eye {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 18px;
+    margin: auto 0;
+    width: 18px;
+    height: 15px;
+    background: url($img_svg + "icon-noEye_gray.svg") no-repeat;
+}
+.form-studentNum__wrap::before {
+    width: 19px;
+    height: 15px;
+    background: url($img_svg + "icon-studentCard_gray.svg") no-repeat;
+}
+
+// ----- Half txtbox style  ----- //
+.formTxt-wrapper--half { // parent tag
+    display: flex;
+    justify-content: space-between;
+}
+.form-txt--half {
+    flex: 0 1 49%;
+}
+
+
+.type-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__submit {
+        max-width: 126px;
+        padding: 5px 35px;
+        border-radius: 6px;
+        box-shadow: 0 2px 11px 0 rgba(255, 57, 57, 0.38);
+        background: #ff3939;
+        font-family: Avenir;
+        font-size: 1.6rem;
+        font-weight: 900;
+        text-align: center;
+        color: $white;
+    }
+}

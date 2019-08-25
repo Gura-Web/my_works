@@ -1,0 +1,14 @@
+// ----- Vide / Hide ----- //
+.none {
+    display: none;
+}
+.block {
+    display: block;
+}
+
+// ----- Color ----- //
+.color {
+    &--success {
+        color: $successColor;
+    }
+}

@@ -1,0 +1,143 @@
+// ---------------------------------
+//
+// Common Layout StyleSheet
+//
+// ---------------------------------
+
+// ---------------------------------
+// Common background illustration
+// ---------------------------------
+.home {
+  position: relative;
+  &::before {
+    content: "";
+    display: none;
+    width: 483px;
+    height: 406px;
+    background: url($img_svg+"illust-standTalk.svg") no-repeat center center /
+      contain;
+    position: absolute;
+    bottom: -70px;
+    right: -80px;
+    opacity: 0.5;
+    z-index: -1;
+    @include tb {
+      display: block;
+    }
+  }
+}
+
+// ---------------------------------
+// Common head background color
+// ---------------------------------
+.home {
+  &__head {
+    background: $mainColor;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.17);
+    padding: 105px 0 0 0;
+    @include tb {
+      height: 100%;
+      flex: 0 1 414px;
+      border-radius: 10px 0 0 10px;
+      padding: 140px 0 0 0;
+    }
+  }
+}
+
+// ---------------------------------
+// Common base background layout
+// ---------------------------------
+.main {
+  @include tb {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 97vh;
+  }
+  &__container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    @include base_bg(); // base background style
+    @include sp-side {
+      width: 80%;
+      margin: 0 auto;
+    }
+    @include tb {
+      align-items: center;
+      position: relative;
+    }
+  }
+}
+
+// ---------------------------------
+// Change account
+// ---------------------------------
+.change-account {
+  height: 9vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @include tb {
+    display: none;
+  }
+  &__txt {
+    font-size: 1.2rem;
+    color: #a8a8a8;
+    text-align: center;
+  }
+  &__link {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: -2px 0 0 0;
+    text-align: center;
+    a {
+      color: $successColor;
+    }
+  }
+}
+.change-account--home {
+  .change-account__link a {
+    color: #36a7cf;
+  }
+}
+
+// ---------------------------------
+//
+// Mypage style
+//
+// ---------------------------------
+.my-barcode {
+  width: 80%;
+  margin: 0 auto;
+  height: 50px;
+  background: $black;
+}
+
+// ---------------------------------
+//
+// Account & signup-finish page style
+//
+// ---------------------------------
+
+// ---------------------------------
+// Account step
+// ---------------------------------
+.account-step {
+  text-align: center;
+  margin: 10px 0 0 0;
+  &__one,
+  &__two {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #cdcdcd;
+  }
+  &__one {
+    margin: 0 7px 0 0;
+  }
+  &--current {
+    background: #f17b7b;
+  }
+}

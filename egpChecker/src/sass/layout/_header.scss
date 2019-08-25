@@ -1,0 +1,52 @@
+// ---------------------------------
+//
+// header StyleSheet
+//
+// ---------------------------------
+
+// ---------------------------------
+// left top logo
+// ---------------------------------
+.header {
+  &__logo {
+    display: none;
+    @include tb {
+      display: block;
+      max-width: 214px;
+      position: absolute;
+      top: 25px;
+      left: 23px;
+      opacity: 0.3;
+      z-index: 1;
+    }
+  }
+  &__logout {
+      display: none;
+      @include tb {
+          display: block;
+          width: 70px;
+          height: 70px;
+          border-radius: 2px;
+          background-color: #f3f4f4;
+          position: absolute;
+          top: 25px; right: 30px;
+          z-index: 10;
+          a {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            font-size: 1.2rem;
+            color: #afc7c7;
+          }
+          img {
+              transform: translateX(-3px);
+          }
+          span {
+              transform: translateY(3px);
+          }
+      }
+  }
+}

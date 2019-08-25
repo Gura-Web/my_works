@@ -1,0 +1,77 @@
+// ---------------------------------
+//
+// Mixin StyleSheet
+//
+// ---------------------------------
+
+
+// ---------------------------------
+//
+// Common base background
+//
+// ---------------------------------
+@mixin base_bg() {
+    @include tb {
+        background: $white;
+        border-radius: 10px;
+        box-shadow: 40px 50px 30px 0 rgba(0, 0, 0, 0.06);
+        max-width: 931px;
+        min-height: 617px;
+        max-height: 70vh;
+    }
+    @include pc {
+        max-width: 1200px;
+    }
+}
+
+
+
+
+// ---------------------------------
+//
+// Btn Mixin stylesheet
+//
+// ---------------------------------
+
+// ----- Default btn style ----- //
+@mixin btn_default {
+    display: block;
+    max-width: 220px;
+    padding: 13px 80px;
+    border-radius: 6px;
+    box-shadow: 0 2px 11px 0 rgba(255, 57, 57, 0.38);
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-align: center;
+    transition: 0.3s ease;
+    @include sp-side {
+        max-width: 100%;
+    }
+    @include tb {
+        padding: 10px 50px;
+        max-width: 187px;
+    }
+    @include pc {
+        max-width: 100%;
+    }
+}
+@mixin btn_normal() {
+    background: $mainColor;
+    color: $white;
+    box-shadow: 0 2px 11px 0 rgba(0, 0, 0, 0.18);
+    &:hover {
+        background: lighten($mainColor,10%);
+        box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.12);
+    }
+}
+// ----- Type difference ----- //
+@mixin btn_solid($color: $mainColor,$borderColor: $mainColor, $shadow: rgba(255, 57, 57, 0.44)) {
+    border: 1px solid $borderColor;
+    color: $color;
+    box-shadow: 0 0 4px 0 $shadow;
+    &:hover {
+        border: 1px solid lighten($borderColor,10%);
+        color: lighten($color,10%);
+        box-shadow: 0 0 10px 0 $borderColor;
+    }
+}
