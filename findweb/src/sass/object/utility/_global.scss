@@ -1,0 +1,48 @@
+.none {
+    display: none;
+}
+.none-animation {
+    opacity: 0;
+    display: none;
+}
+.block {
+    display: block;
+}
+
+// smallchat
+#Smallchat {
+    @include tb {
+        display: none;
+    }
+    iframe {
+        transform: translate(-33px, -10px)!important;
+        z-index: 1!important;
+        @include pc {
+            transform: translateX(-23px)!important;
+        }
+        @include tb {
+            position: absolute!important;
+            top: 0 !important;
+            transform: none!important;
+            z-index: 100!important;
+            
+        }
+        @include sp {
+            position: fixed!important;
+        }
+    }
+}
+
+
+.contact-txt {
+    position: fixed;
+    right: 40px;
+    bottom: 31px;
+    letter-spacing: 0;
+    font-weight: bold;
+    font-size: 1.4rem;
+    @include tb {
+        display: none;
+    }
+}
+

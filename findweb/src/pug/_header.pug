@@ -1,0 +1,85 @@
+
+header.header
+    .header__container
+        h1.header__logo
+            a(href="index.html")
+                img(src=`${img}icon-logo.svg` alt="Find.web")
+    .schedule-wrap
+        .schedule-btn.schedule-btn--view#scheduleBtn
+            img(src=`${img}icon-calendar.svg` alt="")
+        .schedule#scheduleContent
+            .schedule__close-btn#scheduleCloseBtn
+            .schedule__content
+                p.schedule__ttl 時間割
+                p.schedule__class-name WD2A #[span webデザイナー専攻]
+                .schedule__table
+                    table.schedule__table-wrap#scheduleTable
+                        tr
+                            th.period 限
+                            th.week 月
+                            th.week 火
+                            th.week 水
+                            th.week 木
+                            th.week 金
+                        tr
+                            td.period 1
+                            td
+                            td.
+                            td.
+                            td.
+                            td.
+                        tr
+                            td.period 2
+                            td.
+                            td.
+                            td.
+                            td.
+                            td.
+                        tr
+                            td.period 3
+                            td.
+                            td.
+                            td.
+                            td
+                            td
+                        tr
+                            td.period 4
+                            td.
+                            td.
+                            td.
+                            td
+                            td
+                        tr
+                            td.period 5
+                            td
+                            td
+                            td.
+                            td
+                            td
+                .schedule-cate
+                    ul.schedule-cate__wrap
+                        li.schedule-cate__item#wd1aLesson.schedule-cate__item--currect
+                            img(src=`${img}icon-wd1a.svg` alt="")
+                            span WD1A
+                        li.schedule-cate__item--none
+                        li.schedule-cate__item--none
+                    ul.schedule-cate__wrap
+                        li.schedule-cate__item#wd2aLesson
+                            img(src=`${img}icon-wd2a.svg` alt="")
+                            span WD2A
+                        li.schedule-cate__item#we2aLesson
+                            img(src=`${img}icon-we2a.svg` alt="")
+                            span WE2A
+                        li.schedule-cate__item#cd2aLesson
+                            img(src=`${img}icon-cd2a.svg` alt="")
+                            span CD2A
+                    ul.schedule-cate__wrap
+                        li.schedule-cate__item#wd3aLesson
+                            img(src=`${img}icon-wd3a.svg` alt="")
+                            span WD3A
+                        li.schedule-cate__item#we3aLesson
+                            img(src=`${img}icon-we3a.svg` alt="")
+                            span WE3A
+                        li.schedule-cate__item#cd3aLesson
+                            img(src=`${img}icon-cd3a.svg` alt="")
+                            span CD3A

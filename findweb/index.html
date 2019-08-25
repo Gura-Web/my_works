@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="keywords" content="">
+    <meta name="description" content="ここに説明文を設定">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@twitteraccount">
+    <meta property="og:site_name" content="サイト名">
+    <meta property="og:title" content="サイトタイトル">
+    <meta property="og:description" content="サイト説明文">
+    <meta property="og:url" content="https://www.hogehoge.com">
+    <meta property="og:image" content="https://www.hogehoge.com./hoge.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="600">
+    <meta property="og:image:height" content="400">
+    <meta property="og:type" content="website">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="apple-touch-icon" href="http://www.hoge.hoge/logo.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300,400,500,700&amp;display=swap">
+    <link rel="stylesheet" href="https://use.typekit.net/uly6rzs.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.2.0/dist/css/yakuhanjp.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>HOME | Find.web</title>
+  </head>
+  <body class="body">
+    <header class="header">
+      <div class="header__container">
+        <h1 class="header__logo"><a href="index.html"><img src="img/icon-logo.svg" alt="Find.web"></a></h1>
+      </div>
+      <div class="schedule-wrap">
+        <div class="schedule-btn schedule-btn--view" id="scheduleBtn"><img src="img/icon-calendar.svg" alt=""></div>
+        <div class="schedule" id="scheduleContent">
+          <div class="schedule__close-btn" id="scheduleCloseBtn"></div>
+          <div class="schedule__content">
+            <p class="schedule__ttl">時間割</p>
+            <p class="schedule__class-name">WD2A <span>webデザイナー専攻</span></p>
+            <div class="schedule__table">
+              <table class="schedule__table-wrap" id="scheduleTable">
+                <tr>
+                  <th class="period">限</th>
+                  <th class="week">月</th>
+                  <th class="week">火</th>
+                  <th class="week">水</th>
+                  <th class="week">木</th>
+                  <th class="week">金</th>
+                </tr>
+                <tr>
+                  <td class="period">1</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td class="period">2</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td class="period">3</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td class="period">4</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td class="period">5</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </table>
+            </div>
+            <div class="schedule-cate">
+              <ul class="schedule-cate__wrap">
+                <li class="schedule-cate__item schedule-cate__item--currect" id="wd1aLesson"><img src="img/icon-wd1a.svg" alt=""><span>WD1A</span></li>
+                <li class="schedule-cate__item--none"></li>
+                <li class="schedule-cate__item--none"></li>
+              </ul>
+              <ul class="schedule-cate__wrap">
+                <li class="schedule-cate__item" id="wd2aLesson"><img src="img/icon-wd2a.svg" alt=""><span>WD2A</span></li>
+                <li class="schedule-cate__item" id="we2aLesson"><img src="img/icon-we2a.svg" alt=""><span>WE2A</span></li>
+                <li class="schedule-cate__item" id="cd2aLesson"><img src="img/icon-cd2a.svg" alt=""><span>CD2A</span></li>
+              </ul>
+              <ul class="schedule-cate__wrap">
+                <li class="schedule-cate__item" id="wd3aLesson"><img src="img/icon-wd3a.svg" alt=""><span>WD3A</span></li>
+                <li class="schedule-cate__item" id="we3aLesson"><img src="img/icon-we3a.svg" alt=""><span>WE3A</span></li>
+                <li class="schedule-cate__item" id="cd3aLesson"><img src="img/icon-cd3a.svg" alt=""><span>CD3A</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="container">
+      <main class="main">
+        <div class="main__container">
+          <nav class="tab-nav">
+            <ul class="tab-nav__wrapper">
+              <li class="tab-nav__item tab-nav__item--current" id="teacherNowTab"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 20" style="enable-background:new 0 0 15 20;" xml:space="preserve"><g><circle class="st0" cx="7.5" cy="4.5" r="4.5"/><path class="st0" d="M11.1,10H4c-2.2,0-4,1.8-4,4v4.3c0,0.6,0.5,1,1,1h12.7c0.6,0,1-0.4,1-1v-4.7C14.7,11.6,13.1,10,11.1,10z"/></g></svg>先生の状況</li>
+              <li class="tab-nav__item" id="teacherListTab"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 28 22" style="enable-background:new 0 0 28 22;" xml:space="preserve"><g><path class="st0" d="M19.8,6.3c0,1-0.2,1.8-0.7,2.6c0.4,0.2,0.8,0.2,1.3,0.2c2.5,0,4.6-2,4.6-4.6c0-2.5-2-4.5-4.6-4.5c-1.3,0-2.5,0.5-3.2,1.5C18.8,2.5,19.8,4.3,19.8,6.3z"/><path class="st0" d="M24.2,10.9h-6.9c-0.2,0.2-0.5,0.4-0.7,0.5h1.1c2.7,0,4.9,2.2,4.9,4.9v4h4.2c0.6,0,1-0.5,1-1v-4.7C27.9,12.6,26.2,10.9,24.2,10.9z"/><path class="st0" d="M7.4,9.2c0.5,0,1-0.1,1.5-0.2C8.4,8.1,8.2,7.2,8.2,6.3c0-2,1-3.8,2.5-4.8C9.9,0.6,8.7,0,7.4,0c-2.5,0-4.5,2-4.5,4.5C2.9,7.1,4.9,9.2,7.4,9.2z"/><path class="st0" d="M10.6,11.4h0.6c-0.2-0.1-0.5-0.2-0.7-0.4h-7c-2,0-3.6,1.6-3.6,3.6v4.7c0,0.5,0.4,1,1,1h4.4v-3.7C5.4,13.8,7.7,11.4,10.6,11.4z"/><path class="st0" d="M9.4,6.2c0,0.8,0.2,1.5,0.6,2.1c0.7,1.5,2.2,2.5,4,2.5s3.3-1,4-2.4c0.3-0.7,0.5-1.4,0.5-2.2c0-1.6-0.8-3-2.1-3.8c-0.8-0.5-1.6-0.8-2.5-0.8c-0.9,0-1.8,0.3-2.5,0.8C10.2,3.2,9.4,4.6,9.4,6.2z"/><path class="st0" d="M17.8,12.6H14h0h-3.2c-2.2,0-4,1.8-4,4v3.6V21c0,0.5,0.5,1,1,1h12.8c0.5,0,1-0.5,1-1v-0.7v-4C21.4,14.3,19.8,12.6,17.8,12.6z"/></g></svg>先生の一覧</li>
+            </ul>
+          </nav>
+          <section class="now-lesson" id="nowLesson">
+            <h2 class="now-lesson__ttl"><img src="img/icon-time.svg" alt=""><span id="nowTime">４時間目</span></h2>
+            <ul class="lesson-list">
+              <li class="lesson-item">
+                <div class="lesson-item__wrapper">
+                  <p class="lesson-item__thumb"><img src="img/teachers-circle/takimoto.png" alt=""></p>
+                  <div class="lesson-item__wrap">
+                    <p class="lesson-item__name">瀧本先生</p>
+                    <p class="lesson-item__place"><img src="img/icon-point.svg" alt=""><span id="takimotoPlace"></span></p>
+                  </div>
+                  <p class="lesson-item__class"><img src="img/icon-study.svg" alt=""><span id="takimotoLesson"></span></p>
+                </div>
+              </li>
+              <li class="lesson-item">
+                <div class="lesson-item__wrapper">
+                  <p class="lesson-item__thumb"><img src="img/teachers-circle/sakakura.png" alt=""></p>
+                  <div class="lesson-item__wrap">
+                    <p class="lesson-item__name">坂倉先生</p>
+                    <p class="lesson-item__place"><img src="img/icon-point.svg" alt=""><span id="sakakuraPlace"></span></p>
+                  </div>
+                  <p class="lesson-item__class"><img src="img/icon-study.svg" alt=""><span id="sakakuraLesson"></span></p>
+                </div>
+              </li>
+              <li class="lesson-item">
+                <div class="lesson-item__wrapper">
+                  <p class="lesson-item__thumb"><img src="img/teachers-circle/tanaka.png" alt=""></p>
+                  <div class="lesson-item__wrap">
+                    <p class="lesson-item__name">田中先生</p>
+                    <p class="lesson-item__place"><img src="img/icon-point.svg" alt=""><span id="tanakaPlace"></span></p>
+                  </div>
+                  <p class="lesson-item__class"><img src="img/icon-study.svg" alt=""><span id="tanakaLesson"></span></p>
+                </div>
+              </li>
+              <li class="lesson-item">
+                <div class="lesson-item__wrapper">
+                  <p class="lesson-item__thumb"><img src="img/teachers-circle/momoi.png" alt=""></p>
+                  <div class="lesson-item__wrap">
+                    <p class="lesson-item__name">桃井先生</p>
+                    <p class="lesson-item__place"><img src="img/icon-point.svg" alt=""><span id="momoiPlace"></span></p>
+                  </div>
+                  <p class="lesson-item__class"><img src="img/icon-study.svg" alt=""><span id="momoiLesson"></span></p>
+                </div>
+              </li>
+              <li class="lesson-item">
+                <div class="lesson-item__wrapper">
+                  <p class="lesson-item__thumb"><img src="img/teachers-circle/takeda.png" alt=""></p>
+                  <div class="lesson-item__wrap">
+                    <p class="lesson-item__name">武田先生</p>
+                    <p class="lesson-item__place"><img src="img/icon-point.svg" alt=""><span id="takedaPlace"></span></p>
+                  </div>
+                  <p class="lesson-item__class"><img src="img/icon-study.svg" alt=""><span id="takedaLesson"></span></p>
+                </div>
+              </li>
+              <li class="lesson-item">
+                <div class="lesson-item__wrapper">
+                  <p class="lesson-item__thumb"><img src="img/teachers-circle/miyazaki.png" alt=""></p>
+                  <div class="lesson-item__wrap">
+                    <p class="lesson-item__name">宮崎先生</p>
+                    <p class="lesson-item__place"><img src="img/icon-point.svg" alt=""><span id="miyazakiPlace"></span></p>
+                  </div>
+                  <p class="lesson-item__class"><img src="img/icon-study.svg" alt=""><span id="miyazakiLesson"></span></p>
+                </div>
+              </li>
+              <li class="lesson-item">
+                <div class="lesson-item__wrapper">
+                  <p class="lesson-item__thumb"><img src="img/teachers-circle/tuji.png" alt=""></p>
+                  <div class="lesson-item__wrap">
+                    <p class="lesson-item__name">辻先生</p>
+                    <p class="lesson-item__place"><img src="img/icon-point.svg" alt=""><span id="tujiPlace"></span></p>
+                  </div>
+                  <p class="lesson-item__class"><img src="img/icon-study.svg" alt=""><span id="tujiLesson"></span></p>
+                </div>
+              </li>
+            </ul>
+          </section>
+          <div class="teacher-list none" id="teacherList">
+            <ul class="teacher-list__wrapper">
+              <li class="teacher-item">
+                <p class="teacher-item__thumb"><img src="img/teachers-list/takimoto.png" alt=""></p>
+                <p class="teacher-item__name">瀧本先生 <span class="teacher-item__solid"></span><span class="teacher-item__gray">Ryuji Takimoto</span></p>
+                <p class="teacher-item__btn"><a href="profile.html?=takimoto">プロフィールを見る</a></p>
+              </li>
+              <li class="teacher-item">
+                <p class="teacher-item__thumb"><img src="img/teachers-list/sakakura.png" alt=""></p>
+                <p class="teacher-item__name">坂倉先生 <span class="teacher-item__solid"></span><span class="teacher-item__gray">Masaki Sakakura</span></p>
+                <p class="teacher-item__btn"><a href="profile.html?=sakakura">プロフィールを見る</a></p>
+              </li>
+              <li class="teacher-item">
+                <p class="teacher-item__thumb"><img src="img/teachers-list/tanaka.png" alt=""></p>
+                <p class="teacher-item__name">田中先生 <span class="teacher-item__solid"></span><span class="teacher-item__gray">Akio Tanaka</span></p>
+                <p class="teacher-item__btn"><a href="profile.html?=tanaka">プロフィールを見る</a></p>
+              </li>
+              <li class="teacher-item">
+                <p class="teacher-item__thumb"><img src="img/teachers-list/momoi.png" alt=""></p>
+                <p class="teacher-item__name">桃井先生 <span class="teacher-item__solid"></span><span class="teacher-item__gray">Keiko Momoi</span></p>
+                <p class="teacher-item__btn"><a href="profile.html?=momoi">プロフィールを見る</a></p>
+              </li>
+              <li class="teacher-item">
+                <p class="teacher-item__thumb"><img src="img/teachers-list/takeda.png" alt=""></p>
+                <p class="teacher-item__name">武田先生 <span class="teacher-item__solid"></span><span class="teacher-item__gray">Masaki Sakakura</span></p>
+                <p class="teacher-item__btn"><a href="profile.html?=takeda">プロフィールを見る</a></p>
+              </li>
+              <li class="teacher-item">
+                <p class="teacher-item__thumb"><img src="img/teachers-list/miyazaki.png" alt=""></p>
+                <p class="teacher-item__name">宮崎先生 <span class="teacher-item__solid"></span><span class="teacher-item__gray">Akio Tanaka</span></p>
+                <p class="teacher-item__btn"><a href="profile.html?=miyazaki">プロフィールを見る</a></p>
+              </li>
+              <li class="teacher-item">
+                <p class="teacher-item__thumb"><img src="img/teachers-list/tuji.png" alt=""></p>
+                <p class="teacher-item__name">辻先生 <span class="teacher-item__solid"></span><span class="teacher-item__gray">Akio Tanaka</span></p>
+                <p class="teacher-item__btn"><a href="profile.html?=tuji">プロフィールを見る</a></p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </main>
+    </div>
+    <p class="contact-txt">お問い合わせ</p>
+    <footer class="footer">
+      <div class="footer__container">
+        <p><small>&copy; Find.web 2019</small></p>
+      </div>
+    </footer>
+    <script src="js/teachers_data.js"></script>
+    <script src="js/teachers.js"></script>
+    <script src="js/schedule.js"></script>
+    <script src="https://embed.small.chat/TLGA8SMK6GLJKUE89M.js" async></script>
+    <script src="js/script.js"></script>
+    <script src="js/time.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

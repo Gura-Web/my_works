@@ -1,0 +1,29 @@
+.header {
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        background: $white;
+        position: relative;
+        border-bottom: 1px solid #d1d1d1;
+        @include tb {
+            border-bottom: none;
+        }
+    }
+    &__logo {
+        padding: 17px 0 14px 3%;
+        @include pc {
+            width: 150px;
+            padding: 11px 0 12px 3%
+        }
+        @include sp {
+            width: 120px;
+            padding: 12px 0 12px 3%;
+        }
+    }
+}
+
+.schedule-btn {
+    position: absolute;
+    top: -90px;
+    right: 40px;
+}

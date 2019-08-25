@@ -1,0 +1,33 @@
+- var ttl = "Profile | Find.web";
+doctype
+html(lang="ja")
+    include _head.pug
+    body.body
+        #container
+            header.header
+                .header__container
+                    h1.header__logo
+                        a(href="index.html")
+                            img(src=`${img}icon-logo.svg` alt="find.web")
+                    p.header__mail-btn
+                        a(href="#")
+                            img(src=`${img}icon-mail.svg` alt="")
+            main.main
+                section.profile-ttl
+                    h2.profile-ttl__heading PROFLE
+                .teacher-detail
+                    .teacher-detail__wrapper
+                        figure.teacher-detail__img #[img#profileImg(src="img/" alt="")]
+                        p.teacher-detail__name #[span#profileNameJP]  #[span.teacher-detail__solid]
+                            span.teacher-detail__gray#profileNameEN
+                    .teacher-detail__skill
+                        p#profileSkill 得意スキル：
+                            span Illustrator
+                            span Illustrator
+                section.teacher-profile
+                    .teacher-profile__wrapper
+                        .teacher-profile__wrap
+                            h2.teacher-profile__heading 自己紹介
+                        p.teacher-profile__txt#profileTxt
+            include _footer.pug
+            script(src="js/profile.js")

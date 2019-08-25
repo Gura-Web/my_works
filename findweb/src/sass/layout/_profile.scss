@@ -1,0 +1,174 @@
+.profile-ttl {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url($img + "profile_bak.png") no-repeat;
+    @include tb {
+        height: 140px;
+        justify-content: flex-end;
+    }
+    @include sp {
+        height: 83px;
+    }
+    &__heading {
+        color: $white;
+        font-size: 4.4rem;
+        letter-spacing: 0.4em;
+        @include tb {
+            padding-right: 10vw;
+        }
+        @include sp {
+            font-size: 2.2rem;
+            padding-right: 20%;
+        }
+    }
+}
+.teacher-detail {
+    background: $white;
+    padding: 0 40px;
+    border-radius: 5px;
+    @include sp-side {
+        padding: 0;
+    }
+    &__wrapper {
+        display: flex;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding-bottom: 25px;
+        @include tb {
+            padding: 0 4% 3%;
+        }
+    }
+    &__img {
+        width: 163px;
+        height: 163px;
+        border-radius: 5px;
+        margin-top: -73px;
+        @include sp-side {
+            width: 40%;
+            height: 40%;
+            margin-top: -59px;
+        }
+        @include sp {
+            width: 116px;
+            height: 116px;
+            margin-top: -40px;
+        }
+    }
+    &__name {
+        font-size: 2rem;
+        padding: 29px 0 20px 16px;
+        @include pc {
+            font-size: 2.2rem;
+        }
+        @include tb {
+            padding-left: 15px;
+        }
+        @include sp-side {
+            font-size: 1.8rem;
+            padding-left: 13px;
+        }
+    }
+    &__solid {
+        display: inline-block;
+        width: 1px;
+        height: 15px;
+        margin: 0 10px 0 7px;
+        background: rgb(204, 204, 204);
+        @include sp-side {
+            margin: 17px 10px 0 7px;
+        }
+    }
+    &__gray {
+        color: #8D8D8D;
+        font-size: 1.4rem;
+        position: relative;
+        bottom: 3px;
+        @include sp-side {
+            margin: 11px 10px 0 0;
+        }
+    }
+    &__skill {
+        font-size: 1.5rem;
+        padding: 7px 0;
+        border-top: solid 1px #dedede;
+        font-weight: 700;
+        @include tb {
+            padding: 1% 4%;
+            font-size: 1.4rem;
+        }
+        @include sp-side {
+            padding: 1.5% 4%;
+        }
+        p {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        span {
+            border-radius: 3px;
+            color: $white;
+            background: $subColor;
+            padding: 5px 22px;
+            margin-left: 8px;
+            font-weight: 500;
+            @include sp-side {
+                padding: 3px 12px;
+            }
+        }
+    }
+}
+.teacher-profile {
+    margin: 34px 0 100px 0;
+    @include sp-side {
+        margin-bottom: 0;
+    }
+    &__wrapper {
+        max-width: 872px;
+        margin: 0 auto;
+        background: $white;
+        border-radius: 5px;
+        padding: 50px 50px 100px;
+        @include tb {
+            padding: 50px 40px;
+        }
+        @include sp {
+            padding: 10px 0;
+        }
+    }
+    &__wrap {
+        border-bottom: solid 1px #dedede;
+    }
+    &__heading {
+        font-weight: bold;
+        color: $mainColor;
+        width: 50%;
+        text-align: center;
+        font-size: 1.8rem;
+        @include sp-side {
+            font-size: 1.4rem;
+        }
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            background: $mainColor;
+        }
+    }
+    &__txt {
+        color: $black;
+        margin-top: 27px;
+        line-height: 2.3;
+        font-weight: normal;
+        @include tb {
+            padding: 21px 30px ;
+            font-size: 1.4rem;
+            line-height: 2.2;
+        }
+        @include sp-side {
+            margin-top: 0;
+            padding: 21px 15px;
+        }
+    }
+}

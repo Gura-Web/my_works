@@ -1,0 +1,76 @@
+.tab-nav {
+    margin: 46px 0 0 0;
+}
+
+.content-toggle--view {
+    animation: view 0.5s ease 0.5s forwards;
+    display: block;
+}
+.content-toggle--view1 {
+    animation: view1 0.5s ease forwards;
+    display: block;
+}
+.content-toggle--hide {
+    opacity: 0;
+    display: block;
+    animation: hide 0.5s ease forwards;
+}
+.main {
+    margin-bottom: 100px;
+}
+
+.now-lesson {
+    margin: 86px 0 0 0;
+    text-align: center;
+    @include pc {
+        margin: 60px 0 0 0;
+    }
+    &__ttl {
+        font-weight: normal;
+        text-align: center;
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+        background: #E4EDF6;
+        border-radius: 25px;
+        padding: 0 32px;
+        position: relative;
+        z-index: -1;
+        display: inline-block;
+        @include sp-side {
+            font-size: 1.6rem;
+        }
+        img {
+            display: inline-block;
+            transform: translateY(3px);
+        }
+        span {
+            color: $mainColor;
+            padding-left: 9px;
+            display: inline-block;
+        }
+    }
+}
+
+.footer {
+    background: $mainColor;
+    font-size: 1.2rem;
+    padding: 6px 0;
+    color: $white;
+    text-align: center;
+    @include tb {
+        padding: 0;
+        font-size: 1.1rem;
+    }
+}
+
+// footer下に固定
+#container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: auto;
+}

@@ -1,0 +1,231 @@
+.schedule-wrap {
+    position: absolute;
+    top: 197px;
+    right: 70px;
+    z-index: 100;
+    @include tb {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+    }
+}
+.schedule {
+    max-width: 626px;
+    padding: 19px 36px 39px;
+    background: $white;
+    border-radius: 5px;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.13);
+    display: none;
+    position: relative;
+    z-index: 10000;
+    @include pc {
+        top: -26px;
+        right: 5px;
+        padding: 12px 26px 30px;
+        max-width: 500px;
+    }
+    @include tb {
+        top: auto;
+        right: auto;
+        max-width: 100%;
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        padding: 19px 16px 39px;
+        z-index: 100;
+    }
+    @include sp {
+        overflow: scroll;
+    }
+    &--view {
+        display: block;
+        animation: view 0.5s ease forwards;
+        .schedule__table {
+            opacity: 0;
+            animation: view 0.5s ease 0.3s forwards;
+        }
+        .schedule-cate {
+            opacity: 0;
+            animation: view 0.5s ease 0.6s forwards;
+        }
+    }
+    &--hide {
+        display: block;
+        animation: hide 0.5s ease forwards;
+    }
+    &::after {
+        content: "";
+        display: block;
+        background: $mainColor;
+        width: 100%;
+        height: 40%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        border-radius: 5px 5px 0 0;
+    }
+    &__close-btn {
+        display: none;
+        @include tb {
+            display: block;
+            position: absolute;
+            right: 12px;
+            top: 12px;
+            z-index: 10;
+            cursor: pointer;
+            width: 45px;
+            height: 45px;
+            border-radius: 2px;
+            background-color: rgba(0, 0, 0, 0.11);
+            transition: 0.3s ease;
+        }
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.31);
+        }
+        &::before,&::after {
+            content: "";
+            display: block;
+            border-radius: 40px;
+            background: $white;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            transform: rotate(45deg);
+        }
+        &::before {
+            width: 18px;
+            height: 3px;
+        }
+        &::after {
+            width: 3px;
+            height: 18px;
+        }
+    }
+    &__ttl {
+        font-size: 30px;
+        font-weight: bold;
+        letter-spacing: 1.36px;
+        color: $white;
+        height: 55px;
+        @include tb {
+            margin: 0 0 0 10px;
+        }
+    }
+    &__class-name {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: $white;
+        margin-bottom: 19px;
+        @include tb {
+            margin: 0 0 0 10px;
+        }
+        span {
+            display: inline-block;
+            margin: 0 0 0 7px;
+            font-size: 1.6rem;
+            font-weight:normal;
+        }
+    }
+    &__content {
+        position: relative;
+        z-index: 1;
+    }
+    &__table {
+        background: $white;
+        border-radius: 3px;
+        box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.09);
+        padding: 10px;
+        position: relative;
+        @include tb {
+            margin-top: 23px;
+            padding: 5px;
+        }
+        &-wrap {
+            max-width: 552px;
+            display: block;
+            border-top: 1px solid #979797;
+            border-collapse: collapse;
+            font-size: 1.4rem;
+            @include tb {
+                font-size: 1.1rem;
+                max-width: 100%;
+                width: 100%;
+            }
+            tbody {
+                display: block;
+            }
+            .period {
+                width: 20px;
+                text-align: center;
+            }
+            th {
+                width: 20%;
+                border-right: 1px solid #979797;
+                border-left: 1px solid #979797;
+                line-height: 1.6;
+            }
+            td {
+                border: 1px solid #979797;
+                line-height: 1.3;
+                padding: 3px;
+                @include tb {
+                    padding: 20px 3px;
+                }
+                @include sp-side {
+                    padding: 3px 3px;
+                }
+            }
+        }
+    }
+}
+
+// 学年ボタン
+.schedule-cate {
+    margin: 43px 0 0 0;
+    @include pc {
+         margin-top: 30px;
+    }
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        max-width: 386px;
+        margin: 10px 0 0 0;
+        @include pc {
+            max-width: 350px;
+        }
+    }
+    &__item {
+        width: 32%;
+        padding: 0 2px 0 12px;
+        display: flex;
+        align-items: center;
+        background: #eff0f3;
+        color: #acb2c5;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: 0.3s ease;
+        &:hover {
+            background: lighten(#eff0f3,5%);
+        }
+        span {
+            margin-left: 11px;
+        }
+        &--none {
+            border: 1px solid #f1f1f1;
+            background: none;
+            @extend .schedule-cate__item;
+        }
+        &--currect {
+            background: $subColor;
+            color: $white;
+            &:hover {
+                background: $subColor;
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+.tab-nav {
+    border-bottom: solid 1px #e0e0e0;
+    &__wrapper {
+        display: flex;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    &__item {
+        cursor: pointer;
+        padding: 0 0 6px;
+        width: 30%;
+        text-align: center;
+        margin: 0 20px;
+        color: #ACB2C5;
+        font-weight: normal;
+        transition: 0.3s ease;
+        font-size: 1.6rem;
+        &--current {
+            box-shadow: 0 2px 0 $mainColor;
+            color: $mainColor;
+            font-weight: bold;
+            svg {
+                fill: $mainColor!important;
+            }
+        }
+        @include tb {
+            font-size: 1.4rem;
+            width: 50%;
+            margin: 0;
+        }
+    }
+}
+
+#teacherListTab,#teacherNowTab {
+    svg {
+        margin: 0 8px 0 0;
+        transform: translateY(4px);
+        fill: #ACB2C5;
+        transition: 0.3s ease;
+        position: relative;
+        z-index: -1;
+    }
+}
+#teacherListTab {
+    svg {
+        width: 28px;
+    }
+}
+#teacherNowTab {
+    svg {
+        width: 15px;
+    }
+}
