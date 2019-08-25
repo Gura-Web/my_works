@@ -1,0 +1,36 @@
+.center {
+    margin: 44px 0 0 0;
+    position: relative;
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        background: #FDFBEB;
+        width: 100%;
+        height: 240px;
+        bottom: -60px;
+        z-index: -1;
+    }
+    a {
+        display: block;
+        transition: 0.3s ease;
+        &:hover {
+            opacity: 0.8;
+            transform: translateY(-5px);
+            
+        }
+        
+    }
+}
+.slide__place-image > img {
+    margin: 0 auto;
+}
+.slide__jp {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 18px 0 0 0 ;
+}
+.slide__en {
+    font-size: 1.2rem;
+    text-align: center;
+}

@@ -1,0 +1,25 @@
+
+.plan-item {
+    max-width: 337px;
+    &__wrap {
+        background: $white;
+        padding: 15px 0 31px 19px;
+        
+    }
+    &__name {
+        font-size: 1.4rem;
+        font-weight: bold;
+        @include tb {
+            font-size: 1.6rem;
+        }
+    }
+    &__date {
+        color: #969696;
+        font-size: 1.2rem;
+        font-weight: normal;
+        margin: 5px 0 0 0;
+        @include tb {
+            font-size: 1.4rem;
+        }
+    }
+}

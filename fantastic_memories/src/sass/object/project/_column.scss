@@ -1,0 +1,138 @@
+.one-column {
+  margin: 0 auto 0;
+  width: 90%;
+  max-width: 850px;
+  @include sp {
+    width: 50%;
+  }
+  @include tb {
+    width: 80%;
+  }
+  &__wrapper {
+    width: 50%;
+    @include sp {
+      width: 50%;
+    }
+    @include tb {
+      width: 34%;
+    }
+  }
+  &__heading {
+    font-size: 1.5rem;
+    position: relative;
+    @include tb {
+      font-size: 2.4rem;
+      letter-spacing: 0.08em;
+    }
+    @include before() {
+      top: -50px;
+      width: 100%;
+      min-width: 330px;
+      padding-top: 390px;
+      @include tb {
+        width: 533px;
+        height: 610px;
+      }
+    }
+    @include after() {
+      width: 134px;
+      height: 87px;
+      z-index: -1;
+      @include tb {
+        height: 127px;
+      }
+    }
+  }
+  .inner-heading__small {
+    font-size: 1.2rem;
+    @include tb {
+      font-size: 1.9rem;
+    }
+  }
+  &__en {
+    font-size: 1.2rem;
+    color: $font_color-pale;
+    font-weight: normal;
+    margin: 5px 0 11px;
+    @include tb {
+      font-size: 1.4rem;
+    }
+  }
+  &__desc {
+    font-size: 1.1rem;
+    max-width: 176px;
+    @include tb {
+      font-size: 1.4rem;
+    }
+  }
+  &__lists {
+    display: flex;
+  }
+  &__list {
+    flex: 0 0 40px;
+    margin: 28px 5px 0 0;
+    @include tb {
+      flex: 0 0 83px;
+    }
+  }
+}
+
+.one-column--left {
+  margin-top: 143px;
+  @include sp {
+    margin-top: 130px;
+  }
+  .one-column__heading {
+    @include before() {
+      background: url($img+"white_dress.png") no-repeat left center/contain;
+      left: 100px;
+      top: -120px;
+      @include tb {
+        left:380px;
+      }
+    }
+    @include after() {
+      background: url($img+"gray_rose.png") no-repeat left center/contain;
+      top: -40px;
+      left: -29px;
+      @include tb {
+        top: -50px;
+        left: -79px;
+      }
+    }
+  }
+}
+
+.one-column--right {
+  margin-top: 160px;
+  @include sp {
+    margin-top: 230px;
+  }
+  @include tb {
+    margin-top: 300px;
+  }
+  .one-column__heading {
+    @include before() {
+      background: url($img+"red_dress.png") no-repeat left center/contain;
+      left: -280px;
+      @include  tb {
+        top: -100px;
+        left: -700px;
+      }
+    }
+    @include after() {
+      background: url($img+"red_rose.png") no-repeat left center/contain;
+      top: -40px;
+      left: -50px;
+      @include tb {
+        top: -50px;
+        left: -80px;
+      }
+    }
+  }
+  .one-column__wrapper {
+    margin: 0 0 0 auto;
+    @include sp {
+    }
+  }
+}

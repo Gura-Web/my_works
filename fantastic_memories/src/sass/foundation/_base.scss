@@ -1,0 +1,83 @@
+/* define */
+$main_color: #FF88D2;
+$neutral_color: #F7F7F7;
+$accent_color1: #88D1FF;
+$accent_color2: #A888FF;
+$pale_color: #FCF7EF;
+$font_color: #313131;
+$font_color-light:#3E3E3E;
+$font_color-pale: #C6C6C6;
+$white: #fff;
+
+// PATH
+$img: "../img/";
+
+$font1: 'Noto Serif JP','Hiragino Mincho ProN', '游明朝' , 'Yu Mincho' ,'游明朝体' ,'YuMincho' , serif;
+
+// global
+html * ,
+::before ,
+::after {
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Hiragino Mincho ProN', '游明朝' , 'Yu Mincho' ,'游明朝体' ,'YuMincho' , serif;
+    font-size: 1.5rem;
+    background: $neutral_color;
+    color: $font_color-light;
+    letter-spacing: 0.04em;
+    overflow: hidden;
+}
+a {
+    text-decoration: none;
+    color: $font_color-light;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+ul,ol,li {
+    list-style: none;
+    margin:0;
+    padding: 0;
+}
+:focus {
+    outline: 0;
+    border: 0;
+}
+
+// media 
+$pc: 1200px; // パソコン
+$tb: 769px; // タブレット
+$sp: 481px;  // スマートフォン
+
+@mixin pc {
+  @media screen and (min-width: ($pc)) {
+    @content;
+  }
+}
+
+@mixin tb {
+  @media screen and (min-width: ($tb)) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media screen and (min-width: ($sp)) {
+    @content;
+  }
+}
+
+// useful
+.italic {
+  font-style: italic;
+}
+.bold {
+  font-weight: bold;
+}

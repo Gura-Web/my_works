@@ -1,0 +1,40 @@
+
+// ====================
+// inner
+// ====================
+[class^="inner--"],[class*=" inner--"] {
+    margin: 74px 0 0 0;
+    padding: 100px 0 0 0;
+    @include pc {
+        margin: 200px 0 0 0;
+    }
+}
+.inner {
+    &--news {
+        background: #FCF7EF;
+        border-style: solid;
+        border-width: 30px;
+        border-image: url($img + "frame.png") 30 repeat;
+        border-image-width: 30px;
+        padding: 80px 0 40px;
+    }
+}
+
+
+
+
+// ====================
+// ページ内リンクのヘッダーのズレを解消
+// ====================
+.main__container {
+    padding-top:100px;
+}
+#consept {
+    padding-top:160px;
+    margin-top:-100px;
+    @include pc {
+        padding-top:300px;
+        margin-top:-100px;
+    }
+}
+

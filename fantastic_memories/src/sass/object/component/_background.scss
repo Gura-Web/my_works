@@ -1,0 +1,40 @@
+[class^="inner--"],
+[class*=" inner--"] {
+  background-repeat: no-repeat;
+  background-size: 570px;
+  background-position: center top;
+  
+}
+.inner {
+  &--consept {
+    background-image: url($img+"consept_bak.png");
+    background-position: center bottom;
+  }
+  &--place {
+    background-image: url($img+"flower_bak.png");
+    @include pc {
+      background-position: 700px top;
+    }
+  }
+  &--dress {
+    background-image: url($img+"dress_bak.png");
+    @include pc {
+      background-position: 100px top;
+    }
+  }
+  &--food {
+    background-image: url($img+"food_bak.png");
+    @include pc {
+      background-position: 700px top;
+    }
+  }
+  &--plan {
+    background-image: url($img+"plan_bak.png");
+    @include pc {
+      background-position: 100px top;
+    }
+  }
+  // &--access {
+  //     background-image: url($img + "access_bak.png");
+  // }
+}

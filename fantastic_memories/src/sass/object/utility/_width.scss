@@ -1,0 +1,15 @@
+
+.nav-sp__btn-wrap {
+    [class^="btn--important"], [class*=" btn--important"] { 
+        a {
+            max-width: 100%;
+        }
+    }
+    .btn--important1,.btn--important2 {
+        flex: 1;
+        margin-right: 1px;
+    }
+    .btn--important2 {
+        margin: 0;
+    }
+}
