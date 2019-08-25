@@ -1,0 +1,62 @@
+.body__container--index {
+  background: url($img + "wave1.png") no-repeat ;
+}
+.logo-desc {
+  background: url($img + "wave2.png") no-repeat left bottom;
+  height: 1340px;
+}
+.top-profile {
+  background: url($img + "wave3.png") no-repeat left 60px/45% auto;
+  z-index: -1;
+  height: 1010px;
+  @include pc {
+    background: url($img + "wave3.png") no-repeat left 60px/50% auto;
+    height: 760px;
+  }
+}
+
+.top-works {
+  margin: -100px 0 340px;
+  padding: 50px 0;
+  // background: url($img + "wave4.png") no-repeat right bottom/20% auto;
+  @include pc {
+    margin: 80px 0 230px;
+  }
+}
+
+.top-blog {
+  padding: 300px 0 200px 0;
+  margin: -100px 0 -200px 0;
+  background: url($img + "wave5.png") no-repeat center center / cover;
+  @include pc {
+    margin: 0;
+  }
+}
+
+.top-study-room {
+  height: 770px;
+  margin: 200px 0 0 0;
+  @include pc {
+    margin: 0 0 0 0;
+  }
+  &__wrapper {
+    padding-top: 120px;
+  }
+}
+
+/* -------------- profile.php ------------------ */
+.top-profile.profile {
+  background: none;
+  height: 500px;
+  margin: 200px 0 150px;
+  .top-profile__left {
+    &::after,&::before {
+      display: none;
+    }
+  }
+}
+
+
+
+
+

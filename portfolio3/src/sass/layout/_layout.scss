@@ -1,0 +1,441 @@
+// UPDATEの説明
+.logo-desc {
+    margin: 207px 0 0 0;
+    &__wrapper {
+        @include width;
+        text-align: center;
+    }
+    &__ttl {
+        font-size: 4rem;
+        color: $main_color;
+        letter-spacing: 0.3em;
+        font-family: $font2;
+        @include pc {
+            font-size: 5rem;
+        }
+    }
+    &__txt {
+        color: $main_color;
+        letter-spacing: 0.3em;
+        font-size: 2.4rem;
+        font-weight: bold;
+        margin: 43px 0 0 0;
+        @include pc {
+            margin: 23px 0 0 0;
+        }
+    }
+
+    // 図解
+    &__list {
+        display: flex;
+        max-width: 815px;
+        margin: 104px auto 81px;
+        justify-content: space-between;
+        align-items: center;
+        @include pc {
+            max-width: 700px;
+        }
+    }
+    &__item {
+        display: block;
+        font-size: 1.8rem;
+        line-height: 1.8;
+        width: 316px;
+        height: 316px;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        @include pc {
+            width: 290px;
+            height: 290px;
+            font-size: 2rem;
+        }
+        &:nth-of-type(1) {
+            background: rgba(0,98,255,0.27);
+            &::after {
+                border: 1px solid $main_color;
+            }
+        }
+        &:nth-of-type(3) {
+            background: rgba(0,208,0,0.27);
+            &::after {
+                border: 1px solid $accent_color;
+            }
+        }
+        @include after() {
+            position: absolute;
+            right: -12px;
+            width: 340px;
+            height: 340px;
+            border-radius: 50%;
+            @include pc {
+                right: -10px;
+                width: 310px;
+                height: 310px;
+            }
+        }
+    }
+    &__cross {
+        @include pc {
+            width: 40px;
+        }
+    }
+    
+    &__desc {
+        font-size: 1.9rem;
+        margin: 0 auto 0;
+        line-height: 6.2;
+        @include pc {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+// TOP画面のPROFILE
+.top-profile {
+    margin: 230px 0 50px 0;
+    @include pc {
+        margin: 0;
+    }
+    &__wrapper {
+        @include width;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .medium-ttl {
+            position: relative;
+            z-index: 1;
+            @include pc {
+                &::before {
+                    width: 600px;
+                    height: 600px;
+                    top: -185px;
+                    right: 120px;
+                    background: url($img + "deco-small_circle1.svg") no-repeat 178px 178px,linear-gradient(to right, #0062FF,#000080);
+                    background-position: 120px 230px, 0 0;
+                }
+            }
+        }
+        .medium-sub-ttl {
+            position: relative;
+            z-index: 1;
+        }
+    }
+    &__ball {
+        position: absolute;
+        top: -270px;
+        left: -570px;
+
+    }
+    .top-me {
+        &__name {
+            font-size: 3.2rem;
+            letter-spacing: 0.2em;
+            font-weight: bold;
+        }
+        &__desc {
+            max-width: 496px;
+        }
+        &__btns {
+            margin: 50px 0 0 0;
+            display: flex;
+             .btn-normal {
+                 margin-right: 40px;
+             }
+        }
+    }
+}
+
+
+// TOP画面のWORKS
+.top-works {
+    &__wrapper {
+        @include width;
+        text-align: right;
+        position: relative;
+    }
+    &__txt {
+        margin: 20px 0 50px;
+    }
+    .btn-normal {
+        margin: 0 30px 0 0;
+    }
+    &__img {
+        max-width:590px;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
+
+// TOP画面のBLOG
+.top-blog {
+    &__container {
+        @include width;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin: 70px 0 100px 0;
+    }
+}
+
+// TOP画面のstudy-room
+.top-study-room {
+    &__wrapper {
+        @include width;
+    }
+    &__txt {
+        letter-spacing: 0.1em;
+        line-height: 2;
+        margin: 57px 0;
+    }
+    &__wrap {
+        position: relative;
+    }
+    &__ball {
+        position: absolute;
+        top: -400px;
+        right: -325px;
+        z-index: -1;
+    }
+    .btn-normal {
+        @include pc {
+            &::before {
+                bottom: -360px;
+                right: -400px;
+            }
+        }
+    }
+}
+// TOP画面のThank you
+.thanks {
+    margin: 300px 0 0;
+    &__img {
+        margin: 0 auto;
+    }
+}
+
+
+/* -------------- profile.php ------------------ */
+.profile-type,.my-data,.skill,.activity {
+    @include width;
+}
+.skill,.activity {
+    margin: 200px auto 0;
+}
+
+
+
+/* -------------- works.php ------------------ */
+.service,.works {
+    @include width;
+    margin: 200px auto 0;
+    .medium-sub-ttl {
+        margin: 0 0 118px 0;
+    }
+}
+/* -------------- product.php ------------------ */
+.product {
+    background: url($img + "wave5.png") no-repeat center center/cover;
+}
+.product-detail {
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+    &__left {
+        width: 47%;
+    }
+    &__ttl {
+        font-size: 3rem;
+        letter-spacing: 0.1em;
+        height: 75px;
+        margin: -15px 0 0 0;
+    }
+    &__about-desc {
+        letter-spacing: 0.1em;
+        font-size: 1.8rem;
+        margin: 0 0 47px 0;
+        line-height: 1.7;
+        opacity: 0.5;
+    }
+    &__desc {
+        letter-spacing: 0.1em;
+        line-height: 2.2;
+        font-size: 1.9rem;
+        @include pc {
+            font-size: 1.7rem;
+            width: 95%;
+        }
+        &--sub {
+            opacity: 0.3;
+            font-size: 1.5rem;
+            line-height: 1.9;
+            margin: 36px 0 0 0;
+            @include pc {
+                font-size: 1.4rem;
+                width: 95%;
+            }
+        }
+    }
+
+    &__right {
+        width: 44%;
+    }
+    .btn-normal {
+        margin: 40px 0 0 0;
+        &--sp {
+            margin: 20px 0 0 0;
+        }
+    }
+    &__img { // PC
+        max-width: 490px;
+        margin: 15px auto 0;
+        @include pc {
+            max-width: 468px;
+        }
+        &--sp { // スマホ
+            max-width: 280px;
+            @include pc {
+                max-width: 260px;
+            }
+            margin: 0 auto 0;
+            transform: translateX(-1px);
+        }
+        &--gra { // グラフィック
+            max-width: 380px;
+            margin: 0 auto;
+            box-shadow: 0 3px 10px rgba(0,0,0,.25);
+            @include pc {
+                max-width: 300px;
+            }
+        }
+        &--tumbler {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    }
+}
+.product-info {
+    display: flex;
+    font-weight: bold;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1200px;
+    @include pc {
+        max-width: 1000px;
+    }
+    &__left {
+        flex: 0 1 548px;
+        display: flex;
+        flex-wrap:wrap;
+    }
+    &__right {
+        flex: 0 1 442px;
+    }
+    &__wrap {
+        width: 48%;
+        display: flex;
+        margin: 20px 0 0 0;
+        dt {
+            opacity: 0.3;
+            padding-right: 18px;
+        }
+        dd {
+            letter-spacing: 0.1em;
+            line-height: 2.1;
+            // font-size: 1.8rem;
+            transform: translateY(4px);
+            font-weight: normal;
+        }
+    }
+}
+.product-info__wrap {
+    &:first-of-type {
+        width: 100%;
+    }
+
+}
+
+
+.product-skill {
+    margin: 30px 0 0 0;
+    line-height: 1.8;
+    letter-spacing: 0.1em;
+    dt {
+        margin-bottom: 10px;
+        opacity: 0.3;
+    }
+    dd{
+        letter-spacing: 0.1em;
+        font-weight: normal;
+    }
+}
+
+
+// 作品説明
+.product-desc {
+    margin: 148px auto 0;
+    max-width: 1200px;
+    @include pc {
+        max-width: 1000px;
+    }
+    .solid-ttl {
+        font-size: 2.4rem;
+    }
+    .yasai-throw img {
+        margin: 100px auto 20px;
+    }
+}
+.product-desc__txt {
+    line-height: 3.4;
+    font-size: 1.9rem;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    margin: 75px auto 0;
+    @include pc {
+        font-size: 1.7rem;
+    }
+}
+.product-desc__img {
+    margin: 15px auto 0;
+    width: 90%;
+    display: block;
+}
+.accordion {
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s ease;
+    &__content {
+        display: none;
+    }
+    &--icon {
+        position: absolute;
+        top: 7px;
+        right: 10px;
+        font-size: 2.4rem;
+        font-weight: bold;
+        transition: 0.3s ease;
+    }
+    &:hover {
+        .accordion--icon {
+            transform: translateY(-4px);
+        }
+    }
+}
+
+
+
+/* -------------------------------- 勉強部屋 ------------------------------------ */
+/* -------------- design.php ------------------ */
+.study-list {
+    article { cursor: pointer; }
+    a {
+        pointer-events: none;
+    }
+}

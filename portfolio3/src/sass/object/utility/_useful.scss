@@ -1,0 +1,103 @@
+// フォント関連
+.italic {
+    font-style: italic;
+}
+.bold {
+    font-weight: bold;
+}
+.ct {
+    text-align: center
+}
+.lf {
+    text-align: left;
+}
+.ls100 {
+    letter-spacing: 0.1em;
+}
+.ls300 {
+    letter-spacing: 0.3em;
+}
+.font1 {
+    font-family: $font1;
+}
+.font2 {
+    font-family: $font2;
+}
+.fs12 {
+    font-size: 1.2rem;
+}
+.fs17 {
+    font-size: 1.7rem;
+}
+.fs24 {
+    font-size: 2.4rem;
+}
+.fs40 {
+    font-size: 4rem;
+}
+
+// 配色関連
+.color1 {
+    color: $main_color;
+}
+.color2 {
+    color: $accent_color;
+}
+.color3 {
+    color: #dbc60b;
+}
+.op5 {
+    opacity: 0.5;
+}
+
+// レイアウト
+.flexPC {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    img {
+        width: 48%;
+    }
+    &--3column {
+        img {width: 30%;margin: 20px 10px;}
+    }
+}
+.flexSP {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    img {
+        width: 23%;
+        margin: 20px 10px;
+    }
+    @include sp {
+        img {
+            width: 43%;
+        }
+    }
+}
+.float {
+    float: left;
+}
+
+
+
+// width
+.width {
+    @include width;
+}
+.w50 {
+    width: 50%;
+}
+
+// none
+.hidden {
+    visibility: hidden;
+    height: 0;
+}
+
+// 装飾
+.underline {
+    border-bottom: solid 1px $white;
+    padding-bottom: 1px;
+}
