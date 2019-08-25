@@ -1,0 +1,117 @@
+
+#headerWrapper #gNavi #online-shopIcon { /* 現在地がわかるようにメニューのアイコンを青色にする　base.cssより優先 */
+  background: url("../images/grobal/cart_icon_blue.png") no-repeat top center;
+  a {
+    display: block;
+    padding: 43px 0 0 15px;
+    line-height: 1.2em;
+  }
+}
+
+/* heading */
+  #shopHead {
+    background: url("../images/online-shop_img/background_top.png") no-repeat center center;
+    width: 100%;
+    height: 564px;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    h2 {
+      margin: 450px 0 10px;
+    }
+    p {
+      color: #73caff;
+    }
+  }
+  #suuShopWrapper {
+    background: url("../images/online-shop_img/background.png") no-repeat center center;
+    height: 1802px;
+    margin-top: 394px;
+    #suuShopBak {
+      background: url("../images/online-shop_img/description_bak.png") no-repeat center center;
+      height: 1026px;
+      position: relative;
+      top: 180px;
+      #suuShop {
+        width: 1000px;
+        margin: 0 auto;
+        position: relative;
+        top: -50px;
+        h3 {
+          padding-top: 120px;
+          text-align: center;
+        }
+        /* shopLeftBox */
+        #threeBox-Shop {
+          width: 100px;
+          float: right;
+          margin: 60px  80px 0 0;
+          li {
+            border: solid 3px #ffffff;
+            text-align: center;
+            line-height: 90px;
+            width: 87px;
+            height: 87px;
+            margin-bottom: 30px;
+            .cross-shop {
+              display: block;
+              width:20px;
+              height: 4px;
+              background: #ffffff;
+              position: relative;
+              top: 14px;
+              left: 33px;
+              transform: rotate(45deg);
+              &::before {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 100%;
+                background: #ffffff;
+                transform: rotate(90deg);
+              }
+            }
+          }
+        }
+        #component-Shop {
+          border: solid 2px #ffffff;
+          width: 100px;
+          height: 29px;
+          margin: 30px 0 10px;
+          padding: 1px 0 0 17px;
+          text-align: center;
+          line-height: 33px;
+          letter-spacing: 1em;
+        }
+
+        /* shopBottom */
+        #shopBottom {
+          text-align: center;
+          position: relative;
+          z-index: 1;
+          top: 15px;
+          #scroll {
+            font-weight: 100;
+            position: relative;
+            bottom: 9px;
+          }
+          #yellow_arrow {
+            position: relative;
+            bottom: -5px;
+          }
+          #buyBtn {
+            background: url("../images/online-shop_img/buy_btn_hover.png") no-repeat center top;
+            margin-top: 25px;
+            a {
+              display: block;
+              width: 406px;
+              margin: 0 auto;
+            }
+            &:hover img {
+              visibility: hidden;
+            }
+          }
+        }
+      }
+    }
+  }

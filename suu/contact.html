@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="css/contact.css" rel="stylesheet">
+  <link href="css/base.css" rel="stylesheet">
+  <title>Suu | お問い合わせ</title>
+</head>
+<body>
+  <div id="headerWrapper">
+    <header>
+        <h1 id="logo"><a href="#"><img src="images/grobal/logo.png" alt="Suu" width="60" height="71"></a></h1>
+        <nav id="gNavi">
+          <ul>
+            <li id="homeIcon"><a href="index.html">ホーム</a></li>
+            <li id="aboutIcon"><a href="suu_about.html">Suuとは</a></li>
+            <li id="how-to-useIcon"><a href="how-to-use.html">使い方</a></li>
+            <li id="online-shopIcon"><a href="online-shop.html">オンライン<br>ショップ</a></li>
+            <li id="storeIcon"><a href="store.html">販売店</a></li>
+            <li id="faqIcon"><a href="faq.html">よくある質問</a></li>
+          </ul>
+        </nav>
+    </header>
+  </div>
+
+  <main>
+    <div id="container">
+      <div id="formWrapper">
+        <div id="headingTop"><h2>お問い合わせ</h2></div>
+        <form id="contactForm" action="send.html" method="post">
+          <table>
+              <tr>
+                <th>名前</th>
+              </tr>
+              <tr>
+                <td><input type="text" name="name" placeholder="山田 太郎"></td>
+              </tr>
+              <tr>
+                <th>Email</th>
+              </tr>
+              <tr>
+                <td><input type="text" name="mail" placeholder="yamada@gmail.com"></td>
+              </tr>
+              <tr>
+                <th>お問い合わせ内容</th>
+              </tr>
+              <tr>
+                <td>
+                  <textarea cols="90" rows="15"></textarea>
+                </td>
+              </tr>
+            <tr>
+              <td id="send"><input type="submit" value="送信"></td>
+            </tr>
+          </table>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <div id="footerWrapper" class="white">
+    <footer>
+      <div id="footerLeft">
+        <p id="momoi"><a href="#"><img src="images/grobal/momoi.png" alt="momoi" width="124" height="34"></a></p>
+        <address class="font_16px thin">TEL&nbsp;:&nbsp;0120-000-544<br>
+          <span class="font_14px">受付時間&nbsp;10:00~19:00(土日祝を除く)</span><br>
+          &#12306;&nbsp;530-0015<br>
+          大阪市北区中崎西2丁目3-35
+        </address>
+      </div>
+
+      <div id="footerRight">
+        <nav>
+          <ul id="siteLinks" class="font_16px thin normal">
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="suu_about.html">Suuとは</a></li>
+            <li><a href="how-to-use.html">使い方</a></li>
+            <li><a href="online-shop.html">オンラインショップ</a></li>
+            <li><a href="store.html">販売店</a></li>
+            <li><a href="faq.html">よくある質問</a></li>
+            <li><a href="#">プライバシーポリシー</a></li>
+          </ul>
+        </nav>
+        <div id="contact" class="font_16px">
+          <p><a href="contact.html" id="tel">お問い合わせ</a></p>
+          <p><a href="#" id="company">企業情報</a></p>
+        </div>
+      </div>
+
+      <p id="copyright" class="clear thin normal">
+        <small class="font_16px">&copy;&nbsp;2018 momoi Inc.</small>
+      </p>
+    </footer>
+  </div>
+
+  <script src="js/jquery-3.1.0.min.js">
+  </script>
+  <script src="js/scroll.js">
+  </script>
+
+</body>

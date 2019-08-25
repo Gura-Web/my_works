@@ -1,0 +1,338 @@
+
+#headerWrapper #gNavi #aboutIcon { /* 現在地がわかるようにメニューのアイコンを青色にする　base.cssより優先 */
+  background: url("../images/grobal/bottle_icon_blue.png") no-repeat top center;
+  a {
+    display: block;
+    padding: 40px 0 0 15px;
+  }
+}
+
+
+
+#aboutHead {
+  background: url("../images/about_img/background_top.png") no-repeat center center;
+  width: 100%;
+  height: 601px;
+  position: absolute;
+  top: 0;
+  text-align: center;
+  h2 {
+    margin: 450px 0 10px;
+    .font_64px {
+      font-size: 6.4rem;
+    }
+    .font_60px {
+      font-size: 6.0rem;
+      padding-left: 3px;
+    }
+  }
+  p {
+    color: #73caff;
+  }
+}
+
+#problemWrapper {
+  background: url("../images/about_img/background_comment.png") no-repeat center center;
+  height: 710px;
+  margin-top: 431px;
+  #problem {
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 50px;
+    h3 {
+      text-align: center;
+      padding-bottom: 13px;
+      background: url("../images/about_img/underline.png") no-repeat center bottom;
+    }
+    #problemText {
+      background: url("../images/about_img/trouble_frame.png") no-repeat center center;
+      height: 486px;
+      padding-top: 100px;
+      display: flex;
+      justify-content: space-around;
+      p {
+        text-align: center;
+        line-height: 1.9em;
+        &:first-child {
+          position: relative;
+          top: 18px;
+          left: -8px;
+        }
+        &:nth-child(2) {
+          position: relative;
+          top: 18px;
+          left: 12px;
+        }
+        &:nth-child(3) {
+          position: relative;
+          top: 18px;
+          left: 24px;
+        }
+      }
+    }
+  }
+}
+
+#graphWrapper {
+  background: url("../images/about_img/background_bottle.png") no-repeat center center;
+  height: 1323px;
+  position: relative;
+  top: -3px;
+  #scroll {
+    padding-top: 180px;
+    h3 {
+      text-align: center;
+      margin: 0;
+    }
+    .yellow_line {
+      width: 456px;
+      margin: 0 auto;
+      background: linear-gradient(transparent 40%, #ffff00 0%);/*　透明が40%あり(上部分)残り60%は黄色 */
+    }
+    p {
+      text-align: center;
+    }
+  }
+  #downArrow {
+    margin: 25px 0;
+  }
+  #threeEffectWrapper {
+    background: url("../images/about_img/bottle_three_effect.png") no-repeat center center;
+    height: 772px;
+    #threeEffectBak {
+      width: 1000px;
+      height: 734px;
+      margin: 0 auto;
+      position: relative;
+    }
+  }
+}
+#acne {
+  position: absolute;
+  top: 85px;
+  right: 35px;
+  h4 {
+    border-bottom: solid 3px #007cc8;
+    margin-bottom: 13px;
+  }
+  p {
+    margin-bottom: 10px;
+  }
+  p:nth-child(3) {
+    margin-bottom: 5px;
+  }
+  #waterDropAcne {
+    position: absolute;
+    top: 85px;
+    left: 170px;
+    p {
+      margin-bottom: 7px;
+    }
+  }
+  #note {
+    position: absolute;
+    top: 690px;
+    left: -120px;
+  }
+}
+#cool {
+  position: absolute;
+  top: 255px;
+  left: 10px;
+  h4 {
+    border-bottom: solid 3px #007cc8;
+    margin-bottom: 20px;
+  }
+  p {
+    margin: 10px 0 0 10px;
+  }
+  #waterDropCool {
+    position: absolute;
+    top: 80px;
+    left: 150px;
+  }
+}
+#smell {
+  position: absolute;
+  top: 470px;
+  right: 110px;
+  h4 {
+    border-bottom: solid 3px #007cc8;
+    margin-bottom: 20px;
+  }
+
+  p {
+    margin-bottom: 15px;
+  }
+  #waterDropSmell {
+    position: absolute;
+    top: 88px;
+    left: 90px;
+  }
+}
+
+/* description */
+#description {
+  background: url("../images/about_img/background_description.png") no-repeat center center;
+  height: 2072px;
+  position: relative;
+  top: -3px;
+}
+.new_line {
+  display: inline-block;
+  padding-bottom: 20px;
+}
+
+/* acne */
+#acneBak {
+  background: url("../images/about_img/acne_bak.png") no-repeat center center;
+  height: 647px;
+  section {
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 120px;
+    #textAcne {
+      width: 460px;
+      float: right;
+      h4 {
+        margin: 0 0 30px;
+        padding-bottom: 7px;
+        border-bottom: solid 8px #fff100;
+      }
+    }
+    figure {
+      width: 440px;
+      float: left;
+      margin: 0;
+      img {
+        border-radius: 5px;
+      }
+    }
+  }
+}
+/* cool */
+#coolBak {
+  background: url("../images/about_img/cool_bak.png") no-repeat center center;
+  height: 841px;
+  position: relative;
+  top: -130px;
+  section {
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    top: 240px;
+    #textCool {
+      width: 480px;
+      float: left;
+      h4 {
+        margin: 0 0 20px;
+        padding-bottom: 7px;
+        border-bottom: solid 8px #fff100;
+      }
+    }
+    figure {
+      width: 460px;
+      float: right;
+      margin: 0;
+      img {
+        border-radius: 5px;
+      }
+    }
+  }
+}
+/* sweat */
+#sweatBak {
+  background: url("../images/about_img/sweat_bak.png") no-repeat center center;
+  height: 630px;
+  position: relative;
+  top: -240px;
+  section {
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    top: 205px;
+    #textSweat {
+      width: 470px;
+      float: right;
+      margin-right: 40px;
+      h4 {
+        margin: 0 0 20px;
+        padding-bottom: 7px;
+        border-bottom: solid 8px #fff100;
+      }
+    }
+    figure {
+      width: 440px;
+      float: left;
+      margin: 0;
+      img {
+        border-radius: 5px;
+      }
+
+    }
+  }
+}
+#blueArrow {
+  width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  top: -140px;
+}
+
+/* comment */
+#commentWrapper {
+  background: url("../images/about_img/background_bottom.png") no-repeat center center;
+  height: 918px;
+  position: relative;
+  top: -3px;
+  #comment {
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 100px;
+    h3 {
+      font-size: 3.6rem;
+      text-align: center;
+      margin: 0;
+      border-bottom: solid 5px #00a0e9;
+      padding-bottom: 15px;
+    }
+    #commentBox {
+      background: url("../images/about_img/comment_frame.png") no-repeat center center;
+      height: 486px;
+      padding-top: 120px;
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      line-height: 1.6em;
+      margin-bottom: 200px;
+      p:first-child {
+        position: relative;
+        top: -11px;
+        left: -15px;
+      }
+      p:nth-child(2) {
+        position: relative;
+        top: -11px;
+        left: 1px;
+      }
+      p:last-child {
+        position: relative;
+        top: -11px;
+        left: 24px;
+      }
+    }
+  }
+}
+
+#online-shopWrapper {
+  background: url("../images/about_img/background_shop.png") no-repeat center center;
+  height: 1208px;
+  position: relative;
+  top: -3px;
+  #online-shop {
+    margin-top: 0;
+    padding-top: 60px;
+
+  }
+}

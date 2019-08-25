@@ -1,0 +1,531 @@
+@charset "UTF-8";
+#headerWrapper #gNavi #homeIcon {
+  /* 現在地がわかるようにメニューのアイコンを青色にする　base.cssより優先 */
+  background: url("../images/grobal/house_icon_blue.png") no-repeat top center; }
+  #headerWrapper #gNavi #homeIcon a {
+    display: block;
+    padding: 40px 0 0 3px; }
+
+@keyframes anime {
+  from {
+    transform: translateY(0); }
+  50% {
+    transform: translateY(10px); }
+  to {
+    transform: translateY(0); } }
+/* MainVisual */
+#firstView {
+  position: relative; }
+
+#mainVisual {
+  background: url("../images/index_img/main_visual.jpg") no-repeat center center/cover;
+  height: 947px;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  z-index: 10000;
+  width: 100%; }
+  #mainVisual section {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    z-index: 1000; }
+    #mainVisual section h2 {
+      margin-top: 200px; }
+    #mainVisual section p {
+      margin-top: 50px; }
+  #mainVisual #leafMain {
+    background: url("../images/index_img/leaf_main.png") no-repeat center center/cover;
+    width: 100%;
+    height: 912px;
+    position: absolute;
+    top: 0;
+    animation-name: anime;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transform: translate(0, -880px); }
+
+/* leafBottle */
+#aboutSuu #aboutSuuCaption {
+  margin: 877px auto 0;
+  background: url("../images/index_img/caption_sky.png") no-repeat center center;
+  height: 360px;
+  text-align: center;
+  position: relative; }
+  #aboutSuu #aboutSuuCaption h2, #aboutSuu #aboutSuuCaption p {
+    position: relative;
+    z-index: 100;
+    margin: 0 auto; }
+  #aboutSuu #aboutSuuCaption h2 {
+    padding-top: 210px;
+    width: 300px; }
+  #aboutSuu #aboutSuuCaption p {
+    letter-spacing: 0.5em;
+    margin-top: 25px;
+    width: 500px; }
+  #aboutSuu #aboutSuuCaption #leaf {
+    background: url("../images/index_img/leaf1.png") no-repeat center center;
+    position: absolute;
+    top: 0;
+    height: 350px;
+    width: 100%;
+    transition: all 2s ease 0.5s; }
+    #aboutSuu #aboutSuuCaption #leaf:hover {
+      transform: translate(60px, -50px);
+      opacity: 0.1; }
+#aboutSuu #coldLotionWrapper {
+  margin-top: 0;
+  background: url("../images/index_img/bottle_leaf_bak.jpg") no-repeat center center;
+  height: 978px;
+  position: relative; }
+  #aboutSuu #coldLotionWrapper #leaf2 {
+    background: url("../images/index_img/leaf2.png") no-repeat center center;
+    width: 100%;
+    height: 900px;
+    position: absolute;
+    top: 0;
+    transition: all 2s ease 0.5s; }
+    #aboutSuu #coldLotionWrapper #leaf2:hover {
+      transform: translate(60px, -50px);
+      opacity: 0.1; }
+#aboutSuu #coldLotion {
+  width: 1000px;
+  margin: 0 auto; }
+#aboutSuu #coldLotionText {
+  width: 470px;
+  margin-right: 0;
+  margin-left: auto;
+  position: relative;
+  z-index: 100; }
+  #aboutSuu #coldLotionText h3 {
+    font-size: 3.8rem;
+    margin: 0;
+    padding-top: 90px; }
+    #aboutSuu #coldLotionText h3::before {
+      /* 小見出しの長方形 */
+      content: "";
+      display: block;
+      margin-right: 20px;
+      float: left;
+      width: 13px;
+      height: 40px;
+      position: relative;
+      top: -6px;
+      background: #007cc8; }
+  #aboutSuu #coldLotionText h3 + p {
+    margin-top: 15px;
+    text-align: center;
+    letter-spacing: 0.29em; }
+    #aboutSuu #coldLotionText h3 + p::before {
+      /* 小見出しの横棒 */
+      content: "";
+      display: block;
+      margin-top: 15px;
+      margin-right: 7px;
+      float: left;
+      width: 30px;
+      height: 2px;
+      background: #007cc8; }
+    #aboutSuu #coldLotionText h3 + p::after {
+      /* 小見出しの横棒 */
+      content: "";
+      display: block;
+      margin-top: 15px;
+      margin-right: 7px;
+      float: right;
+      width: 30px;
+      height: 2px;
+      background: #007cc8; }
+  #aboutSuu #coldLotionText p + p {
+    margin-top: 50px;
+    line-height: 2.3em; }
+
+.efficacy_link_one {
+  margin: 150px auto;
+  width: 419px;
+  text-align: center;
+  background: url("../images/index_img/efficacy_link_hover.png") no-repeat top center;
+  position: relative;
+  z-index: 100; }
+  .efficacy_link_one a {
+    display: block; }
+  .efficacy_link_one a:hover img {
+    visibility: hidden; }
+
+/* WaterDrop */
+#waterDropWrapper {
+  background: url("../images/index_img/waterdrop_sky.jpg") no-repeat center center;
+  height: 1696px; }
+  #waterDropWrapper #waterDropImg {
+    margin: 0;
+    padding-top: 185px;
+    text-align: center; }
+  #waterDropWrapper #waterDrop {
+    background: url("../images/index_img/water_drop.png") no-repeat center center;
+    width: 1000px;
+    height: 1166px;
+    margin: 0 auto;
+    position: relative;
+    top: 250px;
+    text-align: center; }
+    #waterDropWrapper #waterDrop h3 {
+      /* 無防備な運動中の肌を守る */
+      padding-top: 195px;
+      margin: 0; }
+    #waterDropWrapper #waterDrop h3 + p {
+      /* 普段は気にしていない運動時の肌 */
+      text-align: center;
+      margin-top: 40px; }
+    #waterDropWrapper #waterDrop #twoGraph {
+      /* 紫外線と汗の感想の図 */
+      margin-top: 20px; }
+    #waterDropWrapper #waterDrop #highMoist {
+      margin: 20px 0 0 10px; }
+    #waterDropWrapper #waterDrop #ultravioletText {
+      margin-top: 10px;
+      line-height: 2.2em; }
+    #waterDropWrapper #waterDrop #skinProtectImg {
+      margin-top: 30px; }
+    #waterDropWrapper #waterDrop .yellow_underline {
+      margin: 0;
+      position: relative;
+      top: -5px; }
+
+.efficacy_link_two {
+  margin: 330px auto;
+  width: 419px;
+  background: url("../images/index_img/efficacy_link_hover.png") no-repeat top center; }
+  .efficacy_link_two a {
+    display: block; }
+  .efficacy_link_two a:hover img {
+    visibility: hidden; }
+
+/* thinks */
+@keyframes water {
+  from {
+    transform: translateY(0); }
+  50% {
+    transform: translateY(10px); }
+  to {
+    transform: translateY(0); } }
+#thinksWrapper {
+  background: url("../images/index_img/think_bak1.png"), url("../images/index_img/think_bak2.png");
+  background-repeat: no-repeat;
+  background-position: top, bottom;
+  height: 2060px;
+  position: relative; }
+
+#bubble {
+  background: url("../images/index_img/bubble1.png") center 200px, url("../images/index_img/bubble2.png") center 1100px;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 2060px;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  animation-name: water;
+  animation-duration: 2s;
+  animation-iteration-count: infinite; }
+
+#thinks {
+  width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 10; }
+  #thinks #thinkAsk {
+    background: url("../images/index_img/think_top_h.png") no-repeat center center;
+    width: 711px;
+    height: 188px;
+    position: absolute;
+    top: 100px;
+    left: 150px; }
+    #thinks #thinkAsk img {
+      margin-top: 85px; }
+
+#thinkList {
+  position: relative;
+  height: 1500px; }
+  #thinkList #firstUse {
+    position: absolute;
+    top: 500px;
+    left: 180px; }
+    #thinkList #firstUse #firstUseHover {
+      width: 130px;
+      height: 150px;
+      position: relative; }
+      #thinkList #firstUse #firstUseHover:hover {
+        background: url("../images/index_img/mendo.png") no-repeat center center;
+        width: 350px;
+        height: 300px;
+        position: absolute;
+        top: -110px;
+        left: 20px; }
+  #thinkList #cleanFace {
+    position: absolute;
+    top: 610px;
+    right: 345px; }
+    #thinkList #cleanFace #cleanFaceHover {
+      width: 130px;
+      height: 150px;
+      position: relative; }
+      #thinkList #cleanFace #cleanFaceHover:hover {
+        background: url("../images/index_img/dont.png") no-repeat center center;
+        width: 800px;
+        height: 400px;
+        position: absolute;
+        top: -200px;
+        left: -10px; }
+  #thinkList #careTime {
+    position: absolute;
+    top: 850px;
+    right: 85px; }
+    #thinkList #careTime #careTimeHover {
+      width: 130px;
+      height: 150px;
+      position: relative; }
+      #thinkList #careTime #careTimeHover:hover {
+        background: url("../images/index_img/sindoi.png") no-repeat center center;
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        top: -140px;
+        right: 40px; }
+  #thinkList #sportUse {
+    position: absolute;
+    bottom: 470px;
+    right: 450px; }
+    #thinkList #sportUse #sportUseHover {
+      width: 130px;
+      height: 150px;
+      position: absolute; }
+      #thinkList #sportUse #sportUseHover:hover {
+        background: url("../images/index_img/atui.png") no-repeat center center;
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        top: -120px;
+        right: -10px; }
+  #thinkList #acneCare {
+    position: absolute;
+    bottom: 280px;
+    left: 160px; }
+    #thinkList #acneCare #acneCareHover {
+      width: 130px;
+      height: 150px;
+      position: absolute; }
+      #thinkList #acneCare #acneCareHover:hover {
+        background: url("../images/index_img/huketu.png") no-repeat center center;
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        top: -120px;
+        left: 30px; }
+  #thinkList #sportSweat {
+    position: absolute;
+    bottom: 150px;
+    right: 200px; }
+    #thinkList #sportSweat #sportSweatHover {
+      width: 130px;
+      height: 150px;
+      position: absolute; }
+      #thinkList #sportSweat #sportSweatHover:hover {
+        background: url("../images/index_img/kussa.png") no-repeat center center;
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        top: -100px;
+        left: 60px; }
+
+@keyframes rorate {
+  from {
+    transform: rotate(0); }
+  20% {
+    transform: rotate(-10deg); }
+  80% {
+    transform: rotate(10deg); }
+  to {
+    transform: rotate(0deg); } }
+#thinkAnswer {
+  background: url("../images/index_img/think_top_h.png") no-repeat center center;
+  width: 728px;
+  height: 201px;
+  margin: 180px auto 0; }
+  #thinkAnswer img {
+    margin: 80px 0 0px 20px; }
+    #thinkAnswer img:hover {
+      animation-name: rorate;
+      animation-duration: 1s; }
+
+.efficacy_link_three {
+  margin: 30px auto;
+  width: 419px;
+  background: url("../images/index_img/efficacy_link_hover.png") no-repeat top center; }
+  .efficacy_link_three a {
+    display: block; }
+  .efficacy_link_three a:hover img {
+    visibility: hidden; }
+
+/* BuyLinkMini */
+#buyLinkMini {
+  background: url("../images/index_img/wood_wall_bak.jpg") no-repeat;
+  border-top: 3px solid #fff100;
+  border-bottom: 3px solid #fff100;
+  height: 230px;
+  margin-top: 80px; }
+  #buyLinkMini #buyLinkText {
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 40px;
+    position: relative; }
+    #buyLinkMini #buyLinkText #textLeft {
+      width: 700px;
+      float: left; }
+    #buyLinkMini #buyLinkText #bottleOblique {
+      width: 300px;
+      float: right;
+      position: absolute;
+      right: 0;
+      top: -95px; }
+  #buyLinkMini #buySmallLink {
+    width: 366px;
+    padding-top: 12px;
+    background: url("../images/index_img/buy_link_hover.png") no-repeat center center; }
+    #buyLinkMini #buySmallLink a {
+      display: block; }
+    #buyLinkMini #buySmallLink a:hover img {
+      visibility: hidden; }
+
+/* HowToUse */
+#howToUseWrapper {
+  background: url("../images/index_img/howtouse_bak.jpg") no-repeat center center;
+  height: 831px; }
+  #howToUseWrapper #howToUse {
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 130px;
+    text-align: center;
+    position: relative; }
+    #howToUseWrapper #howToUse h3 {
+      margin: 0 0 20px 25px;
+      letter-spacing: 0.1em; }
+    #howToUseWrapper #howToUse h3 + p {
+      color: #9acff3;
+      margin-bottom: 65px;
+      letter-spacing: 0.1em; }
+      #howToUseWrapper #howToUse h3 + p::before {
+        /* 小見出しの横棒 */
+        content: "";
+        display: block;
+        margin-top: 13px;
+        margin-left: 285px;
+        float: left;
+        width: 63px;
+        height: 3px;
+        background: #9acff3; }
+      #howToUseWrapper #howToUse h3 + p::after {
+        /* 小見出しの横棒 */
+        content: "";
+        display: block;
+        margin-top: 13px;
+        margin-right: 285px;
+        float: right;
+        width: 63px;
+        height: 3px;
+        background: #9acff3; }
+    #howToUseWrapper #howToUse #step {
+      display: flex;
+      width: 1000px;
+      position: absolute;
+      top: 375px; }
+      #howToUseWrapper #howToUse #step li {
+        width: 300px;
+        margin-left: 35px; }
+        #howToUseWrapper #howToUse #step li:first-child {
+          margin-left: 20px; }
+    #howToUseWrapper #howToUse #useLink {
+      margin: 100px auto 0;
+      width: 419px;
+      background: url("../images/index_img/use_link_hover.png") no-repeat top center; }
+      #howToUseWrapper #howToUse #useLink a {
+        display: block; }
+      #howToUseWrapper #howToUse #useLink a:hover img {
+        visibility: hidden; }
+
+/* faq */
+#faqWrapper {
+  background: url("../images/index_img/faq_bak.jpg") no-repeat center center;
+  height: 1099px;
+  position: relative;
+  top: -1px;
+  font-family: "Segoe UI", "Yu Gothic", "YuGothic", sans-serif; }
+  #faqWrapper #faq {
+    padding-top: 250px;
+    width: 750px;
+    margin: 0 auto; }
+    #faqWrapper #faq h3 {
+      text-align: center;
+      margin-bottom: 80px; }
+    #faqWrapper #faq .question {
+      margin-bottom: 30px; }
+      #faqWrapper #faq .question p:nth-child(odd) {
+        margin-bottom: 10px;
+        padding-bottom: 3px;
+        border-bottom: solid 3px #ffffff; }
+      #faqWrapper #faq .question p:nth-child(even) {
+        margin-bottom: 50px; }
+      #faqWrapper #faq .question p > span {
+        margin-right: 10px; }
+    #faqWrapper #faq #faqLink {
+      width: 419px;
+      margin: 0 auto;
+      background: url("../images/index_img/faq_link_hover.png") no-repeat top center; }
+      #faqWrapper #faq #faqLink a {
+        display: block; }
+      #faqWrapper #faq #faqLink a:hover img {
+        visibility: hidden; }
+
+/* store & online-shop-big wrapper */
+#shopWrapper {
+  background: url("../images/index_img/bottom_sky.png") no-repeat center center;
+  height: 1646px;
+  position: relative;
+  top: -2px; }
+
+/* store */
+#store {
+  width: 900px;
+  height: 500px;
+  margin: 0 auto;
+  padding-top: 65px; }
+  #store #storeLeftBox {
+    width: 400px;
+    float: left; }
+    #store #storeLeftBox h3 {
+      margin: 50px 0 40px; }
+      #store #storeLeftBox h3::before {
+        /* 小見出しの長方形 */
+        content: "";
+        display: block;
+        margin-right: 20px;
+        float: left;
+        width: 12px;
+        height: 31px;
+        background: #007cc8; }
+    #store #storeLeftBox h3 + p {
+      line-height: 1.9em; }
+    #store #storeLeftBox #storeLink {
+      width: 291px;
+      margin-top: 52px;
+      background: url("../images/index_img/store_link_hover.png") no-repeat left top; }
+      #store #storeLeftBox #storeLink a {
+        display: block; }
+      #store #storeLeftBox #storeLink a:hover img {
+        visibility: hidden; }
+  #store figure {
+    margin: 30px 0 0;
+    width: 460px;
+    float: right; }
+
+/*# sourceMappingURL=index.css.map */
