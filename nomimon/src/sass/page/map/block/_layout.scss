@@ -1,0 +1,9 @@
+.header {
+  transform: translateY(-100%);
+  transition: 0.3s ease;
+}
+.layout {
+  overflow: hidden;
+  height: 100vh;
+  position: relative;
+}
